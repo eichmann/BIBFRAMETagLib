@@ -34,14 +34,16 @@ public class Print extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			if (thePrintIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
-				ResultSet rs = getResultSet(Prefix_1_4
-				+ " SELECT ?label  ?aspectRatio where {"
+				ResultSet rs = getResultSet(prefix
+				+ " SELECT ?label  ?aspectRatio ?aspectRatio where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
+				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/legacy/aspectRatio> ?aspectRatio } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/legacy/aspectRatio> ?aspectRatio } "
 				+ "}");
 				while(rs.hasNext()) {
 					QuerySolution sol = rs.nextSolution();
 					label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
+					aspectRatio = sol.get("?aspectRatio") == null ? null : sol.get("?aspectRatio").toString();
 					aspectRatio = sol.get("?aspectRatio") == null ? null : sol.get("?aspectRatio").toString();
 				}
 			}

@@ -31,7 +31,7 @@ public class PersonBirthDateIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppo
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://schema.org/birthDate> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://schema.org/birthDate> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				birthDate = sol.get("?s").toString();

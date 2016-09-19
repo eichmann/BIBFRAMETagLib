@@ -37,14 +37,28 @@ public class Item extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.PolicySet.PolicySetGovernsIterator)this.getParent()).getGoverns();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Title.TitleIsTitleOfIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Title.TitleIsTitleOfIterator)this.getParent()).getIsTitleOf();
+			}
+
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Instance.InstanceHasHoldingIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Instance.InstanceHasHoldingIterator)this.getParent()).getHasHolding();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Agent.AgentHeldByInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Agent.AgentHeldByInverseIterator)this.getParent()).getHeldByInverse();
 			}
 
 			edu.uiowa.slis.BIBFRAME.PolicySet.PolicySetGovernsIterator thePolicySetGovernsIterator = (edu.uiowa.slis.BIBFRAME.PolicySet.PolicySetGovernsIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.PolicySet.PolicySetGovernsIterator.class);
 
 			if (subjectURI == null && thePolicySetGovernsIterator != null) {
 				subjectURI = thePolicySetGovernsIterator.getGoverns();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Title.TitleIsTitleOfIterator theTitleIsTitleOfIterator = (edu.uiowa.slis.BIBFRAME.Title.TitleIsTitleOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Title.TitleIsTitleOfIterator.class);
+
+			if (subjectURI == null && theTitleIsTitleOfIterator != null) {
+				subjectURI = theTitleIsTitleOfIterator.getIsTitleOf();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Instance.InstanceHasHoldingIterator theInstanceHasHoldingIterator = (edu.uiowa.slis.BIBFRAME.Instance.InstanceHasHoldingIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Instance.InstanceHasHoldingIterator.class);
@@ -56,7 +70,7 @@ public class Item extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			if (theItemIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
-				ResultSet rs = getResultSet(Prefix_1_4
+				ResultSet rs = getResultSet(prefix
 				+ " SELECT ?label  where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
 				+ "}");

@@ -31,7 +31,7 @@ public class PersonDeathDateIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppo
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://schema.org/deathDate> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://schema.org/deathDate> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				deathDate = sol.get("?s").toString();

@@ -31,7 +31,7 @@ public class ElectronicCopyrightDateIterator extends edu.uiowa.slis.BIBFRAME.Tag
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/copyrightDate> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/copyrightDate> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				copyrightDate = sol.get("?s").toString();

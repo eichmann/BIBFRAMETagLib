@@ -1,0 +1,27 @@
+package edu.uiowa.slis.BIBFRAME.Agent;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspTagException;
+
+@SuppressWarnings("serial")
+public class AgentReceivedType extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
+	static AgentReceivedType currentInstance = null;
+	private static final Log log = LogFactory.getLog(AgentReceivedType.class);
+
+	// object property
+
+	public int doStartTag() throws JspException {
+		try {
+			AgentReceivedIterator theAgentReceivedIterator = (AgentReceivedIterator)findAncestorWithClass(this, AgentReceivedIterator.class);
+			pageContext.getOut().print(theAgentReceivedIterator.getType());
+		} catch (Exception e) {
+			log.error("Can't find enclosing Agent for received tag ", e);
+			throw new JspTagException("Error: Can't find enclosing Agent for received tag ");
+		}
+		return SKIP_BODY;
+	}
+}
+

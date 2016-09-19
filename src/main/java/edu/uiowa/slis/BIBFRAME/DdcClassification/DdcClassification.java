@@ -33,7 +33,7 @@ public class DdcClassification extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			if (theDdcClassificationIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
-				ResultSet rs = getResultSet(Prefix_1_4
+				ResultSet rs = getResultSet(prefix
 				+ " SELECT ?label  where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
 				+ "}");

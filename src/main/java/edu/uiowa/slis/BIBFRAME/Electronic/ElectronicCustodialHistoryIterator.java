@@ -31,7 +31,7 @@ public class ElectronicCustodialHistoryIterator extends edu.uiowa.slis.BIBFRAME.
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/custodialHistory> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/custodialHistory> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				custodialHistory = sol.get("?s").toString();

@@ -31,7 +31,7 @@ public class CartographyCartographicEquinoxIterator extends edu.uiowa.slis.BIBFR
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicEquinox> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicEquinox> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				cartographicEquinox = sol.get("?s").toString();

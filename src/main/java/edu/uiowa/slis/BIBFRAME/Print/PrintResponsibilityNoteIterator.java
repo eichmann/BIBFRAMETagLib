@@ -31,7 +31,7 @@ public class PrintResponsibilityNoteIterator extends edu.uiowa.slis.BIBFRAME.Tag
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/responsibilityNote> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/responsibilityNote> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				responsibilityNote = sol.get("?s").toString();

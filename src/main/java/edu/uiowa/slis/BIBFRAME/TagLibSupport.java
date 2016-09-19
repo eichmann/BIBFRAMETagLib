@@ -15,12 +15,17 @@ import org.apache.jena.tdb.TDBFactory;
 public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 	static final boolean useSPARQL = false;
 	static String endpoint = "http://marengo.info-science.uiowa.edu:2021/sparql";
-	static protected String Prefix_1_4 = 
-		"PREFIX foaf: <http://xmlns.com/foaf/0.1/>"
-			+ "PREFIX bibo: <http://purl.org/ontology/bibo/>"
+	static protected String prefix = 
+		"PREFIX ld4l: <http://bib.ld4l.org/ontology/>"
+			+ "PREFIX ld4lcornell: <http://draft.ld4l.org/cornell/>"
+			+ "PREFIX madsrdf: <http://www.loc.gov/mads/rdf/v1#>"
+			+ "PREFIX oa: <http://www.w3.org/ns/oa#>"
+			+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>"
 			+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
 			+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
-			+ "PREFIX vivo: <http://vivoweb.org/ontology/core#>";
+			+ "PREFIX void: <http://rdfs.org/ns/void#>"
+			+ "PREFIX worldcat: <http://www.worldcat.org/oclc/>"
+			+ "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>";
 	static Hashtable<String, String> classNameHash = new Hashtable<String, String>();
 	static Hashtable<String, String> classLocalNameHash = new Hashtable<String, String>();
 
@@ -58,8 +63,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classNameHash.put("http://bib.ld4l.org/ontology/Serial", "Serial");
 		classNameHash.put("http://bib.ld4l.org/ontology/FiniteResource", "FiniteResource");
 		classNameHash.put("http://www.loc.gov/mads/rdf/v1#RWO", "RWO");
-		classNameHash.put("http://bib.ld4l.org/ontology/Text", "Text");
 		classNameHash.put("http://www.w3.org/2011/content#ContentAsText", "ContentAsText");
+		classNameHash.put("http://bib.ld4l.org/ontology/Text", "Text");
 		classNameHash.put("http://bib.ld4l.org/ontology/IntegratingResource", "IntegratingResource");
 		classNameHash.put("http://bib.ld4l.org/ontology/DissertationIdentifier", "DissertationIdentifier");
 		classNameHash.put("http://www.w3.org/2011/content#Content", "Content");
@@ -104,10 +109,10 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classNameHash.put("http://purl.org/spar/fabio/Newspaper", "Newspaper");
 		classNameHash.put("http://bib.ld4l.org/ontology/ContinuingResource", "ContinuingResource");
 		classNameHash.put("http://bib.ld4l.org/ontology/LcOverseasAcqNumber", "LcOverseasAcqNumber");
-		classNameHash.put("http://bib.ld4l.org/ontology/BinderTitle", "BinderTitle");
 		classNameHash.put("http://bib.ld4l.org/ontology/Barcode", "Barcode");
-		classNameHash.put("http://bib.ld4l.org/ontology/ShelfMark", "ShelfMark");
+		classNameHash.put("http://bib.ld4l.org/ontology/BinderTitle", "BinderTitle");
 		classNameHash.put("http://bib.ld4l.org/ontology/Policy", "Policy");
+		classNameHash.put("http://bib.ld4l.org/ontology/ShelfMark", "ShelfMark");
 		classNameHash.put("http://bib.ld4l.org/ontology/DistinctiveTitle", "DistinctiveTitle");
 		classNameHash.put("http://bib.ld4l.org/ontology/SpineTitle", "SpineTitle");
 		classNameHash.put("http://bib.ld4l.org/ontology/Ismn", "Ismn");
@@ -205,8 +210,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("Serial", "http://bib.ld4l.org/ontology/Serial");
 		classLocalNameHash.put("FiniteResource", "http://bib.ld4l.org/ontology/FiniteResource");
 		classLocalNameHash.put("RWO", "http://www.loc.gov/mads/rdf/v1#RWO");
-		classLocalNameHash.put("Text", "http://bib.ld4l.org/ontology/Text");
 		classLocalNameHash.put("ContentAsText", "http://www.w3.org/2011/content#ContentAsText");
+		classLocalNameHash.put("Text", "http://bib.ld4l.org/ontology/Text");
 		classLocalNameHash.put("IntegratingResource", "http://bib.ld4l.org/ontology/IntegratingResource");
 		classLocalNameHash.put("DissertationIdentifier", "http://bib.ld4l.org/ontology/DissertationIdentifier");
 		classLocalNameHash.put("Content", "http://www.w3.org/2011/content#Content");
@@ -251,10 +256,10 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("Newspaper", "http://purl.org/spar/fabio/Newspaper");
 		classLocalNameHash.put("ContinuingResource", "http://bib.ld4l.org/ontology/ContinuingResource");
 		classLocalNameHash.put("LcOverseasAcqNumber", "http://bib.ld4l.org/ontology/LcOverseasAcqNumber");
-		classLocalNameHash.put("BinderTitle", "http://bib.ld4l.org/ontology/BinderTitle");
 		classLocalNameHash.put("Barcode", "http://bib.ld4l.org/ontology/Barcode");
-		classLocalNameHash.put("ShelfMark", "http://bib.ld4l.org/ontology/ShelfMark");
+		classLocalNameHash.put("BinderTitle", "http://bib.ld4l.org/ontology/BinderTitle");
 		classLocalNameHash.put("Policy", "http://bib.ld4l.org/ontology/Policy");
+		classLocalNameHash.put("ShelfMark", "http://bib.ld4l.org/ontology/ShelfMark");
 		classLocalNameHash.put("DistinctiveTitle", "http://bib.ld4l.org/ontology/DistinctiveTitle");
 		classLocalNameHash.put("SpineTitle", "http://bib.ld4l.org/ontology/SpineTitle");
 		classLocalNameHash.put("Ismn", "http://bib.ld4l.org/ontology/Ismn");
@@ -328,7 +333,7 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 			QueryExecution theClassExecution = QueryExecutionFactory.sparqlService(endpoint, theClassQuery);
 			return theClassExecution.execSelect();
 		} else {
-			dataset = TDBFactory.createDataset("/Users/eichmann/Documents/Components/cornell");
+			dataset = TDBFactory.createDataset("/Users/eichmann/Documents/Components/stanford");
 			Query query = QueryFactory.create(queryString, Syntax.syntaxARQ);
 			QueryExecution qexec = QueryExecutionFactory.create(query, dataset);
 			return qexec.execSelect();

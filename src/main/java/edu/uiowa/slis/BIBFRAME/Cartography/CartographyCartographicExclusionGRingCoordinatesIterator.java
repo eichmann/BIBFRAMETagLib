@@ -31,7 +31,7 @@ public class CartographyCartographicExclusionGRingCoordinatesIterator extends ed
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicExclusionGRingCoordinates> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicExclusionGRingCoordinates> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				cartographicExclusionGRingCoordinates = sol.get("?s").toString();

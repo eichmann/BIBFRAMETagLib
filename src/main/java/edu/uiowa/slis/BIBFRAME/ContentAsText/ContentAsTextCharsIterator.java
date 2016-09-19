@@ -31,7 +31,7 @@ public class ContentAsTextCharsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://www.w3.org/2011/content#chars> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://www.w3.org/2011/content#chars> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				chars = sol.get("?s").toString();

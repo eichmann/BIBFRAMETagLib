@@ -21,15 +21,15 @@ public class BarcodeIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	public int doStartTag() throws JspException {
 		currentInstance = this;
 		try {
-			rs = getResultSet(Prefix_1_4+
+			rs = getResultSet(prefix+
 					" SELECT ?s ?l where { "+
-						"?s rdfs:label ?l . "+
 						"?s rdf:type <http://bib.ld4l.org/ontology/Barcode> . "+
+					"  OPTIONAL { ?s rdfs:label ?l } "+
 					"} ORDER BY ?l");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();
-				label = sol.get("?l").toString();
+				label = sol.get("?l") == null ? null : sol.get("?l").toString();
 				return EVAL_BODY_INCLUDE;
 			}
 		} catch (Exception e) {
@@ -47,7 +47,7 @@ public class BarcodeIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();
-				label = sol.get("?l").toString();
+				label = sol.get("?l") == null ? null : sol.get("?l").toString();
 				return EVAL_BODY_AGAIN;
 			}
 		} catch (Exception e) {

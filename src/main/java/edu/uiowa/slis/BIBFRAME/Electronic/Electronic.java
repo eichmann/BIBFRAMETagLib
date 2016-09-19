@@ -34,17 +34,29 @@ public class Electronic extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theElectronicIterator.getLabel();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator)this.getParent()).getIdentifies();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator theIdentifierIdentifiesIterator = (edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator.class);
+
+			if (subjectURI == null && theIdentifierIdentifiesIterator != null) {
+				subjectURI = theIdentifierIdentifiesIterator.getIdentifies();
+			}
+
 			if (theElectronicIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
-				ResultSet rs = getResultSet(Prefix_1_4
-				+ " SELECT ?label  ?aspectRatio where {"
+				ResultSet rs = getResultSet(prefix
+				+ " SELECT ?label  ?aspectRatio ?aspectRatio where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
+				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/legacy/aspectRatio> ?aspectRatio } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/legacy/aspectRatio> ?aspectRatio } "
 				+ "}");
 				while(rs.hasNext()) {
 					QuerySolution sol = rs.nextSolution();
 					label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
+					aspectRatio = sol.get("?aspectRatio") == null ? null : sol.get("?aspectRatio").toString();
 					aspectRatio = sol.get("?aspectRatio") == null ? null : sol.get("?aspectRatio").toString();
 				}
 			}

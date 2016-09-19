@@ -35,7 +35,7 @@ public class DistinctiveTitleHasPartIterator extends edu.uiowa.slis.BIBFRAME.Tag
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s ?t where {"
+			rs = getResultSet(prefix+"SELECT ?s ?t where {"
 					+" <" + subjectURI + "> <http://purl.org/dc/terms/hasPart> ?s . "
 					+" ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?t ."
 					+" FILTER NOT EXISTS {"

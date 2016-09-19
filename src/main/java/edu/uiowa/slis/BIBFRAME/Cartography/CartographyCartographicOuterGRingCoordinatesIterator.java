@@ -31,7 +31,7 @@ public class CartographyCartographicOuterGRingCoordinatesIterator extends edu.ui
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicOuterGRingCoordinates> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicOuterGRingCoordinates> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				cartographicOuterGRingCoordinates = sol.get("?s").toString();

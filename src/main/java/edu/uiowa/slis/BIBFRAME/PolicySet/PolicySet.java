@@ -37,6 +37,26 @@ public class PolicySet extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Item.ItemGovernedByIterator)this.getParent()).getGovernedBy();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Policy.PolicyHasAccessPolicyInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Policy.PolicyHasAccessPolicyInverseIterator)this.getParent()).getHasAccessPolicyInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Policy.PolicyHasReproductionPolicyInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Policy.PolicyHasReproductionPolicyInverseIterator)this.getParent()).getHasReproductionPolicyInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Policy.PolicyHasPolicyInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Policy.PolicyHasPolicyInverseIterator)this.getParent()).getHasPolicyInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Policy.PolicyHasLendingPolicyInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Policy.PolicyHasLendingPolicyInverseIterator)this.getParent()).getHasLendingPolicyInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Policy.PolicyHasRetentionPolicyInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Policy.PolicyHasRetentionPolicyInverseIterator)this.getParent()).getHasRetentionPolicyInverse();
+			}
+
 			edu.uiowa.slis.BIBFRAME.Item.ItemGovernedByIterator theItemGovernedByIterator = (edu.uiowa.slis.BIBFRAME.Item.ItemGovernedByIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Item.ItemGovernedByIterator.class);
 
 			if (subjectURI == null && theItemGovernedByIterator != null) {
@@ -46,7 +66,7 @@ public class PolicySet extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			if (thePolicySetIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
-				ResultSet rs = getResultSet(Prefix_1_4
+				ResultSet rs = getResultSet(prefix
 				+ " SELECT ?label  where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
 				+ "}");

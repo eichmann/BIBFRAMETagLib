@@ -37,8 +37,12 @@ public class AwardReceipt extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Award.AwardHasReceiptIterator)this.getParent()).getHasReceipt();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.null.nullReceivedIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.null.nullReceivedIterator)this.getParent()).getReceived();
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Work.WorkReceivedIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Work.WorkReceivedIterator)this.getParent()).getReceived();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Agent.AgentReceivedIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Agent.AgentReceivedIterator)this.getParent()).getReceived();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Award.AwardHasReceiptIterator theAwardHasReceiptIterator = (edu.uiowa.slis.BIBFRAME.Award.AwardHasReceiptIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Award.AwardHasReceiptIterator.class);
@@ -47,16 +51,22 @@ public class AwardReceipt extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = theAwardHasReceiptIterator.getHasReceipt();
 			}
 
-			edu.uiowa.slis.BIBFRAME.null.nullReceivedIterator thenullReceivedIterator = (edu.uiowa.slis.BIBFRAME.null.nullReceivedIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.null.nullReceivedIterator.class);
+			edu.uiowa.slis.BIBFRAME.Work.WorkReceivedIterator theWorkReceivedIterator = (edu.uiowa.slis.BIBFRAME.Work.WorkReceivedIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Work.WorkReceivedIterator.class);
 
-			if (subjectURI == null && thenullReceivedIterator != null) {
-				subjectURI = thenullReceivedIterator.getReceived();
+			if (subjectURI == null && theWorkReceivedIterator != null) {
+				subjectURI = theWorkReceivedIterator.getReceived();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Agent.AgentReceivedIterator theAgentReceivedIterator = (edu.uiowa.slis.BIBFRAME.Agent.AgentReceivedIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Agent.AgentReceivedIterator.class);
+
+			if (subjectURI == null && theAgentReceivedIterator != null) {
+				subjectURI = theAgentReceivedIterator.getReceived();
 			}
 
 			if (theAwardReceiptIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
-				ResultSet rs = getResultSet(Prefix_1_4
+				ResultSet rs = getResultSet(prefix
 				+ " SELECT ?label  where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
 				+ "}");

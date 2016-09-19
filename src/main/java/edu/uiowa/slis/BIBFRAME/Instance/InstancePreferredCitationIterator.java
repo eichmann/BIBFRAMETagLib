@@ -31,7 +31,7 @@ public class InstancePreferredCitationIterator extends edu.uiowa.slis.BIBFRAME.T
 				throw new JspException("subject URI generation currently not supported");
 			}
 
-			rs = getResultSet(Prefix_1_4+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/preferredCitation> ?s } ");
+			rs = getResultSet(prefix+"SELECT ?s where { <" + subjectURI + "> <http://bib.ld4l.org/ontology/preferredCitation> ?s } ");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				preferredCitation = sol.get("?s").toString();
