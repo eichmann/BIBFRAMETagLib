@@ -48,7 +48,7 @@ public class MovingImageReceivedIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 				QuerySolution sol = rs.nextSolution();
 				received = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
-				if (classFilter == null || (classFilter != null && classFilter.containsKey(type))) {
+				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + received + "	type: " + type);
 					return EVAL_BODY_INCLUDE;
 				}
@@ -69,7 +69,7 @@ public class MovingImageReceivedIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 				QuerySolution sol = rs.nextSolution();
 				received = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
-				if (classFilter == null || (classFilter != null && classFilter.containsKey(type))) {
+				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + received + "	type: " + type);
 					return EVAL_BODY_AGAIN;
 				}

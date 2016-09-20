@@ -48,7 +48,7 @@ public class WorkIsFindingAidForIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 				QuerySolution sol = rs.nextSolution();
 				isFindingAidFor = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
-				if (classFilter == null || (classFilter != null && classFilter.containsKey(type))) {
+				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isFindingAidFor + "	type: " + type);
 					return EVAL_BODY_INCLUDE;
 				}
@@ -69,7 +69,7 @@ public class WorkIsFindingAidForIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 				QuerySolution sol = rs.nextSolution();
 				isFindingAidFor = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
-				if (classFilter == null || (classFilter != null && classFilter.containsKey(type))) {
+				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isFindingAidFor + "	type: " + type);
 					return EVAL_BODY_AGAIN;
 				}

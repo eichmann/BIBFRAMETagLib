@@ -48,7 +48,7 @@ public class AudioPerformedAtIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 				QuerySolution sol = rs.nextSolution();
 				performedAt = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
-				if (classFilter == null || (classFilter != null && classFilter.containsKey(type))) {
+				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + performedAt + "	type: " + type);
 					return EVAL_BODY_INCLUDE;
 				}
@@ -69,7 +69,7 @@ public class AudioPerformedAtIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 				QuerySolution sol = rs.nextSolution();
 				performedAt = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
-				if (classFilter == null || (classFilter != null && classFilter.containsKey(type))) {
+				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + performedAt + "	type: " + type);
 					return EVAL_BODY_AGAIN;
 				}

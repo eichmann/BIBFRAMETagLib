@@ -48,7 +48,7 @@ public class AudioPrecedesIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport
 				QuerySolution sol = rs.nextSolution();
 				precedes = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
-				if (classFilter == null || (classFilter != null && classFilter.containsKey(type))) {
+				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + precedes + "	type: " + type);
 					return EVAL_BODY_INCLUDE;
 				}
@@ -69,7 +69,7 @@ public class AudioPrecedesIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport
 				QuerySolution sol = rs.nextSolution();
 				precedes = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
-				if (classFilter == null || (classFilter != null && classFilter.containsKey(type))) {
+				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + precedes + "	type: " + type);
 					return EVAL_BODY_AGAIN;
 				}
