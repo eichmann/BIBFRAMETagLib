@@ -388,15 +388,13 @@ public class Instance extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
 				ResultSet rs = getResultSet(prefix
-				+ " SELECT ?label  ?aspectRatio ?aspectRatio where {"
+				+ " SELECT ?label  ?aspectRatio where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
-				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/legacy/aspectRatio> ?aspectRatio } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/legacy/aspectRatio> ?aspectRatio } "
 				+ "}");
 				while(rs.hasNext()) {
 					QuerySolution sol = rs.nextSolution();
 					label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
-					aspectRatio = sol.get("?aspectRatio") == null ? null : sol.get("?aspectRatio").toString();
 					aspectRatio = sol.get("?aspectRatio") == null ? null : sol.get("?aspectRatio").toString();
 				}
 			}

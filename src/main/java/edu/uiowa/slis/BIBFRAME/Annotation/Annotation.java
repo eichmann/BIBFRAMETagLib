@@ -162,15 +162,13 @@ public class Annotation extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
 				ResultSet rs = getResultSet(prefix
-				+ " SELECT ?label  ?annotatedAt ?annotatedAt where {"
+				+ " SELECT ?label  ?annotatedAt where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
-				+ "  OPTIONAL { <" + subjectURI + "> <http://www.w3.org/ns/oa#annotatedAt> ?annotatedAt } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://www.w3.org/ns/oa#annotatedAt> ?annotatedAt } "
 				+ "}");
 				while(rs.hasNext()) {
 					QuerySolution sol = rs.nextSolution();
 					label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
-					annotatedAt = sol.get("?annotatedAt") == null ? null : sol.get("?annotatedAt").toString();
 					annotatedAt = sol.get("?annotatedAt") == null ? null : sol.get("?annotatedAt").toString();
 				}
 			}

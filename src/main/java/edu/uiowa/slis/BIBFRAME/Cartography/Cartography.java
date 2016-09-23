@@ -186,31 +186,21 @@ public class Cartography extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
 				ResultSet rs = getResultSet(prefix
-				+ " SELECT ?label  ?cartographicEasternmostLongitude ?cartographicEasternmostLongitude ?cartographicWesternmostLongitude ?cartographicWesternmostLongitude ?cartographicZone ?cartographicZone ?cartographicNorthernmostLatitude ?cartographicNorthernmostLatitude ?cartographicSouthernmostLatitude ?cartographicSouthernmostLatitude where {"
+				+ " SELECT ?label  ?cartographicEasternmostLongitude ?cartographicWesternmostLongitude ?cartographicZone ?cartographicNorthernmostLatitude ?cartographicSouthernmostLatitude where {"
 				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicEasternmostLongitude> ?cartographicEasternmostLongitude } "
-				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicEasternmostLongitude> ?cartographicEasternmostLongitude } "
-				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicWesternmostLongitude> ?cartographicWesternmostLongitude } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicWesternmostLongitude> ?cartographicWesternmostLongitude } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicZone> ?cartographicZone } "
-				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicZone> ?cartographicZone } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicNorthernmostLatitude> ?cartographicNorthernmostLatitude } "
-				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicNorthernmostLatitude> ?cartographicNorthernmostLatitude } "
-				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicSouthernmostLatitude> ?cartographicSouthernmostLatitude } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://bib.ld4l.org/ontology/cartographicSouthernmostLatitude> ?cartographicSouthernmostLatitude } "
 				+ "}");
 				while(rs.hasNext()) {
 					QuerySolution sol = rs.nextSolution();
 					label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
 					cartographicEasternmostLongitude = sol.get("?cartographicEasternmostLongitude") == null ? null : sol.get("?cartographicEasternmostLongitude").toString();
-					cartographicEasternmostLongitude = sol.get("?cartographicEasternmostLongitude") == null ? null : sol.get("?cartographicEasternmostLongitude").toString();
-					cartographicWesternmostLongitude = sol.get("?cartographicWesternmostLongitude") == null ? null : sol.get("?cartographicWesternmostLongitude").toString();
 					cartographicWesternmostLongitude = sol.get("?cartographicWesternmostLongitude") == null ? null : sol.get("?cartographicWesternmostLongitude").toString();
 					cartographicZone = sol.get("?cartographicZone") == null ? null : sol.get("?cartographicZone").toString();
-					cartographicZone = sol.get("?cartographicZone") == null ? null : sol.get("?cartographicZone").toString();
 					cartographicNorthernmostLatitude = sol.get("?cartographicNorthernmostLatitude") == null ? null : sol.get("?cartographicNorthernmostLatitude").toString();
-					cartographicNorthernmostLatitude = sol.get("?cartographicNorthernmostLatitude") == null ? null : sol.get("?cartographicNorthernmostLatitude").toString();
-					cartographicSouthernmostLatitude = sol.get("?cartographicSouthernmostLatitude") == null ? null : sol.get("?cartographicSouthernmostLatitude").toString();
 					cartographicSouthernmostLatitude = sol.get("?cartographicSouthernmostLatitude") == null ? null : sol.get("?cartographicSouthernmostLatitude").toString();
 				}
 			}
