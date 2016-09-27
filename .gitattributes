@@ -6195,5 +6195,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/utility/SPARQLPredicate.java -text
 src/main/resources/META-INF/taglib.tld -text svneol=unset#application/xml
 src/non-packaged-resources/Model.clay -text svneol=unset#application/xml
 src/non-packaged-resources/ld4l.rdf -text
+src/non-packaged-resources/ontology.statistics -text
 src/test/java/edu/uiowa/slis/VIVOISF/README.txt -text
 src/test/resources/README.txt -text
