@@ -48,6 +48,8 @@ public class MultimediaIsExpressionOfIterator extends edu.uiowa.slis.BIBFRAME.Ta
 				QuerySolution sol = rs.nextSolution();
 				isExpressionOf = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isExpressionOf + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

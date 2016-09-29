@@ -48,6 +48,8 @@ public class DistinctiveTitleHasSourceStatusIterator extends edu.uiowa.slis.BIBF
 				QuerySolution sol = rs.nextSolution();
 				hasSourceStatus = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasSourceStatus + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

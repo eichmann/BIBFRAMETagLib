@@ -48,6 +48,8 @@ public class LinguisticSystemLanguageInverseIterator extends edu.uiowa.slis.BIBF
 				QuerySolution sol = rs.nextSolution();
 				languageInverse = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + languageInverse + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

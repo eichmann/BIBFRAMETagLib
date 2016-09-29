@@ -10905,6 +10905,84 @@
 	</tag>
 
 	<tag>
+		<name>MatrixNumber</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumber</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMatrixNumber</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIterator</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+
+	<tag>
+		<name>MatrixNumberSubjectURI</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberSubjectURI</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MatrixNumberLabel</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberLabel</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMatrixNumberIdentifiesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifiesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MatrixNumberIdentifies</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifies</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifies</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MatrixNumberIdentifiesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifiesType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
 		<name>Manuscript</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Manuscript.Manuscript</tag-class>
 		<body-content>JSP</body-content>
@@ -11139,84 +11217,6 @@
 
 		<attribute>
 			<name>dimensions</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MatrixNumber</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumber</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMatrixNumber</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<tag>
-		<name>MatrixNumberSubjectURI</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberSubjectURI</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MatrixNumberLabel</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberLabel</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>label</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMatrixNumberIdentifiesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifiesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MatrixNumberIdentifies</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifies</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifies</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MatrixNumberIdentifiesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifiesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -23619,102 +23619,6 @@
 	</tag>
 
 	<tag>
-		<name>ContentAsText</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsText</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachContentAsText</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<tag>
-		<name>ContentAsTextSubjectURI</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextSubjectURI</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>ContentAsTextLabel</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextLabel</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>label</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachContentAsTextIsBodyOfIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>ContentAsTextIsBodyOf</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOf</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>isBodyOf</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>ContentAsTextIsBodyOfType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachContentAsTextCharsIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextCharsIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<tag>
-		<name>ContentAsTextChars</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextChars</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>chars</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>Text</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Text.Text</tag-class>
 		<body-content>JSP</body-content>
@@ -26073,6 +25977,102 @@
 
 		<attribute>
 			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>ContentAsText</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsText</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachContentAsText</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIterator</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+
+	<tag>
+		<name>ContentAsTextSubjectURI</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextSubjectURI</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>ContentAsTextLabel</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextLabel</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachContentAsTextIsBodyOfIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>ContentAsTextIsBodyOf</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOf</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>isBodyOf</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>ContentAsTextIsBodyOfType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachContentAsTextCharsIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextCharsIterator</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+
+	<tag>
+		<name>ContentAsTextChars</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextChars</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>chars</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -29049,366 +29049,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachMultipartMonographIsPartOfIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsPartOfIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographIsPartOf</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsPartOf</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>isPartOf</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographIsPartOfType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsPartOfType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographIdentifiedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIdentifiedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographIdentifiedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIdentifiedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifiedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographIdentifiedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIdentifiedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographPrecedesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographPrecedesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographPrecedes</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographPrecedes</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>precedes</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographPrecedesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographPrecedesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographFollowsIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographFollowsIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographFollows</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographFollows</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>follows</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographFollowsType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographFollowsType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographSubjectIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographSubjectIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographSubject</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographSubject</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subject</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographSubjectType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographSubjectType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographHasAnnotationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasAnnotationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographHasAnnotation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasAnnotation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasAnnotation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographHasAnnotationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasAnnotationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographIsSubjectOfIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsSubjectOfIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographIsSubjectOf</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsSubjectOf</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>isSubjectOf</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographIsSubjectOfType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsSubjectOfType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographLanguageIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographLanguageIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographLanguage</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographLanguage</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>language</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographLanguageType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographLanguageType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultipartMonographHasPartIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasPartIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographHasPart</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasPart</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasPart</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultipartMonographHasPartType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasPartType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachMultipartMonographPerformedAtIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographPerformedAtIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -31083,8 +30723,8 @@
 	</tag>
 
 	<tag>
-		<name>foreachMultipartMonographRelationInverseIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationInverseIterator</tag-class>
+		<name>foreachMultipartMonographIsPartOfIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsPartOfIterator</tag-class>
 		<body-content>JSP</body-content>
 
 		<attribute>
@@ -31095,8 +30735,260 @@
 	</tag>
 
 	<tag>
-		<name>MultipartMonographRelationInverse</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationInverse</tag-class>
+		<name>MultipartMonographIsPartOf</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsPartOf</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>isPartOf</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographIsPartOfType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsPartOfType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographIdentifiedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIdentifiedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographIdentifiedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIdentifiedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifiedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographIdentifiedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIdentifiedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographPrecedesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographPrecedesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographPrecedes</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographPrecedes</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>precedes</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographPrecedesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographPrecedesType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographFollowsIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographFollowsIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographFollows</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographFollows</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>follows</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographFollowsType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographFollowsType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographSubjectIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographSubjectIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographSubject</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographSubject</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subject</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographSubjectType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographSubjectType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographHasAnnotationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasAnnotationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographHasAnnotation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasAnnotation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasAnnotation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographHasAnnotationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasAnnotationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographIsSubjectOfIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsSubjectOfIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographIsSubjectOf</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsSubjectOf</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>isSubjectOf</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographIsSubjectOfType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographIsSubjectOfType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographRelationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographRelation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelation</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -31107,8 +30999,80 @@
 	</tag>
 
 	<tag>
-		<name>MultipartMonographRelationInverseType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationInverseType</tag-class>
+		<name>MultipartMonographRelationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographLanguageIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographLanguageIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographLanguage</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographLanguage</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>language</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographLanguageType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographLanguageType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographHasPartIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasPartIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographHasPart</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasPart</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasPart</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographHasPartType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasPartType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -31325,6 +31289,42 @@
 	<tag>
 		<name>MultipartMonographHasOriginalVersionInverseType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographHasOriginalVersionInverseType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMultipartMonographRelationInverseIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationInverseIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographRelationInverse</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationInverse</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>relation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MultipartMonographRelationInverseType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MultipartMonograph.MultipartMonographRelationInverseType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -38583,330 +38583,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachMagazineIdentifiedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineIdentifiedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineIdentifiedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineIdentifiedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifiedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineIdentifiedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineIdentifiedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMagazinePrecedesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazinePrecedesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazinePrecedes</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazinePrecedes</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>precedes</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazinePrecedesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazinePrecedesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMagazineHasFirstIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasFirstIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineHasFirst</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasFirst</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasFirst</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineHasFirstType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasFirstType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMagazineSubjectIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineSubjectIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineSubject</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineSubject</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subject</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineSubjectType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineSubjectType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMagazineHasAnnotationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasAnnotationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineHasAnnotation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasAnnotation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasAnnotation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineHasAnnotationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasAnnotationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMagazineHasLastIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasLastIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineHasLast</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasLast</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasLast</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineHasLastType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasLastType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMagazineRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineRelationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMagazineLanguageIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineLanguageIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineLanguage</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineLanguage</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>language</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineLanguageType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineLanguageType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMagazineAccompaniedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineAccompaniedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineAccompaniedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineAccompaniedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>accompaniedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MagazineAccompaniedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineAccompaniedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachMagazinePerformedAtIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazinePerformedAtIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -40581,6 +40257,330 @@
 	</tag>
 
 	<tag>
+		<name>foreachMagazineIdentifiedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineIdentifiedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineIdentifiedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineIdentifiedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifiedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineIdentifiedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineIdentifiedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMagazinePrecedesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazinePrecedesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazinePrecedes</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazinePrecedes</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>precedes</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazinePrecedesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazinePrecedesType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMagazineHasFirstIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasFirstIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineHasFirst</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasFirst</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasFirst</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineHasFirstType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasFirstType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMagazineSubjectIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineSubjectIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineSubject</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineSubject</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subject</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineSubjectType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineSubjectType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMagazineHasAnnotationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasAnnotationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineHasAnnotation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasAnnotation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasAnnotation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineHasAnnotationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasAnnotationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMagazineHasLastIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasLastIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineHasLast</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasLast</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasLast</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineHasLastType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineHasLastType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMagazineRelationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineRelationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineRelation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineRelation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>relation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineRelationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineRelationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMagazineLanguageIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineLanguageIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineLanguage</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineLanguage</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>language</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineLanguageType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineLanguageType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMagazineAccompaniedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineAccompaniedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineAccompaniedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineAccompaniedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>accompaniedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MagazineAccompaniedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineAccompaniedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
 		<name>foreachMagazineFollowsInNarrativeInverseIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Magazine.MagazineFollowsInNarrativeInverseIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -41853,330 +41853,6 @@
 
 		<attribute>
 			<name>label</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperIdentifiedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperIdentifiedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperIdentifiedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperIdentifiedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifiedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperIdentifiedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperIdentifiedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperPrecedesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperPrecedesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperPrecedes</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperPrecedes</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>precedes</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperPrecedesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperPrecedesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperHasFirstIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasFirstIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperHasFirst</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasFirst</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasFirst</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperHasFirstType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasFirstType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperSubjectIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperSubjectIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperSubject</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperSubject</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subject</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperSubjectType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperSubjectType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperHasAnnotationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasAnnotationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperHasAnnotation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasAnnotation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasAnnotation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperHasAnnotationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasAnnotationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperHasLastIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasLastIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperHasLast</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasLast</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasLast</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperHasLastType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasLastType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperRelationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperLanguageIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperLanguageIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperLanguage</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperLanguage</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>language</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperLanguageType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperLanguageType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNewspaperAccompaniedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperAccompaniedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperAccompaniedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperAccompaniedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>accompaniedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NewspaperAccompaniedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperAccompaniedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -43851,6 +43527,330 @@
 
 		<attribute>
 			<name>geographicCoverageNote</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperIdentifiedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperIdentifiedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperIdentifiedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperIdentifiedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifiedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperIdentifiedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperIdentifiedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperPrecedesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperPrecedesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperPrecedes</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperPrecedes</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>precedes</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperPrecedesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperPrecedesType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperHasFirstIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasFirstIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperHasFirst</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasFirst</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasFirst</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperHasFirstType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasFirstType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperSubjectIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperSubjectIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperSubject</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperSubject</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subject</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperSubjectType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperSubjectType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperHasAnnotationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasAnnotationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperHasAnnotation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasAnnotation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasAnnotation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperHasAnnotationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasAnnotationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperHasLastIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasLastIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperHasLast</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasLast</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasLast</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperHasLastType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperHasLastType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperRelationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperRelationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperRelation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperRelation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>relation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperRelationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperRelationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperLanguageIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperLanguageIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperLanguage</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperLanguage</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>language</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperLanguageType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperLanguageType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachNewspaperAccompaniedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperAccompaniedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperAccompaniedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperAccompaniedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>accompaniedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>NewspaperAccompaniedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Newspaper.NewspaperAccompaniedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -56553,330 +56553,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachPeriodicalIdentifiedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalIdentifiedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalIdentifiedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalIdentifiedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifiedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalIdentifiedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalIdentifiedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPeriodicalPrecedesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalPrecedesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalPrecedes</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalPrecedes</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>precedes</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalPrecedesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalPrecedesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPeriodicalHasFirstIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasFirstIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalHasFirst</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasFirst</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasFirst</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalHasFirstType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasFirstType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPeriodicalSubjectIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalSubjectIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalSubject</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalSubject</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subject</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalSubjectType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalSubjectType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPeriodicalHasAnnotationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasAnnotationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalHasAnnotation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasAnnotation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasAnnotation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalHasAnnotationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasAnnotationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPeriodicalHasLastIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasLastIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalHasLast</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasLast</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasLast</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalHasLastType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasLastType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPeriodicalRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalRelationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPeriodicalLanguageIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalLanguageIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalLanguage</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalLanguage</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>language</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalLanguageType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalLanguageType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPeriodicalAccompaniedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalAccompaniedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalAccompaniedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalAccompaniedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>accompaniedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PeriodicalAccompaniedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalAccompaniedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachPeriodicalPerformedAtIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalPerformedAtIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -58551,6 +58227,330 @@
 	</tag>
 
 	<tag>
+		<name>foreachPeriodicalIdentifiedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalIdentifiedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalIdentifiedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalIdentifiedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifiedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalIdentifiedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalIdentifiedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPeriodicalPrecedesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalPrecedesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalPrecedes</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalPrecedes</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>precedes</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalPrecedesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalPrecedesType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPeriodicalHasFirstIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasFirstIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalHasFirst</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasFirst</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasFirst</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalHasFirstType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasFirstType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPeriodicalSubjectIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalSubjectIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalSubject</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalSubject</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subject</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalSubjectType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalSubjectType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPeriodicalHasAnnotationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasAnnotationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalHasAnnotation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasAnnotation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasAnnotation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalHasAnnotationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasAnnotationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPeriodicalHasLastIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasLastIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalHasLast</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasLast</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasLast</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalHasLastType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalHasLastType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPeriodicalRelationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalRelationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalRelation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalRelation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>relation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalRelationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalRelationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPeriodicalLanguageIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalLanguageIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalLanguage</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalLanguage</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>language</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalLanguageType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalLanguageType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPeriodicalAccompaniedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalAccompaniedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalAccompaniedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalAccompaniedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>accompaniedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>PeriodicalAccompaniedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalAccompaniedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
 		<name>foreachPeriodicalFollowsInNarrativeInverseIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Periodical.PeriodicalFollowsInNarrativeInverseIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -59349,6 +59349,42 @@
 	</tag>
 
 	<tag>
+		<name>foreachGovernmentOrganizationIsSubjectOfIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationIsSubjectOfIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>GovernmentOrganizationIsSubjectOf</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationIsSubjectOf</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>isSubjectOf</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>GovernmentOrganizationIsSubjectOfType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationIsSubjectOfType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
 		<name>foreachGovernmentOrganizationReceivedIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationReceivedIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -59421,8 +59457,8 @@
 	</tag>
 
 	<tag>
-		<name>foreachGovernmentOrganizationIsSubjectOfIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationIsSubjectOfIterator</tag-class>
+		<name>foreachGovernmentOrganizationAgentInverseIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationAgentInverseIterator</tag-class>
 		<body-content>JSP</body-content>
 
 		<attribute>
@@ -59433,20 +59469,20 @@
 	</tag>
 
 	<tag>
-		<name>GovernmentOrganizationIsSubjectOf</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationIsSubjectOf</tag-class>
+		<name>GovernmentOrganizationAgentInverse</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationAgentInverse</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
-			<name>isSubjectOf</name>
+			<name>agent</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
 
 	<tag>
-		<name>GovernmentOrganizationIsSubjectOfType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationIsSubjectOfType</tag-class>
+		<name>GovernmentOrganizationAgentInverseType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationAgentInverseType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -59483,42 +59519,6 @@
 	<tag>
 		<name>GovernmentOrganizationHeldByInverseType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationHeldByInverseType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachGovernmentOrganizationAgentInverseIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationAgentInverseIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>GovernmentOrganizationAgentInverse</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationAgentInverse</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>agent</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>GovernmentOrganizationAgentInverseType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.GovernmentOrganization.GovernmentOrganizationAgentInverseType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -64659,330 +64659,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachSeriesIdentifiedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesIdentifiedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesIdentifiedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesIdentifiedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifiedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesIdentifiedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesIdentifiedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSeriesPrecedesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesPrecedesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesPrecedes</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesPrecedes</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>precedes</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesPrecedesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesPrecedesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSeriesHasFirstIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasFirstIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesHasFirst</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasFirst</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasFirst</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesHasFirstType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasFirstType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSeriesSubjectIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesSubjectIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesSubject</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesSubject</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subject</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesSubjectType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesSubjectType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSeriesHasAnnotationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasAnnotationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesHasAnnotation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasAnnotation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasAnnotation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesHasAnnotationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasAnnotationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSeriesHasLastIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasLastIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesHasLast</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasLast</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasLast</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesHasLastType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasLastType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSeriesRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesRelationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSeriesLanguageIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesLanguageIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesLanguage</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesLanguage</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>language</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesLanguageType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesLanguageType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSeriesAccompaniedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesAccompaniedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesAccompaniedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesAccompaniedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>accompaniedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>SeriesAccompaniedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesAccompaniedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachSeriesPerformedAtIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesPerformedAtIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -66651,6 +66327,330 @@
 
 		<attribute>
 			<name>geographicCoverageNote</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesIdentifiedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesIdentifiedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesIdentifiedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesIdentifiedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifiedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesIdentifiedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesIdentifiedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesPrecedesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesPrecedesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesPrecedes</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesPrecedes</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>precedes</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesPrecedesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesPrecedesType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesHasFirstIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasFirstIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesHasFirst</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasFirst</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasFirst</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesHasFirstType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasFirstType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesSubjectIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesSubjectIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesSubject</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesSubject</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subject</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesSubjectType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesSubjectType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesHasAnnotationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasAnnotationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesHasAnnotation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasAnnotation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasAnnotation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesHasAnnotationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasAnnotationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesHasLastIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasLastIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesHasLast</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasLast</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasLast</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesHasLastType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesHasLastType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesRelationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesRelationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesRelation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesRelation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>relation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesRelationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesRelationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesLanguageIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesLanguageIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesLanguage</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesLanguage</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>language</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesLanguageType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesLanguageType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSeriesAccompaniedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesAccompaniedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesAccompaniedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesAccompaniedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>accompaniedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>SeriesAccompaniedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Series.SeriesAccompaniedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -69687,330 +69687,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachJournalIdentifiedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalIdentifiedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalIdentifiedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalIdentifiedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifiedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalIdentifiedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalIdentifiedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachJournalPrecedesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalPrecedesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalPrecedes</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalPrecedes</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>precedes</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalPrecedesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalPrecedesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachJournalHasFirstIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasFirstIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalHasFirst</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasFirst</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasFirst</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalHasFirstType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasFirstType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachJournalSubjectIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalSubjectIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalSubject</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalSubject</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subject</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalSubjectType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalSubjectType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachJournalHasAnnotationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasAnnotationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalHasAnnotation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasAnnotation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasAnnotation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalHasAnnotationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasAnnotationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachJournalHasLastIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasLastIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalHasLast</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasLast</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasLast</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalHasLastType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasLastType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachJournalRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalRelationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachJournalLanguageIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalLanguageIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalLanguage</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalLanguage</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>language</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalLanguageType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalLanguageType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachJournalAccompaniedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalAccompaniedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalAccompaniedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalAccompaniedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>accompaniedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>JournalAccompaniedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalAccompaniedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachJournalPerformedAtIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalPerformedAtIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -71679,6 +71355,330 @@
 
 		<attribute>
 			<name>geographicCoverageNote</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalIdentifiedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalIdentifiedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalIdentifiedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalIdentifiedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifiedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalIdentifiedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalIdentifiedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalPrecedesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalPrecedesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalPrecedes</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalPrecedes</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>precedes</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalPrecedesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalPrecedesType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalHasFirstIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasFirstIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalHasFirst</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasFirst</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasFirst</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalHasFirstType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasFirstType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalSubjectIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalSubjectIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalSubject</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalSubject</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subject</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalSubjectType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalSubjectType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalHasAnnotationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasAnnotationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalHasAnnotation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasAnnotation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasAnnotation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalHasAnnotationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasAnnotationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalHasLastIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasLastIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalHasLast</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasLast</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasLast</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalHasLastType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalHasLastType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalRelationIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalRelationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalRelation</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalRelation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>relation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalRelationType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalRelationType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalLanguageIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalLanguageIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalLanguage</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalLanguage</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>language</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalLanguageType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalLanguageType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachJournalAccompaniedByIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalAccompaniedByIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalAccompaniedBy</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalAccompaniedBy</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>accompaniedBy</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>JournalAccompaniedByType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Journal.JournalAccompaniedByType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>

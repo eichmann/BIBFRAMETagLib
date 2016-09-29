@@ -24,7 +24,7 @@ public class IdentifierIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			rs = getResultSet(prefix+
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://bib.ld4l.org/ontology/Identifier> . "+
-					"  OPTIONAL { ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> ?l } "+
+					"  OPTIONAL { ?s rdfs:label ?l } "+
 					"} ORDER BY ?l");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();

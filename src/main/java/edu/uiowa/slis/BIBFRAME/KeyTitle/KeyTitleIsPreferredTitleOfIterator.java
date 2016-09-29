@@ -48,6 +48,8 @@ public class KeyTitleIsPreferredTitleOfIterator extends edu.uiowa.slis.BIBFRAME.
 				QuerySolution sol = rs.nextSolution();
 				isPreferredTitleOf = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isPreferredTitleOf + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

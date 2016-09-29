@@ -48,6 +48,8 @@ public class ConferenceAtLocationIterator extends edu.uiowa.slis.BIBFRAME.TagLib
 				QuerySolution sol = rs.nextSolution();
 				atLocation = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + atLocation + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

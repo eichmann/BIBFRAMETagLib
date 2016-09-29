@@ -49,8 +49,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classNameHash.put("http://bib.ld4l.org/ontology/AwardReceipt", "AwardReceipt");
 		classNameHash.put("http://bib.ld4l.org/ontology/ContainerTitle", "ContainerTitle");
 		classNameHash.put("http://bib.ld4l.org/ontology/ThreeDimensionalObject", "ThreeDimensionalObject");
-		classNameHash.put("http://bib.ld4l.org/ontology/Manuscript", "Manuscript");
 		classNameHash.put("http://bib.ld4l.org/ontology/MatrixNumber", "MatrixNumber");
+		classNameHash.put("http://bib.ld4l.org/ontology/Manuscript", "Manuscript");
 		classNameHash.put("http://bib.ld4l.org/ontology/IssueNumber", "IssueNumber");
 		classNameHash.put("http://bib.ld4l.org/ontology/NotatedMovement", "NotatedMovement");
 		classNameHash.put("http://bib.ld4l.org/ontology/ConciseTitle", "ConciseTitle");
@@ -63,8 +63,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classNameHash.put("http://bib.ld4l.org/ontology/Serial", "Serial");
 		classNameHash.put("http://bib.ld4l.org/ontology/FiniteResource", "FiniteResource");
 		classNameHash.put("http://www.loc.gov/mads/rdf/v1#RWO", "RWO");
-		classNameHash.put("http://www.w3.org/2011/content#ContentAsText", "ContentAsText");
 		classNameHash.put("http://bib.ld4l.org/ontology/Text", "Text");
+		classNameHash.put("http://www.w3.org/2011/content#ContentAsText", "ContentAsText");
 		classNameHash.put("http://bib.ld4l.org/ontology/IntegratingResource", "IntegratingResource");
 		classNameHash.put("http://bib.ld4l.org/ontology/DissertationIdentifier", "DissertationIdentifier");
 		classNameHash.put("http://www.w3.org/2011/content#Content", "Content");
@@ -196,8 +196,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("AwardReceipt", "http://bib.ld4l.org/ontology/AwardReceipt");
 		classLocalNameHash.put("ContainerTitle", "http://bib.ld4l.org/ontology/ContainerTitle");
 		classLocalNameHash.put("ThreeDimensionalObject", "http://bib.ld4l.org/ontology/ThreeDimensionalObject");
-		classLocalNameHash.put("Manuscript", "http://bib.ld4l.org/ontology/Manuscript");
 		classLocalNameHash.put("MatrixNumber", "http://bib.ld4l.org/ontology/MatrixNumber");
+		classLocalNameHash.put("Manuscript", "http://bib.ld4l.org/ontology/Manuscript");
 		classLocalNameHash.put("IssueNumber", "http://bib.ld4l.org/ontology/IssueNumber");
 		classLocalNameHash.put("NotatedMovement", "http://bib.ld4l.org/ontology/NotatedMovement");
 		classLocalNameHash.put("ConciseTitle", "http://bib.ld4l.org/ontology/ConciseTitle");
@@ -210,8 +210,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("Serial", "http://bib.ld4l.org/ontology/Serial");
 		classLocalNameHash.put("FiniteResource", "http://bib.ld4l.org/ontology/FiniteResource");
 		classLocalNameHash.put("RWO", "http://www.loc.gov/mads/rdf/v1#RWO");
-		classLocalNameHash.put("ContentAsText", "http://www.w3.org/2011/content#ContentAsText");
 		classLocalNameHash.put("Text", "http://bib.ld4l.org/ontology/Text");
+		classLocalNameHash.put("ContentAsText", "http://www.w3.org/2011/content#ContentAsText");
 		classLocalNameHash.put("IntegratingResource", "http://bib.ld4l.org/ontology/IntegratingResource");
 		classLocalNameHash.put("DissertationIdentifier", "http://bib.ld4l.org/ontology/DissertationIdentifier");
 		classLocalNameHash.put("Content", "http://www.w3.org/2011/content#Content");

@@ -48,6 +48,8 @@ public class GovernmentOrganizationIsAnnotatorOfIterator extends edu.uiowa.slis.
 				QuerySolution sol = rs.nextSolution();
 				isAnnotatorOf = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isAnnotatorOf + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

@@ -48,6 +48,8 @@ public class MultipartMonographIdentifiedByIterator extends edu.uiowa.slis.BIBFR
 				QuerySolution sol = rs.nextSolution();
 				identifiedBy = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + identifiedBy + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

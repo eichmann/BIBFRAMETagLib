@@ -48,6 +48,8 @@ public class CreatorContributionAgentIterator extends edu.uiowa.slis.BIBFRAME.Ta
 				QuerySolution sol = rs.nextSolution();
 				agent = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + agent + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

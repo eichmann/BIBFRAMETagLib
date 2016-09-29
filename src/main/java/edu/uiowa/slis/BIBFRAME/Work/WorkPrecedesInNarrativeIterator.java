@@ -48,6 +48,8 @@ public class WorkPrecedesInNarrativeIterator extends edu.uiowa.slis.BIBFRAME.Tag
 				QuerySolution sol = rs.nextSolution();
 				precedesInNarrative = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + precedesInNarrative + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

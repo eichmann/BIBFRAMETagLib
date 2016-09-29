@@ -48,6 +48,8 @@ public class AuthorityIdentifiesRWOIterator extends edu.uiowa.slis.BIBFRAME.TagL
 				QuerySolution sol = rs.nextSolution();
 				identifiesRWO = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + identifiesRWO + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

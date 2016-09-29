@@ -24,7 +24,7 @@ public class PersonIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			rs = getResultSet(prefix+
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://xmlns.com/foaf/0.1/Person> . "+
-					"  OPTIONAL { ?s <http://xmlns.com/foaf/0.1/name> ?l } "+
+					"  OPTIONAL { ?s rdfs:label ?l } "+
 					"} ORDER BY ?l");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();

@@ -48,6 +48,8 @@ public class AudioDerivedFromIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 				QuerySolution sol = rs.nextSolution();
 				derivedFrom = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + derivedFrom + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

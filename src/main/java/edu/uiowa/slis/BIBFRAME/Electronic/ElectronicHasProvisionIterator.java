@@ -48,6 +48,8 @@ public class ElectronicHasProvisionIterator extends edu.uiowa.slis.BIBFRAME.TagL
 				QuerySolution sol = rs.nextSolution();
 				hasProvision = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasProvision + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

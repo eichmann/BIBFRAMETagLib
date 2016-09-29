@@ -48,6 +48,8 @@ public class NotatedMusicPrecedesIterator extends edu.uiowa.slis.BIBFRAME.TagLib
 				QuerySolution sol = rs.nextSolution();
 				precedes = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + precedes + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

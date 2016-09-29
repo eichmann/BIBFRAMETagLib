@@ -48,6 +48,8 @@ public class ContinuingResourceRelationInverseIterator extends edu.uiowa.slis.BI
 				QuerySolution sol = rs.nextSolution();
 				relationInverse = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + relationInverse + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

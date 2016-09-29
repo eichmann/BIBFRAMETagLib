@@ -48,6 +48,8 @@ public class PrintHasTableOfContentsIterator extends edu.uiowa.slis.BIBFRAME.Tag
 				QuerySolution sol = rs.nextSolution();
 				hasTableOfContents = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasTableOfContents + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

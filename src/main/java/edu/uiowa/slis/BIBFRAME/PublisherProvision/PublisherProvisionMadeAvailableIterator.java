@@ -48,6 +48,8 @@ public class PublisherProvisionMadeAvailableIterator extends edu.uiowa.slis.BIBF
 				QuerySolution sol = rs.nextSolution();
 				madeAvailable = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + madeAvailable + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

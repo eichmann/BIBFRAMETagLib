@@ -48,6 +48,8 @@ public class FiniteResourceHasOriginalVersionIterator extends edu.uiowa.slis.BIB
 				QuerySolution sol = rs.nextSolution();
 				hasOriginalVersion = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasOriginalVersion + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

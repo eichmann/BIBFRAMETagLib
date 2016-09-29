@@ -48,6 +48,8 @@ public class AnnotationAnnotatedByIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 				QuerySolution sol = rs.nextSolution();
 				annotatedBy = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + annotatedBy + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

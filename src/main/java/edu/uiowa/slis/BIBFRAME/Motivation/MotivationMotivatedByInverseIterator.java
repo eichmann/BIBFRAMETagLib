@@ -48,6 +48,8 @@ public class MotivationMotivatedByInverseIterator extends edu.uiowa.slis.BIBFRAM
 				QuerySolution sol = rs.nextSolution();
 				motivatedByInverse = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + motivatedByInverse + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

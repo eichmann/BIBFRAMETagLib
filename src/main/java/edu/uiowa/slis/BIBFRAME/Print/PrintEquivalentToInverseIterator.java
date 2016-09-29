@@ -48,6 +48,8 @@ public class PrintEquivalentToInverseIterator extends edu.uiowa.slis.BIBFRAME.Ta
 				QuerySolution sol = rs.nextSolution();
 				equivalentToInverse = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + equivalentToInverse + "	type: " + type);
 					return EVAL_BODY_INCLUDE;

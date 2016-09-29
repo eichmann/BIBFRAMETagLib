@@ -48,6 +48,8 @@ public class MonographAbsorbedByIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 				QuerySolution sol = rs.nextSolution();
 				absorbedBy = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + absorbedBy + "	type: " + type);
 					return EVAL_BODY_INCLUDE;
