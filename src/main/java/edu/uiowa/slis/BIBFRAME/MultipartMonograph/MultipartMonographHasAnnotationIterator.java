@@ -71,6 +71,8 @@ public class MultipartMonographHasAnnotationIterator extends edu.uiowa.slis.BIBF
 				QuerySolution sol = rs.nextSolution();
 				hasAnnotation = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasAnnotation + "	type: " + type);
 					return EVAL_BODY_AGAIN;

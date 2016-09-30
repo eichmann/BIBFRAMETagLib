@@ -71,6 +71,8 @@ public class MagazineSubjectIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppo
 				QuerySolution sol = rs.nextSolution();
 				subject = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + subject + "	type: " + type);
 					return EVAL_BODY_AGAIN;

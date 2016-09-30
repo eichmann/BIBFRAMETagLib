@@ -71,6 +71,8 @@ public class MagazineReceivedIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 				QuerySolution sol = rs.nextSolution();
 				received = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + received + "	type: " + type);
 					return EVAL_BODY_AGAIN;

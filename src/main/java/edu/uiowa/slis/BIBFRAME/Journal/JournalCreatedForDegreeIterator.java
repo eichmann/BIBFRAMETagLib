@@ -71,6 +71,8 @@ public class JournalCreatedForDegreeIterator extends edu.uiowa.slis.BIBFRAME.Tag
 				QuerySolution sol = rs.nextSolution();
 				createdForDegree = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + createdForDegree + "	type: " + type);
 					return EVAL_BODY_AGAIN;

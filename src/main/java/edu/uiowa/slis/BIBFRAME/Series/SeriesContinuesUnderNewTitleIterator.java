@@ -71,6 +71,8 @@ public class SeriesContinuesUnderNewTitleIterator extends edu.uiowa.slis.BIBFRAM
 				QuerySolution sol = rs.nextSolution();
 				continuesUnderNewTitle = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + continuesUnderNewTitle + "	type: " + type);
 					return EVAL_BODY_AGAIN;

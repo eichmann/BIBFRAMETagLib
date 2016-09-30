@@ -49,8 +49,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classNameHash.put("http://bib.ld4l.org/ontology/AwardReceipt", "AwardReceipt");
 		classNameHash.put("http://bib.ld4l.org/ontology/ContainerTitle", "ContainerTitle");
 		classNameHash.put("http://bib.ld4l.org/ontology/ThreeDimensionalObject", "ThreeDimensionalObject");
-		classNameHash.put("http://bib.ld4l.org/ontology/MatrixNumber", "MatrixNumber");
 		classNameHash.put("http://bib.ld4l.org/ontology/Manuscript", "Manuscript");
+		classNameHash.put("http://bib.ld4l.org/ontology/MatrixNumber", "MatrixNumber");
 		classNameHash.put("http://bib.ld4l.org/ontology/IssueNumber", "IssueNumber");
 		classNameHash.put("http://bib.ld4l.org/ontology/NotatedMovement", "NotatedMovement");
 		classNameHash.put("http://bib.ld4l.org/ontology/ConciseTitle", "ConciseTitle");
@@ -86,10 +86,10 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classNameHash.put("http://schema.org/Event", "Event");
 		classNameHash.put("http://bib.ld4l.org/ontology/Fingerprint", "Fingerprint");
 		classNameHash.put("http://bib.ld4l.org/ontology/PostalRegistrationNumber", "PostalRegistrationNumber");
+		classNameHash.put("http://bib.ld4l.org/ontology/LccClassification", "LccClassification");
 		classNameHash.put("http://bib.ld4l.org/ontology/Ansi", "Ansi");
 		classNameHash.put("http://purl.org/dc/terms/LinguisticSystem", "LinguisticSystem");
 		classNameHash.put("http://bib.ld4l.org/ontology/Isan", "Isan");
-		classNameHash.put("http://bib.ld4l.org/ontology/LccClassification", "LccClassification");
 		classNameHash.put("http://bib.ld4l.org/ontology/PublisherNumber", "PublisherNumber");
 		classNameHash.put("http://bib.ld4l.org/ontology/Isbn", "Isbn");
 		classNameHash.put("http://xmlns.com/foaf/0.1/Agent", "Agent");
@@ -128,8 +128,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classNameHash.put("http://bib.ld4l.org/ontology/Periodical", "Periodical");
 		classNameHash.put("http://www.w3.org/2004/02/skos/core#Collection", "Collection");
 		classNameHash.put("http://bib.ld4l.org/ontology/TechnicalReportNumber", "TechnicalReportNumber");
-		classNameHash.put("http://bib.ld4l.org/ontology/Coden", "Coden");
 		classNameHash.put("http://www.loc.gov/mads/rdf/v1#PartNameElement", "PartNameElement");
+		classNameHash.put("http://bib.ld4l.org/ontology/Coden", "Coden");
 		classNameHash.put("http://www.loc.gov/mads/rdf/v1#SubTitleElement", "SubTitleElement");
 		classNameHash.put("http://bib.ld4l.org/ontology/AuthorContribution", "AuthorContribution");
 		classNameHash.put("http://schema.org/GovernmentOrganization", "GovernmentOrganization");
@@ -196,8 +196,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("AwardReceipt", "http://bib.ld4l.org/ontology/AwardReceipt");
 		classLocalNameHash.put("ContainerTitle", "http://bib.ld4l.org/ontology/ContainerTitle");
 		classLocalNameHash.put("ThreeDimensionalObject", "http://bib.ld4l.org/ontology/ThreeDimensionalObject");
-		classLocalNameHash.put("MatrixNumber", "http://bib.ld4l.org/ontology/MatrixNumber");
 		classLocalNameHash.put("Manuscript", "http://bib.ld4l.org/ontology/Manuscript");
+		classLocalNameHash.put("MatrixNumber", "http://bib.ld4l.org/ontology/MatrixNumber");
 		classLocalNameHash.put("IssueNumber", "http://bib.ld4l.org/ontology/IssueNumber");
 		classLocalNameHash.put("NotatedMovement", "http://bib.ld4l.org/ontology/NotatedMovement");
 		classLocalNameHash.put("ConciseTitle", "http://bib.ld4l.org/ontology/ConciseTitle");
@@ -233,10 +233,10 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("Event", "http://schema.org/Event");
 		classLocalNameHash.put("Fingerprint", "http://bib.ld4l.org/ontology/Fingerprint");
 		classLocalNameHash.put("PostalRegistrationNumber", "http://bib.ld4l.org/ontology/PostalRegistrationNumber");
+		classLocalNameHash.put("LccClassification", "http://bib.ld4l.org/ontology/LccClassification");
 		classLocalNameHash.put("Ansi", "http://bib.ld4l.org/ontology/Ansi");
 		classLocalNameHash.put("LinguisticSystem", "http://purl.org/dc/terms/LinguisticSystem");
 		classLocalNameHash.put("Isan", "http://bib.ld4l.org/ontology/Isan");
-		classLocalNameHash.put("LccClassification", "http://bib.ld4l.org/ontology/LccClassification");
 		classLocalNameHash.put("PublisherNumber", "http://bib.ld4l.org/ontology/PublisherNumber");
 		classLocalNameHash.put("Isbn", "http://bib.ld4l.org/ontology/Isbn");
 		classLocalNameHash.put("Agent", "http://xmlns.com/foaf/0.1/Agent");
@@ -275,8 +275,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("Periodical", "http://bib.ld4l.org/ontology/Periodical");
 		classLocalNameHash.put("Collection", "http://www.w3.org/2004/02/skos/core#Collection");
 		classLocalNameHash.put("TechnicalReportNumber", "http://bib.ld4l.org/ontology/TechnicalReportNumber");
-		classLocalNameHash.put("Coden", "http://bib.ld4l.org/ontology/Coden");
 		classLocalNameHash.put("PartNameElement", "http://www.loc.gov/mads/rdf/v1#PartNameElement");
+		classLocalNameHash.put("Coden", "http://bib.ld4l.org/ontology/Coden");
 		classLocalNameHash.put("SubTitleElement", "http://www.loc.gov/mads/rdf/v1#SubTitleElement");
 		classLocalNameHash.put("AuthorContribution", "http://bib.ld4l.org/ontology/AuthorContribution");
 		classLocalNameHash.put("GovernmentOrganization", "http://schema.org/GovernmentOrganization");

@@ -745,6 +745,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Concept/ConceptIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Concept/ConceptLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Concept/ConceptSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ConceptScheme/ConceptScheme.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ConceptScheme/ConceptSchemeInSchemeInverse.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ConceptScheme/ConceptSchemeInSchemeInverseIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ConceptScheme/ConceptSchemeInSchemeInverseType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ConceptScheme/ConceptSchemeIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ConceptScheme/ConceptSchemeLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ConceptScheme/ConceptSchemeSubjectURI.java -text
@@ -3051,6 +3054,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/Motivation.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationHasGenreInverse.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationHasGenreInverseIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationHasGenreInverseType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationInScheme.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationInSchemeIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationInSchemeType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Motivation/MotivationMotivatedByInverse.java -text

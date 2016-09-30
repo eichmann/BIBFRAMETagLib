@@ -71,6 +71,8 @@ public class ThreeDimensionalObjectIsLastOfIterator extends edu.uiowa.slis.BIBFR
 				QuerySolution sol = rs.nextSolution();
 				isLastOf = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isLastOf + "	type: " + type);
 					return EVAL_BODY_AGAIN;

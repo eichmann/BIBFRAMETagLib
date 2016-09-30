@@ -71,6 +71,8 @@ public class FiniteResourceIsExpressionOfIterator extends edu.uiowa.slis.BIBFRAM
 				QuerySolution sol = rs.nextSolution();
 				isExpressionOf = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isExpressionOf + "	type: " + type);
 					return EVAL_BODY_AGAIN;

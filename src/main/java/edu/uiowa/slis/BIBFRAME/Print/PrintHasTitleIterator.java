@@ -71,6 +71,8 @@ public class PrintHasTitleIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport
 				QuerySolution sol = rs.nextSolution();
 				hasTitle = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasTitle + "	type: " + type);
 					return EVAL_BODY_AGAIN;

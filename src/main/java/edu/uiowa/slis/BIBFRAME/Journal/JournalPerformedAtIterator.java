@@ -71,6 +71,8 @@ public class JournalPerformedAtIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 				QuerySolution sol = rs.nextSolution();
 				performedAt = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + performedAt + "	type: " + type);
 					return EVAL_BODY_AGAIN;

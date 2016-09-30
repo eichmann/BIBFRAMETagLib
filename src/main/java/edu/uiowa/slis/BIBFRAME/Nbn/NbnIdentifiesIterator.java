@@ -71,6 +71,8 @@ public class NbnIdentifiesIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport
 				QuerySolution sol = rs.nextSolution();
 				identifies = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + identifies + "	type: " + type);
 					return EVAL_BODY_AGAIN;

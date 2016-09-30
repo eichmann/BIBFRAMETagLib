@@ -71,6 +71,8 @@ public class TextHasOriginalVersionInverseIterator extends edu.uiowa.slis.BIBFRA
 				QuerySolution sol = rs.nextSolution();
 				hasOriginalVersionInverse = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasOriginalVersionInverse + "	type: " + type);
 					return EVAL_BODY_AGAIN;

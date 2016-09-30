@@ -71,6 +71,8 @@ public class MultipartMonographHasPartIterator extends edu.uiowa.slis.BIBFRAME.T
 				QuerySolution sol = rs.nextSolution();
 				hasPart = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasPart + "	type: " + type);
 					return EVAL_BODY_AGAIN;

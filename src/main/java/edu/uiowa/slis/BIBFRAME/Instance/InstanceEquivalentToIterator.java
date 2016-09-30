@@ -71,6 +71,8 @@ public class InstanceEquivalentToIterator extends edu.uiowa.slis.BIBFRAME.TagLib
 				QuerySolution sol = rs.nextSolution();
 				equivalentTo = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + equivalentTo + "	type: " + type);
 					return EVAL_BODY_AGAIN;

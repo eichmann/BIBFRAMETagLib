@@ -7971,6 +7971,42 @@
 	</tag>
 
 	<tag>
+		<name>foreachMotivationInSchemeIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MotivationInScheme</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Motivation.MotivationInScheme</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>inScheme</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MotivationInSchemeType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
 		<name>foreachMotivationMotivatedByInverseIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Motivation.MotivationMotivatedByInverseIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -10905,84 +10941,6 @@
 	</tag>
 
 	<tag>
-		<name>MatrixNumber</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumber</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMatrixNumber</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<tag>
-		<name>MatrixNumberSubjectURI</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberSubjectURI</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MatrixNumberLabel</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberLabel</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>label</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMatrixNumberIdentifiesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifiesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MatrixNumberIdentifies</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifies</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifies</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MatrixNumberIdentifiesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifiesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>Manuscript</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Manuscript.Manuscript</tag-class>
 		<body-content>JSP</body-content>
@@ -11217,6 +11175,84 @@
 
 		<attribute>
 			<name>dimensions</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MatrixNumber</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumber</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMatrixNumber</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIterator</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+
+	<tag>
+		<name>MatrixNumberSubjectURI</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberSubjectURI</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MatrixNumberLabel</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberLabel</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachMatrixNumberIdentifiesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifiesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MatrixNumberIdentifies</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifies</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifies</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>MatrixNumberIdentifiesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.MatrixNumber.MatrixNumberIdentifiesType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -13641,6 +13677,42 @@
 
 		<attribute>
 			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachConceptSchemeInSchemeInverseIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeInSchemeInverseIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>ConceptSchemeInSchemeInverse</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeInSchemeInverse</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>inScheme</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>ConceptSchemeInSchemeInverseType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeInSchemeInverseType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -37131,6 +37203,120 @@
 	</tag>
 
 	<tag>
+		<name>LccClassification</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassification</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachLccClassification</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationIterator</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+
+	<tag>
+		<name>LccClassificationSubjectURI</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationSubjectURI</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>LccClassificationLabel</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationLabel</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachLccClassificationIsClassificationForIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationIsClassificationForIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>LccClassificationIsClassificationFor</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationIsClassificationFor</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>isClassificationFor</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>LccClassificationIsClassificationForType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationIsClassificationForType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachLccClassificationHasGenreInverseIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationHasGenreInverseIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>LccClassificationHasGenreInverse</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationHasGenreInverse</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>hasGenre</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>LccClassificationHasGenreInverseType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationHasGenreInverseType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
 		<name>Ansi</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Ansi.Ansi</tag-class>
 		<body-content>JSP</body-content>
@@ -37355,120 +37541,6 @@
 	<tag>
 		<name>IsanIdentifiesType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Isan.IsanIdentifiesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>LccClassification</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassification</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachLccClassification</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<tag>
-		<name>LccClassificationSubjectURI</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationSubjectURI</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>LccClassificationLabel</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationLabel</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>label</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachLccClassificationIsClassificationForIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationIsClassificationForIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>LccClassificationIsClassificationFor</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationIsClassificationFor</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>isClassificationFor</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>LccClassificationIsClassificationForType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationIsClassificationForType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachLccClassificationHasGenreInverseIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationHasGenreInverseIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>LccClassificationHasGenreInverse</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationHasGenreInverse</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasGenre</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>LccClassificationHasGenreInverseType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.LccClassification.LccClassificationHasGenreInverseType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -58887,84 +58959,6 @@
 	</tag>
 
 	<tag>
-		<name>Coden</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.Coden</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachCoden</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<tag>
-		<name>CodenSubjectURI</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenSubjectURI</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>subjectURI</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>CodenLabel</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenLabel</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>label</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachCodenIdentifiesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenIdentifiesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>CodenIdentifies</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenIdentifies</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifies</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>CodenIdentifiesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenIdentifiesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>PartNameElement</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.PartNameElement.PartNameElement</tag-class>
 		<body-content>JSP</body-content>
@@ -59033,6 +59027,84 @@
 	<tag>
 		<name>PartNameElementIsPartOfType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.PartNameElement.PartNameElementIsPartOfType</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>Coden</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.Coden</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachCoden</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenIterator</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+
+	<tag>
+		<name>CodenSubjectURI</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenSubjectURI</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>subjectURI</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>CodenLabel</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenLabel</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachCodenIdentifiesIterator</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenIdentifiesIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>classFilter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>CodenIdentifies</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenIdentifies</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>identifies</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>CodenIdentifiesType</name>
+		<tag-class>edu.uiowa.slis.BIBFRAME.Coden.CodenIdentifiesType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>

@@ -71,6 +71,8 @@ public class AnnotationHasBodyIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 				QuerySolution sol = rs.nextSolution();
 				hasBody = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasBody + "	type: " + type);
 					return EVAL_BODY_AGAIN;

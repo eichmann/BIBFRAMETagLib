@@ -71,6 +71,8 @@ public class SeriesHasInstanceIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 				QuerySolution sol = rs.nextSolution();
 				hasInstance = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasInstance + "	type: " + type);
 					return EVAL_BODY_AGAIN;

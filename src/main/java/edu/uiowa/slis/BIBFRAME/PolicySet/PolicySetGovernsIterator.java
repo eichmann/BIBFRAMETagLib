@@ -71,6 +71,8 @@ public class PolicySetGovernsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 				QuerySolution sol = rs.nextSolution();
 				governs = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + governs + "	type: " + type);
 					return EVAL_BODY_AGAIN;

@@ -71,6 +71,8 @@ public class MeetingAgentInverseIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 				QuerySolution sol = rs.nextSolution();
 				agentInverse = sol.get("?s").toString();
 				type = getLocalName(sol.get("?t").toString());
+				if (type == null)
+					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + agentInverse + "	type: " + type);
 					return EVAL_BODY_AGAIN;
