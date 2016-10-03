@@ -33,6 +33,10 @@ public class Serial extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theSerialIterator.getLabel();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator)this.getParent()).getHasTarget();
+			}
+
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.MainTitleElement.MainTitleElementFollowsIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.MainTitleElement.MainTitleElementFollowsIterator)this.getParent()).getFollows();
 			}
@@ -75,6 +79,10 @@ public class Serial extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Person.PersonIsSubjectOfIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Person.PersonIsSubjectOfIterator)this.getParent()).getIsSubjectOf();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Thing.ThingIsSubjectOfIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Thing.ThingIsSubjectOfIterator)this.getParent()).getIsSubjectOf();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Organization.OrganizationIsSubjectOfIterator) {
@@ -129,10 +137,6 @@ public class Serial extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Work.WorkAccompaniesIterator)this.getParent()).getAccompanies();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator)this.getParent()).getHasTarget();
-			}
-
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Work.WorkRelationInverseIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Work.WorkRelationInverseIterator)this.getParent()).getRelationInverse();
 			}
@@ -151,6 +155,12 @@ public class Serial extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.LinguisticSystem.LinguisticSystemLanguageInverseIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.LinguisticSystem.LinguisticSystemLanguageInverseIterator)this.getParent()).getLanguageInverse();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator theAnnotationHasTargetIterator = (edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator.class);
+
+			if (subjectURI == null && theAnnotationHasTargetIterator != null) {
+				subjectURI = theAnnotationHasTargetIterator.getHasTarget();
 			}
 
 			edu.uiowa.slis.BIBFRAME.MainTitleElement.MainTitleElementFollowsIterator theMainTitleElementFollowsIterator = (edu.uiowa.slis.BIBFRAME.MainTitleElement.MainTitleElementFollowsIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.MainTitleElement.MainTitleElementFollowsIterator.class);
@@ -217,6 +227,12 @@ public class Serial extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && thePersonIsSubjectOfIterator != null) {
 				subjectURI = thePersonIsSubjectOfIterator.getIsSubjectOf();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Thing.ThingIsSubjectOfIterator theThingIsSubjectOfIterator = (edu.uiowa.slis.BIBFRAME.Thing.ThingIsSubjectOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Thing.ThingIsSubjectOfIterator.class);
+
+			if (subjectURI == null && theThingIsSubjectOfIterator != null) {
+				subjectURI = theThingIsSubjectOfIterator.getIsSubjectOf();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Organization.OrganizationIsSubjectOfIterator theOrganizationIsSubjectOfIterator = (edu.uiowa.slis.BIBFRAME.Organization.OrganizationIsSubjectOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Organization.OrganizationIsSubjectOfIterator.class);
@@ -295,12 +311,6 @@ public class Serial extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && theWorkAccompaniesIterator != null) {
 				subjectURI = theWorkAccompaniesIterator.getAccompanies();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator theAnnotationHasTargetIterator = (edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Annotation.AnnotationHasTargetIterator.class);
-
-			if (subjectURI == null && theAnnotationHasTargetIterator != null) {
-				subjectURI = theAnnotationHasTargetIterator.getHasTarget();
 			}
 
 			if (theSerialIterator == null && subjectURI == null) {

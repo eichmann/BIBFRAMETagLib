@@ -20,6 +20,9 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	String label = null;
 	boolean commitNeeded = false;
 
+	// functional datatype properties, both local and inherited
+
+
 	public int doStartTag() throws JspException {
 		currentInstance = this;
 		try {
@@ -28,6 +31,20 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			if (theCollectionIterator != null) {
 				subjectURI = theCollectionIterator.getSubjectURI();
 				label = theCollectionIterator.getLabel();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator)this.getParent()).getMember();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Concept.ConceptMemberInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Concept.ConceptMemberInverseIterator)this.getParent()).getMemberInverse();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator theCollectionMemberIterator = (edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator.class);
+
+			if (subjectURI == null && theCollectionMemberIterator != null) {
+				subjectURI = theCollectionMemberIterator.getMember();
 			}
 
 			if (theCollectionIterator == null && subjectURI == null) {

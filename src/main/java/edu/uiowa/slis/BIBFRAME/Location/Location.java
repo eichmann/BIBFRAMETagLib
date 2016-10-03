@@ -33,18 +33,6 @@ public class Location extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theLocationIterator.getLabel();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator)this.getParent()).getAtLocation();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator)this.getParent()).getAtLocation();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator)this.getParent()).getAtLocation();
-			}
-
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Monograph.MonographSubjectIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Monograph.MonographSubjectIterator)this.getParent()).getSubject();
 			}
@@ -85,6 +73,18 @@ public class Location extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.StillImage.StillImageSubjectIterator)this.getParent()).getSubject();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator)this.getParent()).getAtLocation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator)this.getParent()).getAtLocation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator)this.getParent()).getAtLocation();
+			}
+
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Work.WorkHasOriginPlaceIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Work.WorkHasOriginPlaceIterator)this.getParent()).getHasOriginPlace();
 			}
@@ -119,24 +119,6 @@ public class Location extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.EditorContribution.EditorContributionAgentIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.EditorContribution.EditorContributionAgentIterator)this.getParent()).getAgent();
-			}
-
-			edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator thePublisherProvisionAtLocationIterator = (edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator.class);
-
-			if (subjectURI == null && thePublisherProvisionAtLocationIterator != null) {
-				subjectURI = thePublisherProvisionAtLocationIterator.getAtLocation();
-			}
-
-			edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator theManufacturerProvisionAtLocationIterator = (edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator.class);
-
-			if (subjectURI == null && theManufacturerProvisionAtLocationIterator != null) {
-				subjectURI = theManufacturerProvisionAtLocationIterator.getAtLocation();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator theEventAtLocationIterator = (edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator.class);
-
-			if (subjectURI == null && theEventAtLocationIterator != null) {
-				subjectURI = theEventAtLocationIterator.getAtLocation();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Monograph.MonographSubjectIterator theMonographSubjectIterator = (edu.uiowa.slis.BIBFRAME.Monograph.MonographSubjectIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Monograph.MonographSubjectIterator.class);
@@ -197,6 +179,24 @@ public class Location extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && theStillImageSubjectIterator != null) {
 				subjectURI = theStillImageSubjectIterator.getSubject();
+			}
+
+			edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator thePublisherProvisionAtLocationIterator = (edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.PublisherProvision.PublisherProvisionAtLocationIterator.class);
+
+			if (subjectURI == null && thePublisherProvisionAtLocationIterator != null) {
+				subjectURI = thePublisherProvisionAtLocationIterator.getAtLocation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator theManufacturerProvisionAtLocationIterator = (edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAtLocationIterator.class);
+
+			if (subjectURI == null && theManufacturerProvisionAtLocationIterator != null) {
+				subjectURI = theManufacturerProvisionAtLocationIterator.getAtLocation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator theEventAtLocationIterator = (edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Event.EventAtLocationIterator.class);
+
+			if (subjectURI == null && theEventAtLocationIterator != null) {
+				subjectURI = theEventAtLocationIterator.getAtLocation();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Work.WorkHasOriginPlaceIterator theWorkHasOriginPlaceIterator = (edu.uiowa.slis.BIBFRAME.Work.WorkHasOriginPlaceIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Work.WorkHasOriginPlaceIterator.class);

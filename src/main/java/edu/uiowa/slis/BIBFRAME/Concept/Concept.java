@@ -20,6 +20,9 @@ public class Concept extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	String label = null;
 	boolean commitNeeded = false;
 
+	// functional datatype properties, both local and inherited
+
+
 	public int doStartTag() throws JspException {
 		currentInstance = this;
 		try {
@@ -28,6 +31,36 @@ public class Concept extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			if (theConceptIterator != null) {
 				subjectURI = theConceptIterator.getSubjectURI();
 				label = theConceptIterator.getLabel();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Concept.ConceptSemanticRelationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Concept.ConceptSemanticRelationIterator)this.getParent()).getSemanticRelation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeHasTopConceptIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeHasTopConceptIterator)this.getParent()).getHasTopConcept();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator)this.getParent()).getMember();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Concept.ConceptSemanticRelationIterator theConceptSemanticRelationIterator = (edu.uiowa.slis.BIBFRAME.Concept.ConceptSemanticRelationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Concept.ConceptSemanticRelationIterator.class);
+
+			if (subjectURI == null && theConceptSemanticRelationIterator != null) {
+				subjectURI = theConceptSemanticRelationIterator.getSemanticRelation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeHasTopConceptIterator theConceptSchemeHasTopConceptIterator = (edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeHasTopConceptIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeHasTopConceptIterator.class);
+
+			if (subjectURI == null && theConceptSchemeHasTopConceptIterator != null) {
+				subjectURI = theConceptSchemeHasTopConceptIterator.getHasTopConcept();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator theCollectionMemberIterator = (edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Collection.CollectionMemberIterator.class);
+
+			if (subjectURI == null && theCollectionMemberIterator != null) {
+				subjectURI = theCollectionMemberIterator.getMember();
 			}
 
 			if (theConceptIterator == null && subjectURI == null) {
