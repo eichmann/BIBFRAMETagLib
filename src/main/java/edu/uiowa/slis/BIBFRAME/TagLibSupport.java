@@ -333,7 +333,7 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 
 	Dataset dataset = null;
 
-	protected ResultSet getResultSet(String queryString) {
+	public ResultSet getResultSet(String queryString) {
 		if (useSPARQL) {
 			Query theClassQuery = QueryFactory.create(queryString, Syntax.syntaxARQ);
 			QueryExecution theClassExecution = QueryExecutionFactory.sparqlService(endpoint, theClassQuery);
