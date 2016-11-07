@@ -34,16 +34,6 @@ public class Electronic extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theElectronicIterator.getLabel();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator)this.getParent()).getIdentifies();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator theIdentifierIdentifiesIterator = (edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator.class);
-
-			if (subjectURI == null && theIdentifierIdentifiesIterator != null) {
-				subjectURI = theIdentifierIdentifiesIterator.getIdentifies();
-			}
-
 			if (theElectronicIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {

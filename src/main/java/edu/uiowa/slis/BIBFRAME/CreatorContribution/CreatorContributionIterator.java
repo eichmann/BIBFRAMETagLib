@@ -25,7 +25,7 @@ public class CreatorContributionIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://bib.ld4l.org/ontology/CreatorContribution> . "+
 					"  OPTIONAL { ?s rdfs:label ?l } "+
-					"} ORDER BY ?l");
+					"} LIMIT 1000");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();

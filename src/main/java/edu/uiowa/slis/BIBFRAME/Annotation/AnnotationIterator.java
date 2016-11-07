@@ -25,7 +25,7 @@ public class AnnotationIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://www.w3.org/ns/oa#Annotation> . "+
 					"  OPTIONAL { ?s rdfs:label ?l } "+
-					"} ORDER BY ?l");
+					"} LIMIT 1000");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();

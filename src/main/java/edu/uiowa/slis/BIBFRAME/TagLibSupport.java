@@ -130,8 +130,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classNameHash.put("http://www.w3.org/2004/02/skos/core#Collection", "Collection");
 		classNameHash.put("http://bib.ld4l.org/ontology/TechnicalReportNumber", "TechnicalReportNumber");
 		classNameHash.put("http://www.w3.org/2002/07/owl#Nothing", "Nothing");
-		classNameHash.put("http://bib.ld4l.org/ontology/Coden", "Coden");
 		classNameHash.put("http://www.loc.gov/mads/rdf/v1#PartNameElement", "PartNameElement");
+		classNameHash.put("http://bib.ld4l.org/ontology/Coden", "Coden");
 		classNameHash.put("http://www.loc.gov/mads/rdf/v1#SubTitleElement", "SubTitleElement");
 		classNameHash.put("http://bib.ld4l.org/ontology/AuthorContribution", "AuthorContribution");
 		classNameHash.put("http://schema.org/GovernmentOrganization", "GovernmentOrganization");
@@ -280,8 +280,8 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("Collection", "http://www.w3.org/2004/02/skos/core#Collection");
 		classLocalNameHash.put("TechnicalReportNumber", "http://bib.ld4l.org/ontology/TechnicalReportNumber");
 		classLocalNameHash.put("Nothing", "http://www.w3.org/2002/07/owl#Nothing");
-		classLocalNameHash.put("Coden", "http://bib.ld4l.org/ontology/Coden");
 		classLocalNameHash.put("PartNameElement", "http://www.loc.gov/mads/rdf/v1#PartNameElement");
+		classLocalNameHash.put("Coden", "http://bib.ld4l.org/ontology/Coden");
 		classLocalNameHash.put("SubTitleElement", "http://www.loc.gov/mads/rdf/v1#SubTitleElement");
 		classLocalNameHash.put("AuthorContribution", "http://bib.ld4l.org/ontology/AuthorContribution");
 		classLocalNameHash.put("GovernmentOrganization", "http://schema.org/GovernmentOrganization");
@@ -339,7 +339,7 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 			QueryExecution theClassExecution = QueryExecutionFactory.sparqlService(endpoint, theClassQuery);
 			return theClassExecution.execSelect();
 		} else {
-			dataset = TDBFactory.createDataset("/Users/eichmann/Documents/Components/stanford");
+			dataset = TDBFactory.createDataset("/Users/eichmann/Documents/Components/stanford_subset");
 			Query query = QueryFactory.create(queryString, Syntax.syntaxARQ);
 			QueryExecution qexec = QueryExecutionFactory.create(query, dataset);
 			return qexec.execSelect();

@@ -25,7 +25,7 @@ public class OrderedCollectionIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://www.w3.org/2004/02/skos/core#OrderedCollection> . "+
 					"  OPTIONAL { ?s rdfs:label ?l } "+
-					"} ORDER BY ?l");
+					"} LIMIT 1000");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();

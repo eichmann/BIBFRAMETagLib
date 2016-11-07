@@ -25,7 +25,7 @@ public class NonSortElementIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppor
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://www.loc.gov/mads/rdf/v1#NonSortElement> . "+
 					"  OPTIONAL { ?s rdfs:label ?l } "+
-					"} ORDER BY ?l");
+					"} LIMIT 1000");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();

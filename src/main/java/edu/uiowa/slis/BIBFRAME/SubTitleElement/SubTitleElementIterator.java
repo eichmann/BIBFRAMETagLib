@@ -25,7 +25,7 @@ public class SubTitleElementIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppo
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://www.loc.gov/mads/rdf/v1#SubTitleElement> . "+
 					"  OPTIONAL { ?s rdfs:label ?l } "+
-					"} ORDER BY ?l");
+					"} LIMIT 1000");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();

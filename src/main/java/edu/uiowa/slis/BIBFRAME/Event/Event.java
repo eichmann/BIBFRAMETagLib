@@ -37,10 +37,6 @@ public class Event extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Work.WorkPerformedAtIterator)this.getParent()).getPerformedAt();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator)this.getParent()).getLocationOf();
-			}
-
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Work.WorkRecordedAtIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Work.WorkRecordedAtIterator)this.getParent()).getRecordedAt();
 			}
@@ -49,12 +45,6 @@ public class Event extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && theWorkPerformedAtIterator != null) {
 				subjectURI = theWorkPerformedAtIterator.getPerformedAt();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator theLocationLocationOfIterator = (edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator.class);
-
-			if (subjectURI == null && theLocationLocationOfIterator != null) {
-				subjectURI = theLocationLocationOfIterator.getLocationOf();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Work.WorkRecordedAtIterator theWorkRecordedAtIterator = (edu.uiowa.slis.BIBFRAME.Work.WorkRecordedAtIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Work.WorkRecordedAtIterator.class);

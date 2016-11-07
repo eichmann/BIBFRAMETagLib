@@ -25,7 +25,7 @@ public class ConceptIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://www.w3.org/2004/02/skos/core#Concept> . "+
 					"  OPTIONAL { ?s rdfs:label ?l } "+
-					"} ORDER BY ?l");
+					"} LIMIT 1000");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();

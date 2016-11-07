@@ -20,9 +20,6 @@ public class Motivation extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	String label = null;
 	boolean commitNeeded = false;
 
-	// functional datatype properties, both local and inherited
-
-
 	public int doStartTag() throws JspException {
 		currentInstance = this;
 		try {
@@ -35,10 +32,6 @@ public class Motivation extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Annotation.AnnotationMotivatedByIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Annotation.AnnotationMotivatedByIterator)this.getParent()).getMotivatedBy();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeInSchemeInverseIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.ConceptScheme.ConceptSchemeInSchemeInverseIterator)this.getParent()).getInSchemeInverse();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Annotation.AnnotationMotivatedByIterator theAnnotationMotivatedByIterator = (edu.uiowa.slis.BIBFRAME.Annotation.AnnotationMotivatedByIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Annotation.AnnotationMotivatedByIterator.class);

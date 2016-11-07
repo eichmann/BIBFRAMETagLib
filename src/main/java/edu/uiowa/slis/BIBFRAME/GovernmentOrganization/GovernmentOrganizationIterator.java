@@ -25,7 +25,7 @@ public class GovernmentOrganizationIterator extends edu.uiowa.slis.BIBFRAME.TagL
 					" SELECT ?s ?l where { "+
 						"?s rdf:type <http://schema.org/GovernmentOrganization> . "+
 					"  OPTIONAL { ?s rdfs:label ?l } "+
-					"} ORDER BY ?l");
+					"} LIMIT 1000");
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();
