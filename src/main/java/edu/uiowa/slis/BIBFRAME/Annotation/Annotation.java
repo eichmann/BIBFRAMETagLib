@@ -34,12 +34,162 @@ public class Annotation extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theAnnotationIterator.getLabel();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfIterator)this.getParent()).getIsBodyOf();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Audio.AudioHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Audio.AudioHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Serial.SerialHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Serial.SerialHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Text.TextHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Text.TextHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.IntegratingResource.IntegratingResourceHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.IntegratingResource.IntegratingResourceHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Collection.CollectionHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Collection.CollectionHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Monograph.MonographHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Monograph.MonographHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasAnnotationIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasAnnotationIterator)this.getParent()).getHasAnnotation();
+			}
+
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Agent.AgentIsAnnotatorOfIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Agent.AgentIsAnnotatorOfIterator)this.getParent()).getIsAnnotatorOf();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Motivation.MotivationMotivatedByInverseIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Motivation.MotivationMotivatedByInverseIterator)this.getParent()).getMotivatedByInverse();
+			}
+
+			edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfIterator theContentAsTextIsBodyOfIterator = (edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ContentAsText.ContentAsTextIsBodyOfIterator.class);
+
+			if (subjectURI == null && theContentAsTextIsBodyOfIterator != null) {
+				subjectURI = theContentAsTextIsBodyOfIterator.getIsBodyOf();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasAnnotationIterator theDatasetHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasAnnotationIterator.class);
+
+			if (subjectURI == null && theDatasetHasAnnotationIterator != null) {
+				subjectURI = theDatasetHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectHasAnnotationIterator theThreeDimensionalObjectHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectHasAnnotationIterator.class);
+
+			if (subjectURI == null && theThreeDimensionalObjectHasAnnotationIterator != null) {
+				subjectURI = theThreeDimensionalObjectHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasAnnotationIterator theNotatedMovementHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasAnnotationIterator.class);
+
+			if (subjectURI == null && theNotatedMovementHasAnnotationIterator != null) {
+				subjectURI = theNotatedMovementHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Audio.AudioHasAnnotationIterator theAudioHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.Audio.AudioHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Audio.AudioHasAnnotationIterator.class);
+
+			if (subjectURI == null && theAudioHasAnnotationIterator != null) {
+				subjectURI = theAudioHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageHasAnnotationIterator theMovingImageHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageHasAnnotationIterator.class);
+
+			if (subjectURI == null && theMovingImageHasAnnotationIterator != null) {
+				subjectURI = theMovingImageHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Serial.SerialHasAnnotationIterator theSerialHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.Serial.SerialHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Serial.SerialHasAnnotationIterator.class);
+
+			if (subjectURI == null && theSerialHasAnnotationIterator != null) {
+				subjectURI = theSerialHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Text.TextHasAnnotationIterator theTextHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.Text.TextHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Text.TextHasAnnotationIterator.class);
+
+			if (subjectURI == null && theTextHasAnnotationIterator != null) {
+				subjectURI = theTextHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.IntegratingResource.IntegratingResourceHasAnnotationIterator theIntegratingResourceHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.IntegratingResource.IntegratingResourceHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.IntegratingResource.IntegratingResourceHasAnnotationIterator.class);
+
+			if (subjectURI == null && theIntegratingResourceHasAnnotationIterator != null) {
+				subjectURI = theIntegratingResourceHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAnnotationIterator theCartographyHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAnnotationIterator.class);
+
+			if (subjectURI == null && theCartographyHasAnnotationIterator != null) {
+				subjectURI = theCartographyHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Collection.CollectionHasAnnotationIterator theCollectionHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.Collection.CollectionHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Collection.CollectionHasAnnotationIterator.class);
+
+			if (subjectURI == null && theCollectionHasAnnotationIterator != null) {
+				subjectURI = theCollectionHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicHasAnnotationIterator theNotatedMusicHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicHasAnnotationIterator.class);
+
+			if (subjectURI == null && theNotatedMusicHasAnnotationIterator != null) {
+				subjectURI = theNotatedMusicHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Monograph.MonographHasAnnotationIterator theMonographHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.Monograph.MonographHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Monograph.MonographHasAnnotationIterator.class);
+
+			if (subjectURI == null && theMonographHasAnnotationIterator != null) {
+				subjectURI = theMonographHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAnnotationIterator theStillImageHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAnnotationIterator.class);
+
+			if (subjectURI == null && theStillImageHasAnnotationIterator != null) {
+				subjectURI = theStillImageHasAnnotationIterator.getHasAnnotation();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasAnnotationIterator theMultimediaHasAnnotationIterator = (edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasAnnotationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasAnnotationIterator.class);
+
+			if (subjectURI == null && theMultimediaHasAnnotationIterator != null) {
+				subjectURI = theMultimediaHasAnnotationIterator.getHasAnnotation();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Agent.AgentIsAnnotatorOfIterator theAgentIsAnnotatorOfIterator = (edu.uiowa.slis.BIBFRAME.Agent.AgentIsAnnotatorOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Agent.AgentIsAnnotatorOfIterator.class);

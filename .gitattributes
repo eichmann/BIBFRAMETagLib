@@ -922,6 +922,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/ContainerTitle/ContainerTitleIterator.java
 src/main/java/edu/uiowa/slis/BIBFRAME/ContainerTitle/ContainerTitleLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ContainerTitle/ContainerTitleSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Content/Content.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Content/ContentIsBodyOf.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Content/ContentIsBodyOfIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Content/ContentIsBodyOfType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Content/ContentIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Content/ContentLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Content/ContentSubjectURI.java -text
@@ -974,6 +977,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceGeogr
 src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ContinuingResource/ContinuingResourceHasContributionType.java -text
@@ -1192,6 +1198,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetGeographicCoverageNoteItera
 src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dataset/DatasetHasContributionType.java -text
@@ -1414,6 +1423,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationGeographicCoverag
 src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Dissertation/DissertationHasContributionType.java -text
@@ -1721,9 +1733,15 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Electronic/ElectronicSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Electronic/ElectronicSupplementaryContentNote.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Electronic/ElectronicSupplementaryContentNoteIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Event/Event.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventAgentInverse.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventAgentInverseIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventAgentInverseType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventAtLocation.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventAtLocationIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventAtLocationType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventIsSubjectOf.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventIsSubjectOfIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventIsSubjectOfType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Event/EventPerformanceOf.java -text
@@ -1750,6 +1768,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyIdentifiedByType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyIsAnnotatorOf.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyIsAnnotatorOfIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyIsAnnotatorOfType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyIsPartOf.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyIsPartOfIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyIsPartOfType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Family/FamilyReceived.java -text
@@ -1806,6 +1827,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceGeographicCov
 src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/FiniteResource/FiniteResourceHasContributionType.java -text
@@ -2305,6 +2329,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceGeo
 src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/IntegratingResource/IntegratingResourceHasContributionType.java -text
@@ -3373,6 +3400,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageGeographicCoverageN
 src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/MovingImage/MovingImageHasContributionType.java -text
@@ -3549,6 +3579,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaGeographicCoverageNot
 src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Multimedia/MultimediaHasContributionType.java -text
@@ -4184,6 +4217,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementGeographicC
 src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMovement/NotatedMovementHasContributionType.java -text
@@ -4500,6 +4536,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMusic/NotatedMusicTranslates.java -
 src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMusic/NotatedMusicTranslatesIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/NotatedMusic/NotatedMusicTranslatesType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Nothing/Nothing.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Nothing/NothingAgent.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Nothing/NothingAgentIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Nothing/NothingAgentType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Nothing/NothingBottomDataProperty.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Nothing/NothingBottomDataPropertyIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Nothing/NothingBottomObjectProperty.java -text
@@ -4826,6 +4865,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartGeographicCov
 src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/PeriodicalPart/PeriodicalPartHasContributionType.java -text
@@ -5150,6 +5192,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Print/PrintSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Print/PrintSupplementaryContentNote.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Print/PrintSupplementaryContentNoteIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvision.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionAtLocation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionAtLocationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionAtLocationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionMadeAvailable.java -text
@@ -5157,6 +5202,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionMadeAva
 src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionMadeAvailableType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ProducerProvision/ProducerProvisionSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Provision/Provision.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Provision/ProvisionAtLocation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Provision/ProvisionAtLocationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Provision/ProvisionAtLocationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Provision/ProvisionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Provision/ProvisionLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Provision/ProvisionMadeAvailable.java -text
@@ -6214,6 +6262,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Text/TextTranslates.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Text/TextTranslatesIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Text/TextTranslatesType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Thing/Thing.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Thing/ThingAgent.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Thing/ThingAgentIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Thing/ThingAgentType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Thing/ThingBottomDataProperty.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Thing/ThingBottomDataPropertyIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Thing/ThingBottomObjectProperty.java -text
@@ -6279,6 +6330,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObj
 src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasAbsorbed.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasAbsorbedIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasAbsorbedType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasAnnotation.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasAnnotationIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasAnnotationType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasContribution.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasContributionIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/ThreeDimensionalObject/ThreeDimensionalObjectHasContributionType.java -text
@@ -6438,6 +6492,9 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Title/TitleIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Title/TitleLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Title/TitleSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/TitleElement/TitleElement.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/TitleElement/TitleElementIsPartOf.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/TitleElement/TitleElementIsPartOfIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/TitleElement/TitleElementIsPartOfType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/TitleElement/TitleElementIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/TitleElement/TitleElementLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/TitleElement/TitleElementSubjectURI.java -text
@@ -6744,6 +6801,7 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Work/WorkTranslatedAsType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Work/WorkTranslates.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Work/WorkTranslatesIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Work/WorkTranslatesType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/utility/Indexer.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/utility/SPARQL.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/utility/SPARQLObject.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/utility/SPARQLPredicate.java -text

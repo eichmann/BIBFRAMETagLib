@@ -33,16 +33,6 @@ public class SourceStatus extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theSourceStatusIterator.getLabel();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator)this.getParent()).getHasSourceStatus();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator theTitleHasSourceStatusIterator = (edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator.class);
-
-			if (subjectURI == null && theTitleHasSourceStatusIterator != null) {
-				subjectURI = theTitleHasSourceStatusIterator.getHasSourceStatus();
-			}
-
 			if (theSourceStatusIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {

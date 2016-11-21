@@ -37,10 +37,100 @@ public class RWO extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Authority.AuthorityIdentifiesRWOIterator)this.getParent()).getIdentifiesRWO();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ConductorContribution.ConductorContributionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ConductorContribution.ConductorContributionAgentIterator)this.getParent()).getAgent();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.EditorContribution.EditorContributionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.EditorContribution.EditorContributionAgentIterator)this.getParent()).getAgent();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.CreatorContribution.CreatorContributionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.CreatorContribution.CreatorContributionAgentIterator)this.getParent()).getAgent();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.NarratorContribution.NarratorContributionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.NarratorContribution.NarratorContributionAgentIterator)this.getParent()).getAgent();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.AuthorContribution.AuthorContributionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.AuthorContribution.AuthorContributionAgentIterator)this.getParent()).getAgent();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ComposerContribution.ComposerContributionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ComposerContribution.ComposerContributionAgentIterator)this.getParent()).getAgent();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.PerformerContribution.PerformerContributionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.PerformerContribution.PerformerContributionAgentIterator)this.getParent()).getAgent();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.DistributorProvision.DistributorProvisionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.DistributorProvision.DistributorProvisionAgentIterator)this.getParent()).getAgent();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAgentIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAgentIterator)this.getParent()).getAgent();
+			}
+
 			edu.uiowa.slis.BIBFRAME.Authority.AuthorityIdentifiesRWOIterator theAuthorityIdentifiesRWOIterator = (edu.uiowa.slis.BIBFRAME.Authority.AuthorityIdentifiesRWOIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Authority.AuthorityIdentifiesRWOIterator.class);
 
 			if (subjectURI == null && theAuthorityIdentifiesRWOIterator != null) {
 				subjectURI = theAuthorityIdentifiesRWOIterator.getIdentifiesRWO();
+			}
+
+			edu.uiowa.slis.BIBFRAME.ConductorContribution.ConductorContributionAgentIterator theConductorContributionAgentIterator = (edu.uiowa.slis.BIBFRAME.ConductorContribution.ConductorContributionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ConductorContribution.ConductorContributionAgentIterator.class);
+
+			if (subjectURI == null && theConductorContributionAgentIterator != null) {
+				subjectURI = theConductorContributionAgentIterator.getAgent();
+			}
+
+			edu.uiowa.slis.BIBFRAME.EditorContribution.EditorContributionAgentIterator theEditorContributionAgentIterator = (edu.uiowa.slis.BIBFRAME.EditorContribution.EditorContributionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.EditorContribution.EditorContributionAgentIterator.class);
+
+			if (subjectURI == null && theEditorContributionAgentIterator != null) {
+				subjectURI = theEditorContributionAgentIterator.getAgent();
+			}
+
+			edu.uiowa.slis.BIBFRAME.CreatorContribution.CreatorContributionAgentIterator theCreatorContributionAgentIterator = (edu.uiowa.slis.BIBFRAME.CreatorContribution.CreatorContributionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.CreatorContribution.CreatorContributionAgentIterator.class);
+
+			if (subjectURI == null && theCreatorContributionAgentIterator != null) {
+				subjectURI = theCreatorContributionAgentIterator.getAgent();
+			}
+
+			edu.uiowa.slis.BIBFRAME.NarratorContribution.NarratorContributionAgentIterator theNarratorContributionAgentIterator = (edu.uiowa.slis.BIBFRAME.NarratorContribution.NarratorContributionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.NarratorContribution.NarratorContributionAgentIterator.class);
+
+			if (subjectURI == null && theNarratorContributionAgentIterator != null) {
+				subjectURI = theNarratorContributionAgentIterator.getAgent();
+			}
+
+			edu.uiowa.slis.BIBFRAME.AuthorContribution.AuthorContributionAgentIterator theAuthorContributionAgentIterator = (edu.uiowa.slis.BIBFRAME.AuthorContribution.AuthorContributionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.AuthorContribution.AuthorContributionAgentIterator.class);
+
+			if (subjectURI == null && theAuthorContributionAgentIterator != null) {
+				subjectURI = theAuthorContributionAgentIterator.getAgent();
+			}
+
+			edu.uiowa.slis.BIBFRAME.ComposerContribution.ComposerContributionAgentIterator theComposerContributionAgentIterator = (edu.uiowa.slis.BIBFRAME.ComposerContribution.ComposerContributionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ComposerContribution.ComposerContributionAgentIterator.class);
+
+			if (subjectURI == null && theComposerContributionAgentIterator != null) {
+				subjectURI = theComposerContributionAgentIterator.getAgent();
+			}
+
+			edu.uiowa.slis.BIBFRAME.PerformerContribution.PerformerContributionAgentIterator thePerformerContributionAgentIterator = (edu.uiowa.slis.BIBFRAME.PerformerContribution.PerformerContributionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.PerformerContribution.PerformerContributionAgentIterator.class);
+
+			if (subjectURI == null && thePerformerContributionAgentIterator != null) {
+				subjectURI = thePerformerContributionAgentIterator.getAgent();
+			}
+
+			edu.uiowa.slis.BIBFRAME.DistributorProvision.DistributorProvisionAgentIterator theDistributorProvisionAgentIterator = (edu.uiowa.slis.BIBFRAME.DistributorProvision.DistributorProvisionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.DistributorProvision.DistributorProvisionAgentIterator.class);
+
+			if (subjectURI == null && theDistributorProvisionAgentIterator != null) {
+				subjectURI = theDistributorProvisionAgentIterator.getAgent();
+			}
+
+			edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAgentIterator theManufacturerProvisionAgentIterator = (edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAgentIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ManufacturerProvision.ManufacturerProvisionAgentIterator.class);
+
+			if (subjectURI == null && theManufacturerProvisionAgentIterator != null) {
+				subjectURI = theManufacturerProvisionAgentIterator.getAgent();
 			}
 
 			if (theRWOIterator == null && subjectURI == null) {

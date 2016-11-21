@@ -33,28 +33,28 @@ public class DistributorProvision extends edu.uiowa.slis.BIBFRAME.TagLibSupport 
 				label = theDistributorProvisionIterator.getLabel();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Organization.OrganizationAgentInverseIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Organization.OrganizationAgentInverseIterator)this.getParent()).getAgentInverse();
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator)this.getParent()).getLocationOf();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Person.PersonAgentInverseIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Person.PersonAgentInverseIterator)this.getParent()).getAgentInverse();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Agent.AgentAgentInverseIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Agent.AgentAgentInverseIterator)this.getParent()).getAgentInverse();
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAgentInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAgentInverseIterator)this.getParent()).getAgentInverse();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Location.LocationAgentInverseIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Location.LocationAgentInverseIterator)this.getParent()).getAgentInverse();
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.RWO.RWOAgentInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.RWO.RWOAgentInverseIterator)this.getParent()).getAgentInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Organization.OrganizationAgentInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Organization.OrganizationAgentInverseIterator)this.getParent()).getAgentInverse();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Meeting.MeetingAgentInverseIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Meeting.MeetingAgentInverseIterator)this.getParent()).getAgentInverse();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Work.WorkAgentInverseIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Work.WorkAgentInverseIterator)this.getParent()).getAgentInverse();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Conference.ConferenceAgentInverseIterator) {
@@ -65,8 +65,10 @@ public class DistributorProvision extends edu.uiowa.slis.BIBFRAME.TagLibSupport 
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Family.FamilyAgentInverseIterator)this.getParent()).getAgentInverse();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityAgentInverseIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityAgentInverseIterator)this.getParent()).getAgentInverse();
+			edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator theLocationLocationOfIterator = (edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Location.LocationLocationOfIterator.class);
+
+			if (subjectURI == null && theLocationLocationOfIterator != null) {
+				subjectURI = theLocationLocationOfIterator.getLocationOf();
 			}
 
 			if (theDistributorProvisionIterator == null && subjectURI == null) {

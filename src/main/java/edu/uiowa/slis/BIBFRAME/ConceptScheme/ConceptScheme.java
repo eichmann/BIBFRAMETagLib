@@ -33,8 +33,18 @@ public class ConceptScheme extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theConceptSchemeIterator.getLabel();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator)this.getParent()).getInScheme();
+			}
+
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator)this.getParent()).getTopConceptOf();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator theMotivationInSchemeIterator = (edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator.class);
+
+			if (subjectURI == null && theMotivationInSchemeIterator != null) {
+				subjectURI = theMotivationInSchemeIterator.getInScheme();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator theConceptTopConceptOfIterator = (edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator.class);

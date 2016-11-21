@@ -58,6 +58,10 @@ public class Instance extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Title.TitleIsPreferredTitleOfIterator)this.getParent()).getIsPreferredTitleOf();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator)this.getParent()).getIdentifies();
+			}
+
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Instance.InstanceReproducesIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Instance.InstanceReproducesIterator)this.getParent()).getReproduces();
 			}
@@ -104,6 +108,12 @@ public class Instance extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && theTitleIsPreferredTitleOfIterator != null) {
 				subjectURI = theTitleIsPreferredTitleOfIterator.getIsPreferredTitleOf();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator theIdentifierIdentifiesIterator = (edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator.class);
+
+			if (subjectURI == null && theIdentifierIdentifiesIterator != null) {
+				subjectURI = theIdentifierIdentifiesIterator.getIdentifies();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Instance.InstanceReproducesIterator theInstanceReproducesIterator = (edu.uiowa.slis.BIBFRAME.Instance.InstanceReproducesIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Instance.InstanceReproducesIterator.class);

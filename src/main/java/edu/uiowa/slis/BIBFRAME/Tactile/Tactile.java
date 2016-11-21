@@ -19,6 +19,9 @@ public class Tactile extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	String subjectURI = null;
 	String label = null;
 	boolean commitNeeded = false;
+
+	// functional datatype properties, both local and inherited
+
 	String aspectRatio = null;
 
 	public int doStartTag() throws JspException {
@@ -29,6 +32,16 @@ public class Tactile extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			if (theTactileIterator != null) {
 				subjectURI = theTactileIterator.getSubjectURI();
 				label = theTactileIterator.getLabel();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator)this.getParent()).getIdentifies();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator theIdentifierIdentifiesIterator = (edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator.class);
+
+			if (subjectURI == null && theIdentifierIdentifiesIterator != null) {
+				subjectURI = theIdentifierIdentifiesIterator.getIdentifies();
 			}
 
 			if (theTactileIterator == null && subjectURI == null) {
