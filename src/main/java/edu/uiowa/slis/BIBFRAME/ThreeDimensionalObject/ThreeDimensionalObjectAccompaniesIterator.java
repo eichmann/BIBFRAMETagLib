@@ -16,6 +16,9 @@ public class ThreeDimensionalObjectAccompaniesIterator extends edu.uiowa.slis.BI
 	static ThreeDimensionalObjectAccompaniesIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(ThreeDimensionalObjectAccompaniesIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String type = null;
 	String accompanies = null;
@@ -52,6 +55,8 @@ public class ThreeDimensionalObjectAccompaniesIterator extends edu.uiowa.slis.BI
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + accompanies + "	type: " + type);
+					firstInstance = true;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_INCLUDE;
 				}
 			}
@@ -75,6 +80,8 @@ public class ThreeDimensionalObjectAccompaniesIterator extends edu.uiowa.slis.BI
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + accompanies + "	type: " + type);
+					firstInstance = false;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_AGAIN;
 				}
 			}
@@ -110,20 +117,36 @@ public class ThreeDimensionalObjectAccompaniesIterator extends edu.uiowa.slis.BI
 		classFilter = null;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public  void setType(String theType) {
+		type = theType;
 	}
 
-	public String getType() {
+	public  String getType() {
 		return type;
 	}
 
-	public void setAccompanies(String accompanies) {
-		this.accompanies = accompanies;
+	public  void setAccompanies(String theAccompanies) {
+		accompanies = theAccompanies;
 	}
 
-	public String getAccompanies() {
+	public  String getAccompanies() {
 		return accompanies;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 	public void setClassFilter(String filterString) {

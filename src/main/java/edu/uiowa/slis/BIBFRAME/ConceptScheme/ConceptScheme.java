@@ -20,9 +20,6 @@ public class ConceptScheme extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	String label = null;
 	boolean commitNeeded = false;
 
-	// functional datatype properties, both local and inherited
-
-
 	public int doStartTag() throws JspException {
 		currentInstance = this;
 		try {
@@ -33,12 +30,48 @@ public class ConceptScheme extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theConceptSchemeIterator.getLabel();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Resource.ResourceInSchemeIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Resource.ResourceInSchemeIterator)this.getParent()).getInScheme();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.NamedIndividual.NamedIndividualInSchemeIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.NamedIndividual.NamedIndividualInSchemeIterator)this.getParent()).getInScheme();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Thing.ThingInSchemeIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Thing.ThingInSchemeIterator)this.getParent()).getInScheme();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Concept.ConceptInSchemeIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Concept.ConceptInSchemeIterator)this.getParent()).getInScheme();
+			}
+
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator)this.getParent()).getInScheme();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator)this.getParent()).getTopConceptOf();
+			edu.uiowa.slis.BIBFRAME.Resource.ResourceInSchemeIterator theResourceInSchemeIterator = (edu.uiowa.slis.BIBFRAME.Resource.ResourceInSchemeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Resource.ResourceInSchemeIterator.class);
+
+			if (subjectURI == null && theResourceInSchemeIterator != null) {
+				subjectURI = theResourceInSchemeIterator.getInScheme();
+			}
+
+			edu.uiowa.slis.BIBFRAME.NamedIndividual.NamedIndividualInSchemeIterator theNamedIndividualInSchemeIterator = (edu.uiowa.slis.BIBFRAME.NamedIndividual.NamedIndividualInSchemeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.NamedIndividual.NamedIndividualInSchemeIterator.class);
+
+			if (subjectURI == null && theNamedIndividualInSchemeIterator != null) {
+				subjectURI = theNamedIndividualInSchemeIterator.getInScheme();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Thing.ThingInSchemeIterator theThingInSchemeIterator = (edu.uiowa.slis.BIBFRAME.Thing.ThingInSchemeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Thing.ThingInSchemeIterator.class);
+
+			if (subjectURI == null && theThingInSchemeIterator != null) {
+				subjectURI = theThingInSchemeIterator.getInScheme();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Concept.ConceptInSchemeIterator theConceptInSchemeIterator = (edu.uiowa.slis.BIBFRAME.Concept.ConceptInSchemeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Concept.ConceptInSchemeIterator.class);
+
+			if (subjectURI == null && theConceptInSchemeIterator != null) {
+				subjectURI = theConceptInSchemeIterator.getInScheme();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator theMotivationInSchemeIterator = (edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Motivation.MotivationInSchemeIterator.class);
@@ -47,25 +80,28 @@ public class ConceptScheme extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = theMotivationInSchemeIterator.getInScheme();
 			}
 
-			edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator theConceptTopConceptOfIterator = (edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Concept.ConceptTopConceptOfIterator.class);
-
-			if (subjectURI == null && theConceptTopConceptOfIterator != null) {
-				subjectURI = theConceptTopConceptOfIterator.getTopConceptOf();
-			}
-
 			if (theConceptSchemeIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
 				ResultSet rs = getResultSet(prefix
-				+ " SELECT ?label ?foafName ?schemaName ?rdfValue  where {"
-				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
+				+ " SELECT ?labelUS ?labelENG ?label ?labelANY ?foafName ?schemaName ?rdfValue  where {"
+				+ "  OPTIONAL { SELECT ?labelUS  WHERE { <" + subjectURI + "> rdfs:label ?labelUS  FILTER (lang(?labelUS) = \"en-US\")}    LIMIT 1 } "
+				+ "  OPTIONAL { SELECT ?labelENG WHERE { <" + subjectURI + "> rdfs:label ?labelENG FILTER (langMatches(?labelENG,\"en\"))} LIMIT 1 } "
+				+ "  OPTIONAL { SELECT ?label    WHERE { <" + subjectURI + "> rdfs:label ?label    FILTER (lang(?label) = \"\")}           LIMIT 1 } "
+				+ "  OPTIONAL { SELECT ?labelANY WHERE { <" + subjectURI + "> rdfs:label ?labelANY FILTER (lang(?labelANY) != \"\")}       LIMIT 1 } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://xmlns.com/foaf/0.1/name> ?foafName } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://schema.org/name> ?schemaName } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> ?rdfValue } "
 				+ "}");
 				while(rs.hasNext()) {
 					QuerySolution sol = rs.nextSolution();
-					label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
+					label = sol.get("?labelUS") == null ? null : sol.get("?labelUS").asLiteral().getString();
+					if (label == null)
+						label = sol.get("?labelENG") == null ? null : sol.get("?labelENG").asLiteral().getString();
+					if (label == null)
+						label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
+					if (label == null)
+						label = sol.get("?labelANY") == null ? null : sol.get("?labelANY").asLiteral().getString();
 					if (label == null)
 						label = sol.get("?foafName") == null ? null : sol.get("?foafName").asLiteral().getString();
 					if (label == null)
@@ -103,19 +139,19 @@ public class ConceptScheme extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 		subjectURI = null;
 	}
 
-	public void setSubjectURI(String subjectURI) {
-		this.subjectURI = subjectURI;
+	public  void setSubjectURI(String theSubjectURI) {
+		subjectURI = theSubjectURI;
 	}
 
-	public String getSubjectURI() {
+	public  String getSubjectURI() {
 		return subjectURI;
 	}
 
-	public void setLabel(String label) {
-		this.label = label;
+	public  void setLabel(String theLabel) {
+		label = theLabel;
 	}
 
-	public String getLabel() {
+	public  String getLabel() {
 		return label;
 	}
 

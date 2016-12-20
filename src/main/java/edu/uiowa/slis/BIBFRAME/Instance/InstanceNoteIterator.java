@@ -14,6 +14,9 @@ public class InstanceNoteIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport 
 	static InstanceNoteIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(InstanceNoteIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String note = null;
 	ResultSet rs = null;
@@ -35,6 +38,8 @@ public class InstanceNoteIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport 
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				note = sol.get("?s").toString();
+				firstInstance = true;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_INCLUDE;
 			}
 		} catch (Exception e) {
@@ -52,6 +57,8 @@ public class InstanceNoteIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport 
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				note = sol.get("?s").toString();
+				firstInstance = false;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_AGAIN;
 			}
 		} catch (Exception e) {
@@ -83,12 +90,28 @@ public class InstanceNoteIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport 
 		subjectURI = null;
 	}
 
-	public void setNote(String note) {
-		this.note = note;
+	public  void setNote(String theNote) {
+		note = theNote;
 	}
 
-	public String getNote() {
+	public  String getNote() {
 		return note;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 }

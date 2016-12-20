@@ -33,19 +33,58 @@ public class SourceStatus extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theSourceStatusIterator.getLabel();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator)this.getParent()).getHasSourceStatus();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Resource.ResourceHasSourceStatusIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Resource.ResourceHasSourceStatusIterator)this.getParent()).getHasSourceStatus();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Thing.ThingHasSourceStatusIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Thing.ThingHasSourceStatusIterator)this.getParent()).getHasSourceStatus();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator theTitleHasSourceStatusIterator = (edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Title.TitleHasSourceStatusIterator.class);
+
+			if (subjectURI == null && theTitleHasSourceStatusIterator != null) {
+				subjectURI = theTitleHasSourceStatusIterator.getHasSourceStatus();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Resource.ResourceHasSourceStatusIterator theResourceHasSourceStatusIterator = (edu.uiowa.slis.BIBFRAME.Resource.ResourceHasSourceStatusIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Resource.ResourceHasSourceStatusIterator.class);
+
+			if (subjectURI == null && theResourceHasSourceStatusIterator != null) {
+				subjectURI = theResourceHasSourceStatusIterator.getHasSourceStatus();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Thing.ThingHasSourceStatusIterator theThingHasSourceStatusIterator = (edu.uiowa.slis.BIBFRAME.Thing.ThingHasSourceStatusIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Thing.ThingHasSourceStatusIterator.class);
+
+			if (subjectURI == null && theThingHasSourceStatusIterator != null) {
+				subjectURI = theThingHasSourceStatusIterator.getHasSourceStatus();
+			}
+
 			if (theSourceStatusIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
 				ResultSet rs = getResultSet(prefix
-				+ " SELECT ?label ?foafName ?schemaName ?rdfValue  where {"
-				+ "  OPTIONAL { <" + subjectURI + "> rdfs:label ?label } "
+				+ " SELECT ?labelUS ?labelENG ?label ?labelANY ?foafName ?schemaName ?rdfValue  where {"
+				+ "  OPTIONAL { SELECT ?labelUS  WHERE { <" + subjectURI + "> rdfs:label ?labelUS  FILTER (lang(?labelUS) = \"en-US\")}    LIMIT 1 } "
+				+ "  OPTIONAL { SELECT ?labelENG WHERE { <" + subjectURI + "> rdfs:label ?labelENG FILTER (langMatches(?labelENG,\"en\"))} LIMIT 1 } "
+				+ "  OPTIONAL { SELECT ?label    WHERE { <" + subjectURI + "> rdfs:label ?label    FILTER (lang(?label) = \"\")}           LIMIT 1 } "
+				+ "  OPTIONAL { SELECT ?labelANY WHERE { <" + subjectURI + "> rdfs:label ?labelANY FILTER (lang(?labelANY) != \"\")}       LIMIT 1 } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://xmlns.com/foaf/0.1/name> ?foafName } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://schema.org/name> ?schemaName } "
 				+ "  OPTIONAL { <" + subjectURI + "> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> ?rdfValue } "
 				+ "}");
 				while(rs.hasNext()) {
 					QuerySolution sol = rs.nextSolution();
-					label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
+					label = sol.get("?labelUS") == null ? null : sol.get("?labelUS").asLiteral().getString();
+					if (label == null)
+						label = sol.get("?labelENG") == null ? null : sol.get("?labelENG").asLiteral().getString();
+					if (label == null)
+						label = sol.get("?label") == null ? null : sol.get("?label").asLiteral().getString();
+					if (label == null)
+						label = sol.get("?labelANY") == null ? null : sol.get("?labelANY").asLiteral().getString();
 					if (label == null)
 						label = sol.get("?foafName") == null ? null : sol.get("?foafName").asLiteral().getString();
 					if (label == null)
@@ -83,19 +122,19 @@ public class SourceStatus extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 		subjectURI = null;
 	}
 
-	public void setSubjectURI(String subjectURI) {
-		this.subjectURI = subjectURI;
+	public  void setSubjectURI(String theSubjectURI) {
+		subjectURI = theSubjectURI;
 	}
 
-	public String getSubjectURI() {
+	public  String getSubjectURI() {
 		return subjectURI;
 	}
 
-	public void setLabel(String label) {
-		this.label = label;
+	public  void setLabel(String theLabel) {
+		label = theLabel;
 	}
 
-	public String getLabel() {
+	public  String getLabel() {
 		return label;
 	}
 

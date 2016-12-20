@@ -14,6 +14,9 @@ public class InstanceIllustrationNoteIterator extends edu.uiowa.slis.BIBFRAME.Ta
 	static InstanceIllustrationNoteIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(InstanceIllustrationNoteIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String illustrationNote = null;
 	ResultSet rs = null;
@@ -35,6 +38,8 @@ public class InstanceIllustrationNoteIterator extends edu.uiowa.slis.BIBFRAME.Ta
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				illustrationNote = sol.get("?s").toString();
+				firstInstance = true;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_INCLUDE;
 			}
 		} catch (Exception e) {
@@ -52,6 +57,8 @@ public class InstanceIllustrationNoteIterator extends edu.uiowa.slis.BIBFRAME.Ta
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				illustrationNote = sol.get("?s").toString();
+				firstInstance = false;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_AGAIN;
 			}
 		} catch (Exception e) {
@@ -83,12 +90,28 @@ public class InstanceIllustrationNoteIterator extends edu.uiowa.slis.BIBFRAME.Ta
 		subjectURI = null;
 	}
 
-	public void setIllustrationNote(String illustrationNote) {
-		this.illustrationNote = illustrationNote;
+	public  void setIllustrationNote(String theIllustrationNote) {
+		illustrationNote = theIllustrationNote;
 	}
 
-	public String getIllustrationNote() {
+	public  String getIllustrationNote() {
 		return illustrationNote;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 }

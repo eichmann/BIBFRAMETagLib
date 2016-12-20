@@ -14,6 +14,9 @@ public class ContentAsTextCharsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 	static ContentAsTextCharsIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(ContentAsTextCharsIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String chars = null;
 	ResultSet rs = null;
@@ -35,6 +38,8 @@ public class ContentAsTextCharsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				chars = sol.get("?s").toString();
+				firstInstance = true;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_INCLUDE;
 			}
 		} catch (Exception e) {
@@ -52,6 +57,8 @@ public class ContentAsTextCharsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				chars = sol.get("?s").toString();
+				firstInstance = false;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_AGAIN;
 			}
 		} catch (Exception e) {
@@ -83,12 +90,28 @@ public class ContentAsTextCharsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 		subjectURI = null;
 	}
 
-	public void setChars(String chars) {
-		this.chars = chars;
+	public  void setChars(String theChars) {
+		chars = theChars;
 	}
 
-	public String getChars() {
+	public  String getChars() {
 		return chars;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 }

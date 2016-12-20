@@ -16,6 +16,9 @@ public class InstanceIsInstanceOfIterator extends edu.uiowa.slis.BIBFRAME.TagLib
 	static InstanceIsInstanceOfIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(InstanceIsInstanceOfIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String type = null;
 	String isInstanceOf = null;
@@ -52,6 +55,8 @@ public class InstanceIsInstanceOfIterator extends edu.uiowa.slis.BIBFRAME.TagLib
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isInstanceOf + "	type: " + type);
+					firstInstance = true;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_INCLUDE;
 				}
 			}
@@ -75,6 +80,8 @@ public class InstanceIsInstanceOfIterator extends edu.uiowa.slis.BIBFRAME.TagLib
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isInstanceOf + "	type: " + type);
+					firstInstance = false;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_AGAIN;
 				}
 			}
@@ -110,20 +117,36 @@ public class InstanceIsInstanceOfIterator extends edu.uiowa.slis.BIBFRAME.TagLib
 		classFilter = null;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public  void setType(String theType) {
+		type = theType;
 	}
 
-	public String getType() {
+	public  String getType() {
 		return type;
 	}
 
-	public void setIsInstanceOf(String isInstanceOf) {
-		this.isInstanceOf = isInstanceOf;
+	public  void setIsInstanceOf(String theIsInstanceOf) {
+		isInstanceOf = theIsInstanceOf;
 	}
 
-	public String getIsInstanceOf() {
+	public  String getIsInstanceOf() {
 		return isInstanceOf;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 	public void setClassFilter(String filterString) {

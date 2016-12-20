@@ -16,6 +16,9 @@ public class ContentAsTextIsBodyOfIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 	static ContentAsTextIsBodyOfIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(ContentAsTextIsBodyOfIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String type = null;
 	String isBodyOf = null;
@@ -52,6 +55,8 @@ public class ContentAsTextIsBodyOfIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isBodyOf + "	type: " + type);
+					firstInstance = true;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_INCLUDE;
 				}
 			}
@@ -75,6 +80,8 @@ public class ContentAsTextIsBodyOfIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isBodyOf + "	type: " + type);
+					firstInstance = false;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_AGAIN;
 				}
 			}
@@ -110,20 +117,36 @@ public class ContentAsTextIsBodyOfIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 		classFilter = null;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public  void setType(String theType) {
+		type = theType;
 	}
 
-	public String getType() {
+	public  String getType() {
 		return type;
 	}
 
-	public void setIsBodyOf(String isBodyOf) {
-		this.isBodyOf = isBodyOf;
+	public  void setIsBodyOf(String theIsBodyOf) {
+		isBodyOf = theIsBodyOf;
 	}
 
-	public String getIsBodyOf() {
+	public  String getIsBodyOf() {
 		return isBodyOf;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 	public void setClassFilter(String filterString) {

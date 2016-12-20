@@ -16,6 +16,9 @@ public class ThreeDimensionalObjectSupersedesIterator extends edu.uiowa.slis.BIB
 	static ThreeDimensionalObjectSupersedesIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(ThreeDimensionalObjectSupersedesIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String type = null;
 	String supersedes = null;
@@ -52,6 +55,8 @@ public class ThreeDimensionalObjectSupersedesIterator extends edu.uiowa.slis.BIB
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + supersedes + "	type: " + type);
+					firstInstance = true;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_INCLUDE;
 				}
 			}
@@ -75,6 +80,8 @@ public class ThreeDimensionalObjectSupersedesIterator extends edu.uiowa.slis.BIB
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + supersedes + "	type: " + type);
+					firstInstance = false;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_AGAIN;
 				}
 			}
@@ -110,20 +117,36 @@ public class ThreeDimensionalObjectSupersedesIterator extends edu.uiowa.slis.BIB
 		classFilter = null;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public  void setType(String theType) {
+		type = theType;
 	}
 
-	public String getType() {
+	public  String getType() {
 		return type;
 	}
 
-	public void setSupersedes(String supersedes) {
-		this.supersedes = supersedes;
+	public  void setSupersedes(String theSupersedes) {
+		supersedes = theSupersedes;
 	}
 
-	public String getSupersedes() {
+	public  String getSupersedes() {
 		return supersedes;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 	public void setClassFilter(String filterString) {

@@ -14,6 +14,9 @@ public class InstanceDimensionsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 	static InstanceDimensionsIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(InstanceDimensionsIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String dimensions = null;
 	ResultSet rs = null;
@@ -35,6 +38,8 @@ public class InstanceDimensionsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				dimensions = sol.get("?s").toString();
+				firstInstance = true;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_INCLUDE;
 			}
 		} catch (Exception e) {
@@ -52,6 +57,8 @@ public class InstanceDimensionsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				dimensions = sol.get("?s").toString();
+				firstInstance = false;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_AGAIN;
 			}
 		} catch (Exception e) {
@@ -83,12 +90,28 @@ public class InstanceDimensionsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 		subjectURI = null;
 	}
 
-	public void setDimensions(String dimensions) {
-		this.dimensions = dimensions;
+	public  void setDimensions(String theDimensions) {
+		dimensions = theDimensions;
 	}
 
-	public String getDimensions() {
+	public  String getDimensions() {
 		return dimensions;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 }

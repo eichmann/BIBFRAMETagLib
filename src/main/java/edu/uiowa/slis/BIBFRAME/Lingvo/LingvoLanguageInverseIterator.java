@@ -16,6 +16,9 @@ public class LingvoLanguageInverseIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 	static LingvoLanguageInverseIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(LingvoLanguageInverseIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String type = null;
 	String languageInverse = null;
@@ -52,6 +55,8 @@ public class LingvoLanguageInverseIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + languageInverse + "	type: " + type);
+					firstInstance = true;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_INCLUDE;
 				}
 			}
@@ -75,6 +80,8 @@ public class LingvoLanguageInverseIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + languageInverse + "	type: " + type);
+					firstInstance = false;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_AGAIN;
 				}
 			}
@@ -110,20 +117,36 @@ public class LingvoLanguageInverseIterator extends edu.uiowa.slis.BIBFRAME.TagLi
 		classFilter = null;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public  void setType(String theType) {
+		type = theType;
 	}
 
-	public String getType() {
+	public  String getType() {
 		return type;
 	}
 
-	public void setLanguageInverse(String languageInverse) {
-		this.languageInverse = languageInverse;
+	public  void setLanguageInverse(String theLanguageInverse) {
+		languageInverse = theLanguageInverse;
 	}
 
-	public String getLanguageInverse() {
+	public  String getLanguageInverse() {
 		return languageInverse;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 	public void setClassFilter(String filterString) {

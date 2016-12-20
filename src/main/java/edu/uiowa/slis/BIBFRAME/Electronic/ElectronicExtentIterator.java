@@ -14,6 +14,9 @@ public class ElectronicExtentIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 	static ElectronicExtentIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(ElectronicExtentIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String extent = null;
 	ResultSet rs = null;
@@ -35,6 +38,8 @@ public class ElectronicExtentIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				extent = sol.get("?s").toString();
+				firstInstance = true;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_INCLUDE;
 			}
 		} catch (Exception e) {
@@ -52,6 +57,8 @@ public class ElectronicExtentIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				extent = sol.get("?s").toString();
+				firstInstance = false;
+				lastInstance = ! rs.hasNext();
 				return EVAL_BODY_AGAIN;
 			}
 		} catch (Exception e) {
@@ -83,12 +90,28 @@ public class ElectronicExtentIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 		subjectURI = null;
 	}
 
-	public void setExtent(String extent) {
-		this.extent = extent;
+	public  void setExtent(String theExtent) {
+		extent = theExtent;
 	}
 
-	public String getExtent() {
+	public  String getExtent() {
 		return extent;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 }

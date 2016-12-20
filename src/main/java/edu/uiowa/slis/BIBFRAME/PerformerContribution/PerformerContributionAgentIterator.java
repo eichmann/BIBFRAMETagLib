@@ -16,6 +16,9 @@ public class PerformerContributionAgentIterator extends edu.uiowa.slis.BIBFRAME.
 	static PerformerContributionAgentIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(PerformerContributionAgentIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String type = null;
 	String agent = null;
@@ -52,6 +55,8 @@ public class PerformerContributionAgentIterator extends edu.uiowa.slis.BIBFRAME.
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + agent + "	type: " + type);
+					firstInstance = true;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_INCLUDE;
 				}
 			}
@@ -75,6 +80,8 @@ public class PerformerContributionAgentIterator extends edu.uiowa.slis.BIBFRAME.
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + agent + "	type: " + type);
+					firstInstance = false;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_AGAIN;
 				}
 			}
@@ -110,20 +117,36 @@ public class PerformerContributionAgentIterator extends edu.uiowa.slis.BIBFRAME.
 		classFilter = null;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public  void setType(String theType) {
+		type = theType;
 	}
 
-	public String getType() {
+	public  String getType() {
 		return type;
 	}
 
-	public void setAgent(String agent) {
-		this.agent = agent;
+	public  void setAgent(String theAgent) {
+		agent = theAgent;
 	}
 
-	public String getAgent() {
+	public  String getAgent() {
 		return agent;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 	public void setClassFilter(String filterString) {

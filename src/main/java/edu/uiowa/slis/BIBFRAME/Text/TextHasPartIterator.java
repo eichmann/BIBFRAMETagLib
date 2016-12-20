@@ -16,6 +16,9 @@ public class TextHasPartIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	static TextHasPartIterator currentInstance = null;
 	private static final Log log = LogFactory.getLog(TextHasPartIterator.class);
 
+	static boolean firstInstance = false;
+	static boolean lastInstance = false;
+
 	String subjectURI = null;
 	String type = null;
 	String hasPart = null;
@@ -52,6 +55,8 @@ public class TextHasPartIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasPart + "	type: " + type);
+					firstInstance = true;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_INCLUDE;
 				}
 			}
@@ -75,6 +80,8 @@ public class TextHasPartIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + hasPart + "	type: " + type);
+					firstInstance = false;
+					lastInstance = ! rs.hasNext();
 					return EVAL_BODY_AGAIN;
 				}
 			}
@@ -110,20 +117,36 @@ public class TextHasPartIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 		classFilter = null;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public  void setType(String theType) {
+		type = theType;
 	}
 
-	public String getType() {
+	public  String getType() {
 		return type;
 	}
 
-	public void setHasPart(String hasPart) {
-		this.hasPart = hasPart;
+	public  void setHasPart(String theHasPart) {
+		hasPart = theHasPart;
 	}
 
-	public String getHasPart() {
+	public  String getHasPart() {
 		return hasPart;
+	}
+
+	public static void setFirstInstance(Boolean theFirstInstance) {
+		firstInstance = theFirstInstance;
+	}
+
+	public static Boolean getFirstInstance() {
+		return firstInstance;
+	}
+
+	public static void setLastInstance(Boolean theLastInstance) {
+		lastInstance = theLastInstance;
+	}
+
+	public static Boolean getLastInstance() {
+		return lastInstance;
 	}
 
 	public void setClassFilter(String filterString) {
