@@ -73,13 +73,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Annotation/AnnotationMotivatedBy.java -tex
 src/main/java/edu/uiowa/slis/BIBFRAME/Annotation/AnnotationMotivatedByIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Annotation/AnnotationMotivatedByType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Annotation/AnnotationSubjectURI.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Ansi/Ansi.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Ansi/AnsiIdentifies.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Ansi/AnsiIdentifiesIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Ansi/AnsiIdentifiesType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Ansi/AnsiIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Ansi/AnsiLabel.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Ansi/AnsiSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Audience/Audience.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Audience/AudienceAudienceInverse.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Audience/AudienceAudienceInverseIterator.java -text
