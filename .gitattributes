@@ -1849,13 +1849,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Ismn/IsmnIdentifiesType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Ismn/IsmnIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Ismn/IsmnLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Ismn/IsmnSubjectURI.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Iso/Iso.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Iso/IsoIdentifies.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Iso/IsoIdentifiesIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Iso/IsoIdentifiesType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Iso/IsoIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Iso/IsoLabel.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Iso/IsoSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Isrc/Isrc.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Isrc/IsrcIdentifies.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Isrc/IsrcIdentifiesIterator.java -text
