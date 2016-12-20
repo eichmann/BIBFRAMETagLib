@@ -275,16 +275,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Authority/AuthorityIsSubjectOfType.java -t
 src/main/java/edu/uiowa/slis/BIBFRAME/Authority/AuthorityIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Authority/AuthorityLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Authority/AuthoritySubjectURI.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceipt.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptIsReceiptOf.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptIsReceiptOfIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptIsReceiptOfType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptLabel.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptReceivedBy.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptReceivedByIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptReceivedByType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Barcode/Barcode.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Barcode/BarcodeIdentifies.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Barcode/BarcodeIdentifiesIterator.java -text
