@@ -1953,9 +1953,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/LccShelfMark/LccShelfMarkSubjectURI.java -
 src/main/java/edu/uiowa/slis/BIBFRAME/LccShelfMark/LccShelfMarkTopConceptOf.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LccShelfMark/LccShelfMarkTopConceptOfIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LccShelfMark/LccShelfMarkTopConceptOfType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/Lccn.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/LccnIdentifiesIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/LccnIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LegalDepositNumber/LegalDepositNumber.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LegalDepositNumber/LegalDepositNumberIdentifies.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LegalDepositNumber/LegalDepositNumberIdentifiesIterator.java -text
