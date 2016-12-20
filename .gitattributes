@@ -3672,13 +3672,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/SubTitleElement/SubTitleElementIsPartOfTyp
 src/main/java/edu/uiowa/slis/BIBFRAME/SubTitleElement/SubTitleElementIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/SubTitleElement/SubTitleElementLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/SubTitleElement/SubTitleElementSubjectURI.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/SystemNumber/SystemNumber.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/SystemNumber/SystemNumberIdentifies.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/SystemNumber/SystemNumberIdentifiesIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/SystemNumber/SystemNumberIdentifiesType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/SystemNumber/SystemNumberIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/SystemNumber/SystemNumberLabel.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/SystemNumber/SystemNumberSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Tactile/Tactile.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Tactile/TactileAccessibilityFeature.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Tactile/TactileAccessibilityFeatureIterator.java -text
