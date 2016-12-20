@@ -73,13 +73,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Annotation/AnnotationMotivatedBy.java -tex
 src/main/java/edu/uiowa/slis/BIBFRAME/Annotation/AnnotationMotivatedByIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Annotation/AnnotationMotivatedByType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Annotation/AnnotationSubjectURI.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Audience/Audience.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Audience/AudienceAudienceInverse.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Audience/AudienceAudienceInverseIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Audience/AudienceAudienceInverseType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Audience/AudienceIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Audience/AudienceLabel.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Audience/AudienceSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Audio/Audio.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Audio/AudioAbsorbedBy.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Audio/AudioAbsorbedByIterator.java -text
