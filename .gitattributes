@@ -275,13 +275,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Authority/AuthorityIsSubjectOfType.java -t
 src/main/java/edu/uiowa/slis/BIBFRAME/Authority/AuthorityIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Authority/AuthorityLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Authority/AuthoritySubjectURI.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Award/Award.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Award/AwardHasReceipt.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Award/AwardHasReceiptIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Award/AwardHasReceiptType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Award/AwardIterator.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Award/AwardLabel.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/Award/AwardSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceipt.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptIsReceiptOf.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/AwardReceipt/AwardReceiptIsReceiptOfIterator.java -text
