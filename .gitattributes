@@ -1176,6 +1176,13 @@ src/main/java/edu/uiowa/slis/BIBFRAME/LccShelfMark/LccShelfMark.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LccShelfMark/LccShelfMarkIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LccShelfMark/LccShelfMarkLabel.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LccShelfMark/LccShelfMarkSubjectURI.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/Lccn.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/LccnIdentifies.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/LccnIdentifiesIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/LccnIdentifiesType.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/LccnIterator.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/LccnLabel.java -text
+src/main/java/edu/uiowa/slis/BIBFRAME/Lccn/LccnSubjectURI.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LegalDepositNumber/LegalDepositNumber.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LegalDepositNumber/LegalDepositNumberIdentifies.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/LegalDepositNumber/LegalDepositNumberIdentifiesIterator.java -text
