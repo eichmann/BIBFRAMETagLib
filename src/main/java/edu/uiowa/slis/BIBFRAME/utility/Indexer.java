@@ -30,16 +30,14 @@ public class Indexer {
     static String tripleStore = null;
     static String endpoint = null;
     
-//    static String dataPath = "/Volumes/LD4L/";
     static String dataPath = "/Volumes/Pegasus3/LD4L/";
-    static String lucenePath = "/Volumes/LD4L/lucene/stanford/titles";
+    static String lucenePath = null;
     static String prefix = 
 	    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
 	    + " PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
 	    + " PREFIX foaf: <http://xmlns.com/foaf/0.1/> "
 	    + " PREFIX mads: <http://www.loc.gov/mads/rdf/v1#> "
 	    + " PREFIX bib: <http://bib.ld4l.org/ontology/> ";
-
 
     
     @SuppressWarnings("deprecation")
@@ -49,11 +47,13 @@ public class Indexer {
 	tripleStore = dataPath + args[0];
 	endpoint = "http://guardian.slis.uiowa.edu:3030/" + args[0] + "/sparql";
 	
-	if (args.length > 0 && args[0].equals("work"))
+	if (args.length > 0 && args[1].equals("work"))
 	    lucenePath = dataPath + "lucene/" + args[0] + "/" + args[1];
-	if (args.length > 0 && args[0].equals("person"))
+	if (args.length > 0 && args[1].equals("person"))
 	    lucenePath = dataPath + "lucene/" + args[0] + "/" + args[1];
 
+	logger.info("data path: " + dataPath);
+	logger.info("lucenePath: " + lucenePath);
 	IndexWriter theWriter = new IndexWriter(FSDirectory.open(new File(lucenePath)), new StandardAnalyzer(org.apache.lucene.util.Version.LUCENE_30), true, IndexWriter.MaxFieldLength.UNLIMITED);
 	
 	if (args.length > 0 && args[1].equals("work"))
@@ -87,7 +87,7 @@ public class Indexer {
 	    theDocument.add(new Field("content", title, Field.Store.NO, Field.Index.ANALYZED));
 	    theWriter.addDocument(theDocument);
 	    count++;
-	    if (count % 10000 == 0)
+	    if (count % 100000 == 0)
 		logger.info("count: " + count);
 	}
 	logger.info("total titles: " + count);
@@ -116,7 +116,7 @@ public class Indexer {
 	    theDocument.add(new Field("content", name, Field.Store.NO, Field.Index.ANALYZED));
 	    theWriter.addDocument(theDocument);
 	    count++;
-	    if (count % 10000 == 0)
+	    if (count % 100000 == 0)
 		logger.info("count: " + count);
 	}
 	logger.info("total titles: " + count);
