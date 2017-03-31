@@ -2860,7 +2860,6 @@ src/main/java/edu/uiowa/slis/BIBFRAME/Work/WorkTranslatedAsType.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Work/WorkTranslates.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Work/WorkTranslatesIterator.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/Work/WorkTranslatesType.java -text
-src/main/java/edu/uiowa/slis/BIBFRAME/utility/Indexer.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/utility/SPARQL.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/utility/SPARQLObject.java -text
 src/main/java/edu/uiowa/slis/BIBFRAME/utility/SPARQLPredicate.java -text
