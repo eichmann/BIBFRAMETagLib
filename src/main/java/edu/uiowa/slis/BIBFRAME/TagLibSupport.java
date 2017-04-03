@@ -1,6 +1,9 @@
 package edu.uiowa.slis.BIBFRAME;
 
+import javax.servlet.http.HttpServletRequest;
+
 import java.util.Hashtable;
+import java.util.Properties;
 
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
@@ -11,10 +14,14 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.Syntax;
 import org.apache.jena.tdb.TDBFactory;
 
+import edu.uiowa.tagUtil.property.PropertyLoader;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 @SuppressWarnings("serial")
 public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
-	static final boolean useSPARQL = false;
-	static String endpoint = "http://marengo.info-science.uiowa.edu:2021/sparql";
+	private static final Log log = LogFactory.getLog(TagLibSupport.class);
 	static protected String prefix = 
 		"PREFIX ld4l: <http://bib.ld4l.org/ontology/>"
 			+ "PREFIX ld4lcornell: <http://draft.ld4l.org/cornell/>"
@@ -265,15 +272,35 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		classLocalNameHash.put("LinguisticSystem", "http://purl.org/dc/terms/LinguisticSystem");
 	}
 
+	boolean useSPARQL = true;
 	Dataset dataset = null;
+	String tripleStore = null;
+	String endpoint = null;
+	Properties properties = null;
+
+	private void loadProperties() {
+		if (properties != null)
+			return;
+
+		String theURI = ((HttpServletRequest)pageContext.getRequest()).getRequestURI();
+		String applicationRoot = theURI.substring(0, theURI.indexOf('/', 1));
+		log.info("loading " + applicationRoot + ".properties");
+		properties = PropertyLoader.loadProperties(applicationRoot + ".properties");
+		useSPARQL = properties.getProperty("useSPARQL", "true").equals("true");
+		endpoint = properties.getProperty("endpoint", "localhost");
+		tripleStore = properties.getProperty("tripleStore", "localhost");
+
+	}
+
 
 	public ResultSet getResultSet(String queryString) {
+		loadProperties();
 		if (useSPARQL) {
 			Query theClassQuery = QueryFactory.create(queryString, Syntax.syntaxARQ);
 			QueryExecution theClassExecution = QueryExecutionFactory.sparqlService(endpoint, theClassQuery);
 			return theClassExecution.execSelect();
 		} else {
-			dataset = TDBFactory.createDataset("/Volumes/LD4L/stanford");
+			dataset = TDBFactory.createDataset(tripleStore);
 			Query query = QueryFactory.create(queryString, Syntax.syntaxARQ);
 			QueryExecution qexec = QueryExecutionFactory.create(query, dataset);
 			return qexec.execSelect();

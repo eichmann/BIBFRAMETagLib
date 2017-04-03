@@ -20,9 +20,6 @@ public class SymmetricProperty extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	String label = null;
 	boolean commitNeeded = false;
 
-	// functional datatype properties, both local and inherited
-
-
 	public int doStartTag() throws JspException {
 		currentInstance = this;
 		try {

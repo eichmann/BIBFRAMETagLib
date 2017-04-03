@@ -81,18 +81,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Text.TextRelationIterator)this.getParent()).getRelation();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Instance.InstanceRelationIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Instance.InstanceRelationIterator)this.getParent()).getRelation();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceRelationIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceRelationIterator)this.getParent()).getRelation();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Serial.SerialRelationIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Serial.SerialRelationIterator)this.getParent()).getRelation();
-			}
-
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Resource.ResourcePrecedesIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Resource.ResourcePrecedesIterator)this.getParent()).getPrecedes();
 			}
@@ -115,10 +103,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Serial.SerialPrecedesIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Serial.SerialPrecedesIterator)this.getParent()).getPrecedes();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Instance.InstancePrecedesIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Instance.InstancePrecedesIterator)this.getParent()).getPrecedes();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) {
@@ -177,14 +161,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Monograph.MonographFollowsIterator)this.getParent()).getFollows();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceFollowsIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceFollowsIterator)this.getParent()).getFollows();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Serial.SerialFollowsIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Serial.SerialFollowsIterator)this.getParent()).getFollows();
-			}
-
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Instance.InstanceFollowsIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Instance.InstanceFollowsIterator)this.getParent()).getFollows();
 			}
@@ -215,18 +191,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Instance.InstanceHasPartIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Instance.InstanceHasPartIterator)this.getParent()).getHasPart();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.RWO.RWOHasPartIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.RWO.RWOHasPartIterator)this.getParent()).getHasPart();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Agent.AgentHasPartIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Agent.AgentHasPartIterator)this.getParent()).getHasPart();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Organization.OrganizationHasPartIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Organization.OrganizationHasPartIterator)this.getParent()).getHasPart();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Resource.ResourceIsSubjectOfIterator) {
@@ -289,14 +253,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Location.LocationIsSubjectOfIterator)this.getParent()).getIsSubjectOf();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.FiniteResource.FiniteResourceIsSubjectOfIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.FiniteResource.FiniteResourceIsSubjectOfIterator)this.getParent()).getIsSubjectOf();
-			}
-
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Monograph.MonographIsSubjectOfIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.Monograph.MonographIsSubjectOfIterator)this.getParent()).getIsSubjectOf();
-			}
-
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Instance.InstanceIsSubjectOfIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Instance.InstanceIsSubjectOfIterator)this.getParent()).getIsSubjectOf();
 			}
@@ -339,6 +295,18 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.RWO.RWORelationInverseIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.RWO.RWORelationInverseIterator)this.getParent()).getRelationInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Instance.InstanceRelationInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Instance.InstanceRelationInverseIterator)this.getParent()).getRelationInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceRelationInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceRelationInverseIterator)this.getParent()).getRelationInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Serial.SerialRelationInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Serial.SerialRelationInverseIterator)this.getParent()).getRelationInverse();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.LinguisticSystem.LinguisticSystemLanguageInverseIterator) {
@@ -417,24 +385,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = theTextRelationIterator.getRelation();
 			}
 
-			edu.uiowa.slis.BIBFRAME.Instance.InstanceRelationIterator theInstanceRelationIterator = (edu.uiowa.slis.BIBFRAME.Instance.InstanceRelationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Instance.InstanceRelationIterator.class);
-
-			if (subjectURI == null && theInstanceRelationIterator != null) {
-				subjectURI = theInstanceRelationIterator.getRelation();
-			}
-
-			edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceRelationIterator theContinuingResourceRelationIterator = (edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceRelationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceRelationIterator.class);
-
-			if (subjectURI == null && theContinuingResourceRelationIterator != null) {
-				subjectURI = theContinuingResourceRelationIterator.getRelation();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Serial.SerialRelationIterator theSerialRelationIterator = (edu.uiowa.slis.BIBFRAME.Serial.SerialRelationIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Serial.SerialRelationIterator.class);
-
-			if (subjectURI == null && theSerialRelationIterator != null) {
-				subjectURI = theSerialRelationIterator.getRelation();
-			}
-
 			edu.uiowa.slis.BIBFRAME.Resource.ResourcePrecedesIterator theResourcePrecedesIterator = (edu.uiowa.slis.BIBFRAME.Resource.ResourcePrecedesIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Resource.ResourcePrecedesIterator.class);
 
 			if (subjectURI == null && theResourcePrecedesIterator != null) {
@@ -469,12 +419,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && theSerialPrecedesIterator != null) {
 				subjectURI = theSerialPrecedesIterator.getPrecedes();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Instance.InstancePrecedesIterator theInstancePrecedesIterator = (edu.uiowa.slis.BIBFRAME.Instance.InstancePrecedesIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Instance.InstancePrecedesIterator.class);
-
-			if (subjectURI == null && theInstancePrecedesIterator != null) {
-				subjectURI = theInstancePrecedesIterator.getPrecedes();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator theIdentifierIdentifiesIterator = (edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Identifier.IdentifierIdentifiesIterator.class);
@@ -561,18 +505,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = theMonographFollowsIterator.getFollows();
 			}
 
-			edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceFollowsIterator theContinuingResourceFollowsIterator = (edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceFollowsIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceFollowsIterator.class);
-
-			if (subjectURI == null && theContinuingResourceFollowsIterator != null) {
-				subjectURI = theContinuingResourceFollowsIterator.getFollows();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Serial.SerialFollowsIterator theSerialFollowsIterator = (edu.uiowa.slis.BIBFRAME.Serial.SerialFollowsIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Serial.SerialFollowsIterator.class);
-
-			if (subjectURI == null && theSerialFollowsIterator != null) {
-				subjectURI = theSerialFollowsIterator.getFollows();
-			}
-
 			edu.uiowa.slis.BIBFRAME.Instance.InstanceFollowsIterator theInstanceFollowsIterator = (edu.uiowa.slis.BIBFRAME.Instance.InstanceFollowsIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Instance.InstanceFollowsIterator.class);
 
 			if (subjectURI == null && theInstanceFollowsIterator != null) {
@@ -619,24 +551,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && theInstanceHasPartIterator != null) {
 				subjectURI = theInstanceHasPartIterator.getHasPart();
-			}
-
-			edu.uiowa.slis.BIBFRAME.RWO.RWOHasPartIterator theRWOHasPartIterator = (edu.uiowa.slis.BIBFRAME.RWO.RWOHasPartIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.RWO.RWOHasPartIterator.class);
-
-			if (subjectURI == null && theRWOHasPartIterator != null) {
-				subjectURI = theRWOHasPartIterator.getHasPart();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Agent.AgentHasPartIterator theAgentHasPartIterator = (edu.uiowa.slis.BIBFRAME.Agent.AgentHasPartIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Agent.AgentHasPartIterator.class);
-
-			if (subjectURI == null && theAgentHasPartIterator != null) {
-				subjectURI = theAgentHasPartIterator.getHasPart();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Organization.OrganizationHasPartIterator theOrganizationHasPartIterator = (edu.uiowa.slis.BIBFRAME.Organization.OrganizationHasPartIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Organization.OrganizationHasPartIterator.class);
-
-			if (subjectURI == null && theOrganizationHasPartIterator != null) {
-				subjectURI = theOrganizationHasPartIterator.getHasPart();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Resource.ResourceIsSubjectOfIterator theResourceIsSubjectOfIterator = (edu.uiowa.slis.BIBFRAME.Resource.ResourceIsSubjectOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Resource.ResourceIsSubjectOfIterator.class);
@@ -727,18 +641,6 @@ public class Collection extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && theLocationIsSubjectOfIterator != null) {
 				subjectURI = theLocationIsSubjectOfIterator.getIsSubjectOf();
-			}
-
-			edu.uiowa.slis.BIBFRAME.FiniteResource.FiniteResourceIsSubjectOfIterator theFiniteResourceIsSubjectOfIterator = (edu.uiowa.slis.BIBFRAME.FiniteResource.FiniteResourceIsSubjectOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.FiniteResource.FiniteResourceIsSubjectOfIterator.class);
-
-			if (subjectURI == null && theFiniteResourceIsSubjectOfIterator != null) {
-				subjectURI = theFiniteResourceIsSubjectOfIterator.getIsSubjectOf();
-			}
-
-			edu.uiowa.slis.BIBFRAME.Monograph.MonographIsSubjectOfIterator theMonographIsSubjectOfIterator = (edu.uiowa.slis.BIBFRAME.Monograph.MonographIsSubjectOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Monograph.MonographIsSubjectOfIterator.class);
-
-			if (subjectURI == null && theMonographIsSubjectOfIterator != null) {
-				subjectURI = theMonographIsSubjectOfIterator.getIsSubjectOf();
 			}
 
 			edu.uiowa.slis.BIBFRAME.Instance.InstanceIsSubjectOfIterator theInstanceIsSubjectOfIterator = (edu.uiowa.slis.BIBFRAME.Instance.InstanceIsSubjectOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Instance.InstanceIsSubjectOfIterator.class);

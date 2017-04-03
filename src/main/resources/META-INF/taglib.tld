@@ -339,36 +339,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachEventBirthDateIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Event.EventBirthDateIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstEventBirthDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Event.EventBirthDateIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastEventBirthDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Event.EventBirthDateIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>EventBirthDate</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Event.EventBirthDate</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>birthDate</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachEventPrecedesIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Event.EventPrecedesIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -411,36 +381,6 @@
 
 		<attribute>
 			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachEventDeathDateIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Event.EventDeathDateIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstEventDeathDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Event.EventDeathDateIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastEventDeathDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Event.EventDeathDateIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>EventDeathDate</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Event.EventDeathDate</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>deathDate</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -2397,54 +2337,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachPersonRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Person.PersonRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstPersonRelationInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Person.PersonRelationIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastPersonRelationInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Person.PersonRelationIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>PersonRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Person.PersonRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>PersonRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Person.PersonRelationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachPersonBirthDateIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Person.PersonBirthDateIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -3711,54 +3603,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachCartographyAbsorbedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyAbsorbedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstCartographyAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastCartographyAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>CartographyAbsorbedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyAbsorbedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>absorbedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>CartographyAbsorbedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyAbsorbedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachCartographySupersedesIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographySupersedesIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -3797,54 +3641,6 @@
 	<tag>
 		<name>CartographySupersedesType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographySupersedesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachCartographySupersededByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographySupersededByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstCartographySupersededByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographySupersededByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastCartographySupersededByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographySupersededByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>CartographySupersededBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographySupersededBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>supersededBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>CartographySupersededByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographySupersededByType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -3941,54 +3737,6 @@
 	<tag>
 		<name>CartographyHasDerivativeType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasDerivativeType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachCartographyHasAbsorbedIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAbsorbedIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstCartographyHasAbsorbedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAbsorbedIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastCartographyHasAbsorbedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAbsorbedIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>CartographyHasAbsorbed</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAbsorbed</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasAbsorbed</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>CartographyHasAbsorbedType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Cartography.CartographyHasAbsorbedType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -4635,36 +4383,6 @@
 
 		<attribute>
 			<name>note</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachClassTerm_statusIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Class.ClassTerm_statusIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstClassTerm_statusInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Class.ClassTerm_statusIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastClassTerm_statusInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Class.ClassTerm_statusIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>ClassTerm_status</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Class.ClassTerm_status</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>term_status</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -5399,54 +5117,6 @@
 	<tag>
 		<name>MovingImageSupplementsType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageSupplementsType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMovingImageAbsorbedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageAbsorbedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstMovingImageAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastMovingImageAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>MovingImageAbsorbedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageAbsorbedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>absorbedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MovingImageAbsorbedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.MovingImage.MovingImageAbsorbedByType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -6323,102 +5993,6 @@
 	<tag>
 		<name>NotatedMovementSubjectType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementSubjectType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNotatedMovementRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstNotatedMovementRelationInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementRelationIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastNotatedMovementRelationInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementRelationIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>NotatedMovementRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NotatedMovementRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementRelationType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNotatedMovementHasPartIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasPartIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstNotatedMovementHasPartInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasPartIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastNotatedMovementHasPartInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasPartIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>NotatedMovementHasPart</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasPart</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasPart</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NotatedMovementHasPartType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMovement.NotatedMovementHasPartType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -9735,36 +9309,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachLocationBirthDateIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Location.LocationBirthDateIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstLocationBirthDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Location.LocationBirthDateIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastLocationBirthDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Location.LocationBirthDateIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>LocationBirthDate</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Location.LocationBirthDate</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>birthDate</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachLocationAccompaniedByIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Location.LocationAccompaniedByIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -11067,54 +10611,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachStillImageAbsorbedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageAbsorbedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstStillImageAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastStillImageAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>StillImageAbsorbedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageAbsorbedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>absorbedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>StillImageAbsorbedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageAbsorbedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachStillImageSupersedesIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageSupersedesIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -11297,54 +10793,6 @@
 	<tag>
 		<name>StillImageHasDerivativeType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasDerivativeType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachStillImageHasAbsorbedIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAbsorbedIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstStillImageHasAbsorbedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAbsorbedIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastStillImageHasAbsorbedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAbsorbedIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>StillImageHasAbsorbed</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAbsorbed</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasAbsorbed</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>StillImageHasAbsorbedType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.StillImage.StillImageHasAbsorbedType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -12063,54 +11511,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachTemporalEntityFollowsIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityFollowsIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstTemporalEntityFollowsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityFollowsIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastTemporalEntityFollowsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityFollowsIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>TemporalEntityFollows</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityFollows</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>follows</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>TemporalEntityFollowsType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityFollowsType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachTemporalEntityIsSubjectOfIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityIsSubjectOfIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -12197,54 +11597,6 @@
 	<tag>
 		<name>TemporalEntityIsPartOfType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityIsPartOfType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachTemporalEntityRelationInverseIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityRelationInverseIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstTemporalEntityRelationInverseInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityRelationInverseIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastTemporalEntityRelationInverseInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityRelationInverseIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>TemporalEntityRelationInverse</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityRelationInverse</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>TemporalEntityRelationInverseType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityRelationInverseType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -14271,36 +13623,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachMeetingBirthDateIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingBirthDateIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstMeetingBirthDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingBirthDateIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastMeetingBirthDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingBirthDateIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>MeetingBirthDate</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingBirthDate</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>birthDate</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachMeetingPrecedesIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingPrecedesIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -14343,36 +13665,6 @@
 
 		<attribute>
 			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMeetingDeathDateIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingDeathDateIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstMeetingDeathDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingDeathDateIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastMeetingDeathDateInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingDeathDateIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>MeetingDeathDate</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Meeting.MeetingDeathDate</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>deathDate</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -15885,36 +15177,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachAnnotationPropertyTerm_statusIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.AnnotationProperty.AnnotationPropertyTerm_statusIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstAnnotationPropertyTerm_statusInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.AnnotationProperty.AnnotationPropertyTerm_statusIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastAnnotationPropertyTerm_statusInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.AnnotationProperty.AnnotationPropertyTerm_statusIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>AnnotationPropertyTerm_status</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.AnnotationProperty.AnnotationPropertyTerm_status</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>term_status</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>Organization</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Organization.Organization</tag-class>
 		<body-content>JSP</body-content>
@@ -17075,54 +16337,6 @@
 	<tag>
 		<name>AgentSubjectType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Agent.AgentSubjectType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachAgentRelationIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Agent.AgentRelationIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstAgentRelationInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Agent.AgentRelationIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastAgentRelationInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Agent.AgentRelationIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>AgentRelation</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Agent.AgentRelation</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>relation</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>AgentRelationType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Agent.AgentRelationType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -19293,54 +18507,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachDatasetSupersededByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetSupersededByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstDatasetSupersededByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetSupersededByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastDatasetSupersededByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetSupersededByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>DatasetSupersededBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetSupersededBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>supersededBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>DatasetSupersededByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetSupersededByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachDatasetDerivedFromIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetDerivedFromIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -19379,54 +18545,6 @@
 	<tag>
 		<name>DatasetDerivedFromType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetDerivedFromType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachDatasetHasDerivativeIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasDerivativeIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstDatasetHasDerivativeInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasDerivativeIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastDatasetHasDerivativeInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasDerivativeIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>DatasetHasDerivative</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasDerivative</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasDerivative</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>DatasetHasDerivativeType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasDerivativeType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -19763,54 +18881,6 @@
 	<tag>
 		<name>DatasetHasTitleType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetHasTitleType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachDatasetTranslatedAsIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetTranslatedAsIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstDatasetTranslatedAsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetTranslatedAsIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastDatasetTranslatedAsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetTranslatedAsIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>DatasetTranslatedAs</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetTranslatedAs</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>translatedAs</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>DatasetTranslatedAsType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Dataset.DatasetTranslatedAsType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -20687,54 +19757,6 @@
 	<tag>
 		<name>CollectionIsPartOfType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Collection.CollectionIsPartOfType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachCollectionAbsorbedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Collection.CollectionAbsorbedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstCollectionAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Collection.CollectionAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastCollectionAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Collection.CollectionAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>CollectionAbsorbedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Collection.CollectionAbsorbedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>absorbedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>CollectionAbsorbedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Collection.CollectionAbsorbedByType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -23301,54 +22323,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachThreeDimensionalObjectIdentifiedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstThreeDimensionalObjectIdentifiedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastThreeDimensionalObjectIdentifiedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>ThreeDimensionalObjectIdentifiedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>identifiedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>ThreeDimensionalObjectIdentifiedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachThreeDimensionalObjectAccompaniesIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAccompaniesIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -23541,54 +22515,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachThreeDimensionalObjectIsSubjectOfIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIsSubjectOfIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstThreeDimensionalObjectIsSubjectOfInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIsSubjectOfIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastThreeDimensionalObjectIsSubjectOfInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIsSubjectOfIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>ThreeDimensionalObjectIsSubjectOf</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIsSubjectOf</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>isSubjectOf</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>ThreeDimensionalObjectIsSubjectOfType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIsSubjectOfType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachThreeDimensionalObjectHasAnnotationIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectHasAnnotationIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -23723,54 +22649,6 @@
 	<tag>
 		<name>ThreeDimensionalObjectSupplementsType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectSupplementsType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachThreeDimensionalObjectAbsorbedByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAbsorbedByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstThreeDimensionalObjectAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastThreeDimensionalObjectAbsorbedByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAbsorbedByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>ThreeDimensionalObjectAbsorbedBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAbsorbedBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>absorbedBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>ThreeDimensionalObjectAbsorbedByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAbsorbedByType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -24615,66 +23493,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachSymmetricPropertyEditorialNoteIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.SymmetricProperty.SymmetricPropertyEditorialNoteIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstSymmetricPropertyEditorialNoteInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.SymmetricProperty.SymmetricPropertyEditorialNoteIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastSymmetricPropertyEditorialNoteInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.SymmetricProperty.SymmetricPropertyEditorialNoteIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>SymmetricPropertyEditorialNote</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.SymmetricProperty.SymmetricPropertyEditorialNote</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>editorialNote</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachSymmetricPropertyNoteIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.SymmetricProperty.SymmetricPropertyNoteIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstSymmetricPropertyNoteInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.SymmetricProperty.SymmetricPropertyNoteIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastSymmetricPropertyNoteInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.SymmetricProperty.SymmetricPropertyNoteIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>SymmetricPropertyNote</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.SymmetricProperty.SymmetricPropertyNote</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>note</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>StockNumber</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.StockNumber.StockNumber</tag-class>
 		<body-content>JSP</body-content>
@@ -25407,54 +24225,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachNotatedMusicPrecedesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicPrecedesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstNotatedMusicPrecedesInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicPrecedesIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastNotatedMusicPrecedesInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicPrecedesIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>NotatedMusicPrecedes</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicPrecedes</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>precedes</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NotatedMusicPrecedesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicPrecedesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachNotatedMusicIdentifiedByIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicIdentifiedByIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -25493,54 +24263,6 @@
 	<tag>
 		<name>NotatedMusicIdentifiedByType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicIdentifiedByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNotatedMusicAccompaniesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicAccompaniesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstNotatedMusicAccompaniesInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicAccompaniesIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastNotatedMusicAccompaniesInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicAccompaniesIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>NotatedMusicAccompanies</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicAccompanies</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>accompanies</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NotatedMusicAccompaniesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicAccompaniesType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -25839,54 +24561,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachNotatedMusicSupplementsIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicSupplementsIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstNotatedMusicSupplementsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicSupplementsIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastNotatedMusicSupplementsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicSupplementsIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>NotatedMusicSupplements</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicSupplements</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>supplements</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NotatedMusicSupplementsType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicSupplementsType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachNotatedMusicDerivedFromIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicDerivedFromIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -26117,54 +24791,6 @@
 	<tag>
 		<name>NotatedMusicHasTitleType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicHasTitleType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachNotatedMusicContinuedUnderNewTitleByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicContinuedUnderNewTitleByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstNotatedMusicContinuedUnderNewTitleByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicContinuedUnderNewTitleByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastNotatedMusicContinuedUnderNewTitleByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicContinuedUnderNewTitleByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>NotatedMusicContinuedUnderNewTitleBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicContinuedUnderNewTitleBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>continuedUnderNewTitleBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>NotatedMusicContinuedUnderNewTitleByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.NotatedMusic.NotatedMusicContinuedUnderNewTitleByType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -27411,54 +26037,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachMultimediaSupersededByIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaSupersededByIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstMultimediaSupersededByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaSupersededByIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastMultimediaSupersededByInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaSupersededByIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>MultimediaSupersededBy</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaSupersededBy</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>supersededBy</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultimediaSupersededByType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaSupersededByType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachMultimediaDerivedFromIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaDerivedFromIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -27497,54 +26075,6 @@
 	<tag>
 		<name>MultimediaDerivedFromType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaDerivedFromType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachMultimediaHasDerivativeIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasDerivativeIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstMultimediaHasDerivativeInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasDerivativeIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastMultimediaHasDerivativeInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasDerivativeIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>MultimediaHasDerivative</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasDerivative</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>hasDerivative</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultimediaHasDerivativeType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaHasDerivativeType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -27891,54 +26421,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachMultimediaTranslatedAsIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaTranslatedAsIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstMultimediaTranslatedAsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaTranslatedAsIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastMultimediaTranslatedAsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaTranslatedAsIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>MultimediaTranslatedAs</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaTranslatedAs</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>translatedAs</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>MultimediaTranslatedAsType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaTranslatedAsType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachMultimediaContinuedUnderNewTitleByIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Multimedia.MultimediaContinuedUnderNewTitleByIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -28221,36 +26703,6 @@
 
 		<attribute>
 			<name>note</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachPropertyTerm_statusIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Property.PropertyTerm_statusIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstPropertyTerm_statusInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Property.PropertyTerm_statusIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastPropertyTerm_statusInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Property.PropertyTerm_statusIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>PropertyTerm_status</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Property.PropertyTerm_status</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>term_status</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -31623,36 +30075,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachResourceModifiedIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceModifiedIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstResourceModifiedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceModifiedIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastResourceModifiedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceModifiedIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>ResourceModified</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceModified</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>modified</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachResourceTerm_statusIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceTerm_statusIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -31677,36 +30099,6 @@
 
 		<attribute>
 			<name>term_status</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachResourceIssuedIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceIssuedIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstResourceIssuedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceIssuedIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastResourceIssuedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceIssuedIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>ResourceIssued</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceIssued</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>issued</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -32103,36 +30495,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachResourcePreferredNamespacePrefixIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourcePreferredNamespacePrefixIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstResourcePreferredNamespacePrefixInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Resource.ResourcePreferredNamespacePrefixIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastResourcePreferredNamespacePrefixInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Resource.ResourcePreferredNamespacePrefixIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>ResourcePreferredNamespacePrefix</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourcePreferredNamespacePrefix</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>preferredNamespacePrefix</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachResourceLanguageIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceLanguageIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -32175,36 +30537,6 @@
 
 		<attribute>
 			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachResourceVersionInfoIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceVersionInfoIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstResourceVersionInfoInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceVersionInfoIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastResourceVersionInfoInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceVersionInfoIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>ResourceVersionInfo</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Resource.ResourceVersionInfo</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>versionInfo</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -33645,36 +31977,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachRestrictionCardinalityIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Restriction.RestrictionCardinalityIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstRestrictionCardinalityInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Restriction.RestrictionCardinalityIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastRestrictionCardinalityInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Restriction.RestrictionCardinalityIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>RestrictionCardinality</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Restriction.RestrictionCardinality</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>cardinality</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachRestrictionMinCardinalityIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Restriction.RestrictionMinCardinalityIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -34101,54 +32403,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachAudioAccompaniesIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Audio.AudioAccompaniesIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstAudioAccompaniesInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Audio.AudioAccompaniesIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastAudioAccompaniesInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Audio.AudioAccompaniesIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>AudioAccompanies</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Audio.AudioAccompanies</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>accompanies</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>AudioAccompaniesType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Audio.AudioAccompaniesType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachAudioFollowsIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Audio.AudioFollowsIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -34427,54 +32681,6 @@
 	<tag>
 		<name>AudioIsPartOfType</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.Audio.AudioIsPartOfType</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>type</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachAudioSupplementsIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Audio.AudioSupplementsIterator</tag-class>
-		<body-content>JSP</body-content>
-
-		<attribute>
-			<name>classFilter</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<function>
-		<name>isFirstAudioSupplementsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Audio.AudioSupplementsIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastAudioSupplementsInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Audio.AudioSupplementsIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>AudioSupplements</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Audio.AudioSupplements</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>supplements</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>AudioSupplementsType</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Audio.AudioSupplementsType</tag-class>
 		<body-content>empty</body-content>
 
 		<attribute>
@@ -42975,36 +41181,6 @@
 	</tag>
 
 	<tag>
-		<name>foreachDatatypePropertyScopeNoteIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.DatatypeProperty.DatatypePropertyScopeNoteIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstDatatypePropertyScopeNoteInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.DatatypeProperty.DatatypePropertyScopeNoteIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastDatatypePropertyScopeNoteInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.DatatypeProperty.DatatypePropertyScopeNoteIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>DatatypePropertyScopeNote</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.DatatypeProperty.DatatypePropertyScopeNote</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>scopeNote</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>foreachDatatypePropertyExampleIterator</name>
 		<tag-class>edu.uiowa.slis.BIBFRAME.DatatypeProperty.DatatypePropertyExampleIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -43281,96 +41457,6 @@
 
 		<attribute>
 			<name>label</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachOntologyModifiedIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyModifiedIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstOntologyModifiedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyModifiedIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastOntologyModifiedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyModifiedIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>OntologyModified</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyModified</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>modified</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachOntologyIssuedIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyIssuedIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstOntologyIssuedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyIssuedIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastOntologyIssuedInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyIssuedIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>OntologyIssued</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyIssued</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>issued</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
-
-	<tag>
-		<name>foreachOntologyPreferredNamespacePrefixIterator</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyPreferredNamespacePrefixIterator</tag-class>
-		<body-content>JSP</body-content>
-	</tag>
-
-	<function>
-		<name>isFirstOntologyPreferredNamespacePrefixInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyPreferredNamespacePrefixIterator</function-class>
-		<function-signature>java.lang.Boolean getFirstInstance()</function-signature>
-	</function>
-
-	<function>
-		<name>isLastOntologyPreferredNamespacePrefixInstance</name>
-		<function-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyPreferredNamespacePrefixIterator</function-class>
-		<function-signature>java.lang.Boolean getLastInstance()</function-signature>
-	</function>
-
-	<tag>
-		<name>OntologyPreferredNamespacePrefix</name>
-		<tag-class>edu.uiowa.slis.BIBFRAME.Ontology.OntologyPreferredNamespacePrefix</tag-class>
-		<body-content>empty</body-content>
-
-		<attribute>
-			<name>preferredNamespacePrefix</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>

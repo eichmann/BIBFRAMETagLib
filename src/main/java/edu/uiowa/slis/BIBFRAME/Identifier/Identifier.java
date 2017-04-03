@@ -165,10 +165,6 @@ public class Identifier extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityIdentifiedByIterator)this.getParent()).getIdentifiedBy();
 			}
 
-			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator) {
-				subjectURI = ((edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator)this.getParent()).getIdentifiedBy();
-			}
-
 			edu.uiowa.slis.BIBFRAME.Resource.ResourceIdentifiedByIterator theResourceIdentifiedByIterator = (edu.uiowa.slis.BIBFRAME.Resource.ResourceIdentifiedByIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Resource.ResourceIdentifiedByIterator.class);
 
 			if (subjectURI == null && theResourceIdentifiedByIterator != null) {
@@ -365,12 +361,6 @@ public class Identifier extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			if (subjectURI == null && theTemporalEntityIdentifiedByIterator != null) {
 				subjectURI = theTemporalEntityIdentifiedByIterator.getIdentifiedBy();
-			}
-
-			edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator theThreeDimensionalObjectIdentifiedByIterator = (edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator.class);
-
-			if (subjectURI == null && theThreeDimensionalObjectIdentifiedByIterator != null) {
-				subjectURI = theThreeDimensionalObjectIdentifiedByIterator.getIdentifiedBy();
 			}
 
 			if (theIdentifierIterator == null && subjectURI == null) {

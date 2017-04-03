@@ -33,15 +33,15 @@ public class ObjectProperty extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theObjectPropertyIterator.getLabel();
 			}
 
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator)this.getParent()).getInverseOf();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator theObjectPropertyInverseOfIterator = (edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator.class);
-//
-//			if (subjectURI == null && theObjectPropertyInverseOfIterator != null) {
-//				subjectURI = theObjectPropertyInverseOfIterator.getInverseOf();
-//			}
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator)this.getParent()).getInverseOf();
+			}
+
+			edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator theObjectPropertyInverseOfIterator = (edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ObjectProperty.ObjectPropertyInverseOfIterator.class);
+
+			if (subjectURI == null && theObjectPropertyInverseOfIterator != null) {
+				subjectURI = theObjectPropertyInverseOfIterator.getInverseOf();
+			}
 
 			if (theObjectPropertyIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");

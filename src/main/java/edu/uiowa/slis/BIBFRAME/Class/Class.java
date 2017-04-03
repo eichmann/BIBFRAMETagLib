@@ -33,65 +33,65 @@ public class Class extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theClassIterator.getLabel();
 			}
 
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator)this.getParent()).getTheType();
-//			}
-//
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator)this.getParent()).getAllValuesFrom();
-//			}
-//
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator)this.getParent()).getEquivalentClass();
-//			}
-//
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator)this.getParent()).getRange();
-//			}
-//
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator)this.getParent()).getSubClassOf();
-//			}
-//
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator)this.getParent()).getDomain();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator theResourceTheTypeIterator = (edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator.class);
-//
-//			if (subjectURI == null && theResourceTheTypeIterator != null) {
-//				subjectURI = theResourceTheTypeIterator.getTheType();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator theRestrictionAllValuesFromIterator = (edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator.class);
-//
-//			if (subjectURI == null && theRestrictionAllValuesFromIterator != null) {
-//				subjectURI = theRestrictionAllValuesFromIterator.getAllValuesFrom();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator theClassEquivalentClassIterator = (edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator.class);
-//
-//			if (subjectURI == null && theClassEquivalentClassIterator != null) {
-//				subjectURI = theClassEquivalentClassIterator.getEquivalentClass();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator thePropertyRangeIterator = (edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator.class);
-//
-//			if (subjectURI == null && thePropertyRangeIterator != null) {
-//				subjectURI = thePropertyRangeIterator.getRange();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator theClassSubClassOfIterator = (edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator.class);
-//
-//			if (subjectURI == null && theClassSubClassOfIterator != null) {
-//				subjectURI = theClassSubClassOfIterator.getSubClassOf();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator thePropertyDomainIterator = (edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator.class);
-//
-//			if (subjectURI == null && thePropertyDomainIterator != null) {
-//				subjectURI = thePropertyDomainIterator.getDomain();
-//			}
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator)this.getParent()).getTheType();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator)this.getParent()).getAllValuesFrom();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator)this.getParent()).getEquivalentClass();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator)this.getParent()).getRange();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator)this.getParent()).getSubClassOf();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator)this.getParent()).getDomain();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator theResourceTheTypeIterator = (edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Resource.ResourceTheTypeIterator.class);
+
+			if (subjectURI == null && theResourceTheTypeIterator != null) {
+				subjectURI = theResourceTheTypeIterator.getTheType();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator theRestrictionAllValuesFromIterator = (edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Restriction.RestrictionAllValuesFromIterator.class);
+
+			if (subjectURI == null && theRestrictionAllValuesFromIterator != null) {
+				subjectURI = theRestrictionAllValuesFromIterator.getAllValuesFrom();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator theClassEquivalentClassIterator = (edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Class.ClassEquivalentClassIterator.class);
+
+			if (subjectURI == null && theClassEquivalentClassIterator != null) {
+				subjectURI = theClassEquivalentClassIterator.getEquivalentClass();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator thePropertyRangeIterator = (edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Property.PropertyRangeIterator.class);
+
+			if (subjectURI == null && thePropertyRangeIterator != null) {
+				subjectURI = thePropertyRangeIterator.getRange();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator theClassSubClassOfIterator = (edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Class.ClassSubClassOfIterator.class);
+
+			if (subjectURI == null && theClassSubClassOfIterator != null) {
+				subjectURI = theClassSubClassOfIterator.getSubClassOf();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator thePropertyDomainIterator = (edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Property.PropertyDomainIterator.class);
+
+			if (subjectURI == null && thePropertyDomainIterator != null) {
+				subjectURI = thePropertyDomainIterator.getDomain();
+			}
 
 			if (theClassIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");

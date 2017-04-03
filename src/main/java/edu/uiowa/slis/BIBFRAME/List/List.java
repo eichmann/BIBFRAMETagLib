@@ -33,36 +33,36 @@ public class List extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				label = theListIterator.getLabel();
 			}
 
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.List.ListRestIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.List.ListRestIterator)this.getParent()).getRest();
-//			}
-//
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator)this.getParent()).getIntersectionOf();
-//			}
-//
-//			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator) {
-//				subjectURI = ((edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator)this.getParent()).getUnionOf();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.List.ListRestIterator theListRestIterator = (edu.uiowa.slis.BIBFRAME.List.ListRestIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.List.ListRestIterator.class);
-//
-//			if (subjectURI == null && theListRestIterator != null) {
-//				subjectURI = theListRestIterator.getRest();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator theClassIntersectionOfIterator = (edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator.class);
-//
-//			if (subjectURI == null && theClassIntersectionOfIterator != null) {
-//				subjectURI = theClassIntersectionOfIterator.getIntersectionOf();
-//			}
-//
-//			edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator theClassUnionOfIterator = (edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator.class);
-//
-//			if (subjectURI == null && theClassUnionOfIterator != null) {
-//				subjectURI = theClassUnionOfIterator.getUnionOf();
-//			}
-//
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.List.ListRestIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.List.ListRestIterator)this.getParent()).getRest();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator)this.getParent()).getIntersectionOf();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator)this.getParent()).getUnionOf();
+			}
+
+			edu.uiowa.slis.BIBFRAME.List.ListRestIterator theListRestIterator = (edu.uiowa.slis.BIBFRAME.List.ListRestIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.List.ListRestIterator.class);
+
+			if (subjectURI == null && theListRestIterator != null) {
+				subjectURI = theListRestIterator.getRest();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator theClassIntersectionOfIterator = (edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Class.ClassIntersectionOfIterator.class);
+
+			if (subjectURI == null && theClassIntersectionOfIterator != null) {
+				subjectURI = theClassIntersectionOfIterator.getIntersectionOf();
+			}
+
+			edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator theClassUnionOfIterator = (edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Class.ClassUnionOfIterator.class);
+
+			if (subjectURI == null && theClassUnionOfIterator != null) {
+				subjectURI = theClassUnionOfIterator.getUnionOf();
+			}
+
 			if (theListIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
