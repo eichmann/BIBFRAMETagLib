@@ -14,10 +14,10 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.Syntax;
 import org.apache.jena.tdb.TDBFactory;
 
-import edu.uiowa.tagUtil.property.PropertyLoader;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import edu.uiowa.tagUtil.property.PropertyLoader;
 
 @SuppressWarnings("serial")
 public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
