@@ -90,11 +90,11 @@ public class InstanceNoteIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport 
 		subjectURI = null;
 	}
 
-	public  void setNote(String theNote) {
+	public void setNote(String theNote) {
 		note = theNote;
 	}
 
-	public  String getNote() {
+	public String getNote() {
 		return note;
 	}
 

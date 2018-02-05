@@ -90,11 +90,11 @@ public class ElectronicNoteIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppor
 		subjectURI = null;
 	}
 
-	public  void setNote(String theNote) {
+	public void setNote(String theNote) {
 		note = theNote;
 	}
 
-	public  String getNote() {
+	public String getNote() {
 		return note;
 	}
 

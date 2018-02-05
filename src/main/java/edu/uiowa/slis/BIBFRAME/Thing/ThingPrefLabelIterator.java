@@ -90,11 +90,11 @@ public class ThingPrefLabelIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppor
 		subjectURI = null;
 	}
 
-	public  void setPrefLabel(String thePrefLabel) {
+	public void setPrefLabel(String thePrefLabel) {
 		prefLabel = thePrefLabel;
 	}
 
-	public  String getPrefLabel() {
+	public String getPrefLabel() {
 		return prefLabel;
 	}
 

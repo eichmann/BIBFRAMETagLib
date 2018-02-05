@@ -90,11 +90,11 @@ public class ResourcePreferredNamespacePrefixIterator extends edu.uiowa.slis.BIB
 		subjectURI = null;
 	}
 
-	public  void setPreferredNamespacePrefix(String thePreferredNamespacePrefix) {
+	public void setPreferredNamespacePrefix(String thePreferredNamespacePrefix) {
 		preferredNamespacePrefix = thePreferredNamespacePrefix;
 	}
 
-	public  String getPreferredNamespacePrefix() {
+	public String getPreferredNamespacePrefix() {
 		return preferredNamespacePrefix;
 	}
 

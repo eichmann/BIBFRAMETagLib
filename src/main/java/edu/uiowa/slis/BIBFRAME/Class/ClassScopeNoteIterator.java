@@ -90,11 +90,11 @@ public class ClassScopeNoteIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppor
 		subjectURI = null;
 	}
 
-	public  void setScopeNote(String theScopeNote) {
+	public void setScopeNote(String theScopeNote) {
 		scopeNote = theScopeNote;
 	}
 
-	public  String getScopeNote() {
+	public String getScopeNote() {
 		return scopeNote;
 	}
 

@@ -90,11 +90,11 @@ public class InstanceExtentIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppor
 		subjectURI = null;
 	}
 
-	public  void setExtent(String theExtent) {
+	public void setExtent(String theExtent) {
 		extent = theExtent;
 	}
 
-	public  String getExtent() {
+	public String getExtent() {
 		return extent;
 	}
 

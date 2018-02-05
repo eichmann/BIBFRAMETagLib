@@ -90,11 +90,11 @@ public class TactileDimensionsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 		subjectURI = null;
 	}
 
-	public  void setDimensions(String theDimensions) {
+	public void setDimensions(String theDimensions) {
 		dimensions = theDimensions;
 	}
 
-	public  String getDimensions() {
+	public String getDimensions() {
 		return dimensions;
 	}
 

@@ -90,11 +90,11 @@ public class ResourceDeathDateIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 		subjectURI = null;
 	}
 
-	public  void setDeathDate(String theDeathDate) {
+	public void setDeathDate(String theDeathDate) {
 		deathDate = theDeathDate;
 	}
 
-	public  String getDeathDate() {
+	public String getDeathDate() {
 		return deathDate;
 	}
 

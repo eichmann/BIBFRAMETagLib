@@ -90,11 +90,11 @@ public class RestrictionCardinalityIterator extends edu.uiowa.slis.BIBFRAME.TagL
 		subjectURI = null;
 	}
 
-	public  void setCardinality(String theCardinality) {
+	public void setCardinality(String theCardinality) {
 		cardinality = theCardinality;
 	}
 
-	public  String getCardinality() {
+	public String getCardinality() {
 		return cardinality;
 	}
 

@@ -90,11 +90,11 @@ public class ElectronicIllustrationNoteIterator extends edu.uiowa.slis.BIBFRAME.
 		subjectURI = null;
 	}
 
-	public  void setIllustrationNote(String theIllustrationNote) {
+	public void setIllustrationNote(String theIllustrationNote) {
 		illustrationNote = theIllustrationNote;
 	}
 
-	public  String getIllustrationNote() {
+	public String getIllustrationNote() {
 		return illustrationNote;
 	}
 

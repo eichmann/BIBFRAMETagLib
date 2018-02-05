@@ -90,11 +90,11 @@ public class TactileIllustrationNoteIterator extends edu.uiowa.slis.BIBFRAME.Tag
 		subjectURI = null;
 	}
 
-	public  void setIllustrationNote(String theIllustrationNote) {
+	public void setIllustrationNote(String theIllustrationNote) {
 		illustrationNote = theIllustrationNote;
 	}
 
-	public  String getIllustrationNote() {
+	public String getIllustrationNote() {
 		return illustrationNote;
 	}
 

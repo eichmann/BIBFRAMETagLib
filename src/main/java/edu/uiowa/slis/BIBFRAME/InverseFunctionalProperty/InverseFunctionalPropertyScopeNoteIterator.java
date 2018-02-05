@@ -90,11 +90,11 @@ public class InverseFunctionalPropertyScopeNoteIterator extends edu.uiowa.slis.B
 		subjectURI = null;
 	}
 
-	public  void setScopeNote(String theScopeNote) {
+	public void setScopeNote(String theScopeNote) {
 		scopeNote = theScopeNote;
 	}
 
-	public  String getScopeNote() {
+	public String getScopeNote() {
 		return scopeNote;
 	}
 

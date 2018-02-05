@@ -90,11 +90,11 @@ public class DistributorProvisionDateIterator extends edu.uiowa.slis.BIBFRAME.Ta
 		subjectURI = null;
 	}
 
-	public  void setDate(String theDate) {
+	public void setDate(String theDate) {
 		date = theDate;
 	}
 
-	public  String getDate() {
+	public String getDate() {
 		return date;
 	}
 

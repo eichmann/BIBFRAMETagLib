@@ -90,11 +90,11 @@ public class ResourceIsDefinedByIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 		subjectURI = null;
 	}
 
-	public  void setIsDefinedBy(String theIsDefinedBy) {
+	public void setIsDefinedBy(String theIsDefinedBy) {
 		isDefinedBy = theIsDefinedBy;
 	}
 
-	public  String getIsDefinedBy() {
+	public String getIsDefinedBy() {
 		return isDefinedBy;
 	}
 

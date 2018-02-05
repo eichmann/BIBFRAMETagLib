@@ -20,6 +20,8 @@ public class ContinuingResourceIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 	String subjectURI = null;
 	String label = null;
 	ResultSet rs = null;
+	String sortCriteria = null;
+	int limitCriteria = 0;
 
 	public int doStartTag() throws JspException {
 		currentInstance = this;
@@ -31,8 +33,11 @@ public class ContinuingResourceIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 					"  OPTIONAL { ?s rdfs:label ?labelENG FILTER (langMatches(?labelENG,\"en\")) } "+
 					"  OPTIONAL { ?s rdfs:label ?label    FILTER (lang(?label) = \"\") } "+
 					"  OPTIONAL { ?s rdfs:label ?labelANY FILTER (lang(?labelANY) != \"\") } "+
-					"  BIND(COALESCE(?labelUS, ?labelENG, ?label, ?labelANY) as ?lab) "+
-					"} ORDER BY ?lab");
+					"  BIND(COALESCE(?labelUS, ?labelENG, ?label, ?labelANY ) as ?lab) "+
+					" } " +
+					" ORDER BY ?lab " +
+					(limitCriteria == 0 ? "" : " LIMIT " + limitCriteria + " ")
+					);
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subjectURI = sol.get("?s").toString();
@@ -91,19 +96,35 @@ public class ContinuingResourceIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 		label = null;
 	}
 
-	public  void setSubjectURI(String theSubjectURI) {
+	public void setSortCriteria(String theSortCriteria) {
+		sortCriteria = theSortCriteria;
+	}
+
+	public String getSortCriteria() {
+		return sortCriteria;
+	}
+
+	public void setLimitCriteria(Integer theLimitCriteria) {
+		limitCriteria = theLimitCriteria;
+	}
+
+	public Integer getLimitCriteria() {
+		return limitCriteria;
+	}
+
+	public void setSubjectURI(String theSubjectURI) {
 		subjectURI = theSubjectURI;
 	}
 
-	public  String getSubjectURI() {
+	public String getSubjectURI() {
 		return subjectURI;
 	}
 
-	public  void setLabel(String theLabel) {
+	public void setLabel(String theLabel) {
 		label = theLabel;
 	}
 
-	public  String getLabel() {
+	public String getLabel() {
 		return label;
 	}
 

@@ -90,11 +90,11 @@ public class RWOPrefLabelIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport 
 		subjectURI = null;
 	}
 
-	public  void setPrefLabel(String thePrefLabel) {
+	public void setPrefLabel(String thePrefLabel) {
 		prefLabel = thePrefLabel;
 	}
 
-	public  String getPrefLabel() {
+	public String getPrefLabel() {
 		return prefLabel;
 	}
 

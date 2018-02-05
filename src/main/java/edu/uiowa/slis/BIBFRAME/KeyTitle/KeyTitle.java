@@ -162,19 +162,19 @@ public class KeyTitle extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 		subjectURI = null;
 	}
 
-	public  void setSubjectURI(String theSubjectURI) {
+	public void setSubjectURI(String theSubjectURI) {
 		subjectURI = theSubjectURI;
 	}
 
-	public  String getSubjectURI() {
+	public String getSubjectURI() {
 		return subjectURI;
 	}
 
-	public  void setLabel(String theLabel) {
+	public void setLabel(String theLabel) {
 		label = theLabel;
 	}
 
-	public  String getLabel() {
+	public String getLabel() {
 		return label;
 	}
 

@@ -90,11 +90,11 @@ public class PropertyExampleIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppo
 		subjectURI = null;
 	}
 
-	public  void setExample(String theExample) {
+	public void setExample(String theExample) {
 		example = theExample;
 	}
 
-	public  String getExample() {
+	public String getExample() {
 		return example;
 	}
 

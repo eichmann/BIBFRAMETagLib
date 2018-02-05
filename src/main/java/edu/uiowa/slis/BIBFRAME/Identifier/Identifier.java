@@ -165,6 +165,10 @@ public class Identifier extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.TemporalEntity.TemporalEntityIdentifiedByIterator)this.getParent()).getIdentifiedBy();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator)this.getParent()).getIdentifiedBy();
+			}
+
 			edu.uiowa.slis.BIBFRAME.Resource.ResourceIdentifiedByIterator theResourceIdentifiedByIterator = (edu.uiowa.slis.BIBFRAME.Resource.ResourceIdentifiedByIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.Resource.ResourceIdentifiedByIterator.class);
 
 			if (subjectURI == null && theResourceIdentifiedByIterator != null) {
@@ -363,6 +367,12 @@ public class Identifier extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = theTemporalEntityIdentifiedByIterator.getIdentifiedBy();
 			}
 
+			edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator theThreeDimensionalObjectIdentifiedByIterator = (edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator) findAncestorWithClass(this, edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectIdentifiedByIterator.class);
+
+			if (subjectURI == null && theThreeDimensionalObjectIdentifiedByIterator != null) {
+				subjectURI = theThreeDimensionalObjectIdentifiedByIterator.getIdentifiedBy();
+			}
+
 			if (theIdentifierIterator == null && subjectURI == null) {
 				throw new JspException("subject URI generation currently not supported");
 			} else {
@@ -422,19 +432,19 @@ public class Identifier extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 		subjectURI = null;
 	}
 
-	public  void setSubjectURI(String theSubjectURI) {
+	public void setSubjectURI(String theSubjectURI) {
 		subjectURI = theSubjectURI;
 	}
 
-	public  String getSubjectURI() {
+	public String getSubjectURI() {
 		return subjectURI;
 	}
 
-	public  void setLabel(String theLabel) {
+	public void setLabel(String theLabel) {
 		label = theLabel;
 	}
 
-	public  String getLabel() {
+	public String getLabel() {
 		return label;
 	}
 

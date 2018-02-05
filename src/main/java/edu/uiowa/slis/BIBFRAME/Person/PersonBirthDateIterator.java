@@ -90,11 +90,11 @@ public class PersonBirthDateIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppo
 		subjectURI = null;
 	}
 
-	public  void setBirthDate(String theBirthDate) {
+	public void setBirthDate(String theBirthDate) {
 		birthDate = theBirthDate;
 	}
 
-	public  String getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
 

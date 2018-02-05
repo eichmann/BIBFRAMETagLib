@@ -90,11 +90,11 @@ public class DatatypePropertyScopeNoteIterator extends edu.uiowa.slis.BIBFRAME.T
 		subjectURI = null;
 	}
 
-	public  void setScopeNote(String theScopeNote) {
+	public void setScopeNote(String theScopeNote) {
 		scopeNote = theScopeNote;
 	}
 
-	public  String getScopeNote() {
+	public String getScopeNote() {
 		return scopeNote;
 	}
 

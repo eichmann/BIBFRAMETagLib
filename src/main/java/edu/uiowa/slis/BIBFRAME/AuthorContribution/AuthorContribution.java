@@ -105,8 +105,20 @@ public class AuthorContribution extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.ThreeDimensionalObject.ThreeDimensionalObjectAgentInverseIterator)this.getParent()).getAgentInverse();
 			}
 
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Conference.ConferenceAgentInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Conference.ConferenceAgentInverseIterator)this.getParent()).getAgentInverse();
+			}
+
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Family.FamilyAgentInverseIterator) {
 				subjectURI = ((edu.uiowa.slis.BIBFRAME.Family.FamilyAgentInverseIterator)this.getParent()).getAgentInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceAgentInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.ContinuingResource.ContinuingResourceAgentInverseIterator)this.getParent()).getAgentInverse();
+			}
+
+			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Serial.SerialAgentInverseIterator) {
+				subjectURI = ((edu.uiowa.slis.BIBFRAME.Serial.SerialAgentInverseIterator)this.getParent()).getAgentInverse();
 			}
 
 			if (this.getParent() instanceof edu.uiowa.slis.BIBFRAME.Item.ItemAgentInverseIterator) {
@@ -172,19 +184,19 @@ public class AuthorContribution extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 		subjectURI = null;
 	}
 
-	public  void setSubjectURI(String theSubjectURI) {
+	public void setSubjectURI(String theSubjectURI) {
 		subjectURI = theSubjectURI;
 	}
 
-	public  String getSubjectURI() {
+	public String getSubjectURI() {
 		return subjectURI;
 	}
 
-	public  void setLabel(String theLabel) {
+	public void setLabel(String theLabel) {
 		label = theLabel;
 	}
 
-	public  String getLabel() {
+	public String getLabel() {
 		return label;
 	}
 

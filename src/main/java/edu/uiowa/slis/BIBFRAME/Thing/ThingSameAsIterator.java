@@ -90,11 +90,11 @@ public class ThingSameAsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 		subjectURI = null;
 	}
 
-	public  void setSameAs(String theSameAs) {
+	public void setSameAs(String theSameAs) {
 		sameAs = theSameAs;
 	}
 
-	public  String getSameAs() {
+	public String getSameAs() {
 		return sameAs;
 	}
 

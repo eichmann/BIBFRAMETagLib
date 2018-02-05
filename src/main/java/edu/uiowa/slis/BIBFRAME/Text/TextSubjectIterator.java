@@ -23,6 +23,8 @@ public class TextSubjectIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	String type = null;
 	String subject = null;
 	ResultSet rs = null;
+	String sortCriteria = null;
+	int limitCriteria = 0;
 	Hashtable<String,String> classFilter = null;
 
 	public int doStartTag() throws JspException {
@@ -40,19 +42,21 @@ public class TextSubjectIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 			rs = getResultSet(prefix+"SELECT ?s ?t where {"
 					+" <" + subjectURI + "> <http://purl.org/dc/terms/subject> ?s . "
-					+" ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?t ."
+					+" OPTIONAL { ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?t } ."
 					+" FILTER NOT EXISTS {"
 					+"   ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?subtype ."
 					+"   ?subtype <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?t ."
 					+"   filter ( ?subtype != ?t )"
-					+" }"
-					+"} ");
+					+" } " +
+					" } " +
+					(limitCriteria == 0 ? "" : " LIMIT " + limitCriteria + " ")
+					);
 			while(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subject = sol.get("?s").toString();
-				type = getLocalName(sol.get("?t").toString());
-				if (type == null)
-					continue;
+				type = sol.get("?t") == null ? null : getLocalName(sol.get("?t").toString());
+//				if (type == null)
+//					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + subject + "	type: " + type);
 					firstInstance = true;
@@ -75,9 +79,9 @@ public class TextSubjectIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 			while(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				subject = sol.get("?s").toString();
-				type = getLocalName(sol.get("?t").toString());
-				if (type == null)
-					continue;
+				type = sol.get("?t") == null ? null : getLocalName(sol.get("?t").toString());
+//				if (type == null)
+//					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + subject + "	type: " + type);
 					firstInstance = false;
@@ -117,19 +121,35 @@ public class TextSubjectIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 		classFilter = null;
 	}
 
-	public  void setType(String theType) {
+	public void setSortCriteria(String theSortCriteria) {
+		sortCriteria = theSortCriteria;
+	}
+
+	public String getSortCriteria() {
+		return sortCriteria;
+	}
+
+	public void setLimitCriteria(Integer theLimitCriteria) {
+		limitCriteria = theLimitCriteria;
+	}
+
+	public Integer getLimitCriteria() {
+		return limitCriteria;
+	}
+
+	public void setType(String theType) {
 		type = theType;
 	}
 
-	public  String getType() {
+	public String getType() {
 		return type;
 	}
 
-	public  void setSubject(String theSubject) {
+	public void setSubject(String theSubject) {
 		subject = theSubject;
 	}
 
-	public  String getSubject() {
+	public String getSubject() {
 		return subject;
 	}
 

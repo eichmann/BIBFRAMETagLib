@@ -90,11 +90,11 @@ public class ContentAsTextCharsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 		subjectURI = null;
 	}
 
-	public  void setChars(String theChars) {
+	public void setChars(String theChars) {
 		chars = theChars;
 	}
 
-	public  String getChars() {
+	public String getChars() {
 		return chars;
 	}
 

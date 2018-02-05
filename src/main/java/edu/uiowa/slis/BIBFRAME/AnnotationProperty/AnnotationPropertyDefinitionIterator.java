@@ -90,11 +90,11 @@ public class AnnotationPropertyDefinitionIterator extends edu.uiowa.slis.BIBFRAM
 		subjectURI = null;
 	}
 
-	public  void setDefinition(String theDefinition) {
+	public void setDefinition(String theDefinition) {
 		definition = theDefinition;
 	}
 
-	public  String getDefinition() {
+	public String getDefinition() {
 		return definition;
 	}
 

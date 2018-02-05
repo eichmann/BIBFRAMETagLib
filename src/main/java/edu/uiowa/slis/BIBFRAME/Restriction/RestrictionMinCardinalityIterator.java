@@ -90,11 +90,11 @@ public class RestrictionMinCardinalityIterator extends edu.uiowa.slis.BIBFRAME.T
 		subjectURI = null;
 	}
 
-	public  void setMinCardinality(String theMinCardinality) {
+	public void setMinCardinality(String theMinCardinality) {
 		minCardinality = theMinCardinality;
 	}
 
-	public  String getMinCardinality() {
+	public String getMinCardinality() {
 		return minCardinality;
 	}
 

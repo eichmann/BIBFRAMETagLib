@@ -90,11 +90,11 @@ public class ResourceLabelIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport
 		subjectURI = null;
 	}
 
-	public  void setLabel(String theLabel) {
+	public void setLabel(String theLabel) {
 		label = theLabel;
 	}
 
-	public  String getLabel() {
+	public String getLabel() {
 		return label;
 	}
 

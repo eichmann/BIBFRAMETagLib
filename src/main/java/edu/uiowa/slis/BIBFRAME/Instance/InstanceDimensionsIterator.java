@@ -90,11 +90,11 @@ public class InstanceDimensionsIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 		subjectURI = null;
 	}
 
-	public  void setDimensions(String theDimensions) {
+	public void setDimensions(String theDimensions) {
 		dimensions = theDimensions;
 	}
 
-	public  String getDimensions() {
+	public String getDimensions() {
 		return dimensions;
 	}
 

@@ -90,11 +90,11 @@ public class InverseFunctionalPropertyNoteIterator extends edu.uiowa.slis.BIBFRA
 		subjectURI = null;
 	}
 
-	public  void setNote(String theNote) {
+	public void setNote(String theNote) {
 		note = theNote;
 	}
 
-	public  String getNote() {
+	public String getNote() {
 		return note;
 	}
 

@@ -90,11 +90,11 @@ public class ResourceSeeAlsoIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppo
 		subjectURI = null;
 	}
 
-	public  void setSeeAlso(String theSeeAlso) {
+	public void setSeeAlso(String theSeeAlso) {
 		seeAlso = theSeeAlso;
 	}
 
-	public  String getSeeAlso() {
+	public String getSeeAlso() {
 		return seeAlso;
 	}
 

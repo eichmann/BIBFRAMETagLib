@@ -90,11 +90,11 @@ public class SymmetricPropertyEditorialNoteIterator extends edu.uiowa.slis.BIBFR
 		subjectURI = null;
 	}
 
-	public  void setEditorialNote(String theEditorialNote) {
+	public void setEditorialNote(String theEditorialNote) {
 		editorialNote = theEditorialNote;
 	}
 
-	public  String getEditorialNote() {
+	public String getEditorialNote() {
 		return editorialNote;
 	}
 

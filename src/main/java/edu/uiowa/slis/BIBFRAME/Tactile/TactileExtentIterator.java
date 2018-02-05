@@ -90,11 +90,11 @@ public class TactileExtentIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport
 		subjectURI = null;
 	}
 
-	public  void setExtent(String theExtent) {
+	public void setExtent(String theExtent) {
 		extent = theExtent;
 	}
 
-	public  String getExtent() {
+	public String getExtent() {
 		return extent;
 	}
 

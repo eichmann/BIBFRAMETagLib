@@ -11,39 +11,17 @@ public class OntologyLabel extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	static OntologyLabel currentInstance = null;
 	private static final Log log = LogFactory.getLog(OntologyLabel.class);
 
-	// functional property
+	// non-functional property
 
 	public int doStartTag() throws JspException {
 		try {
-			Ontology theOntology = (Ontology)findAncestorWithClass(this, Ontology.class);
-			if (!theOntology.commitNeeded) {
-				pageContext.getOut().print(theOntology.getLabel());
-			}
+			OntologyLabelIterator theOntology = (OntologyLabelIterator)findAncestorWithClass(this, OntologyLabelIterator.class);
+			pageContext.getOut().print(theOntology.getLabel());
 		} catch (Exception e) {
 			log.error("Can't find enclosing Ontology for label tag ", e);
 			throw new JspTagException("Error: Can't find enclosing Ontology for label tag ");
 		}
 		return SKIP_BODY;
-	}
-
-	public String getLabel() throws JspTagException {
-		try {
-			Ontology theOntology = (Ontology)findAncestorWithClass(this, Ontology.class);
-			return theOntology.getLabel();
-		} catch (Exception e) {
-			log.error(" Can't find enclosing Ontology for label tag ", e);
-			throw new JspTagException("Error: Can't find enclosing Ontology for label tag ");
-		}
-	}
-
-	public void setLabel(String label) throws JspTagException {
-		try {
-			Ontology theOntology = (Ontology)findAncestorWithClass(this, Ontology.class);
-			theOntology.setLabel(label);
-		} catch (Exception e) {
-			log.error("Can't find enclosing Ontology for label tag ", e);
-			throw new JspTagException("Error: Can't find enclosing Ontology for label tag ");
-		}
 	}
 }
 

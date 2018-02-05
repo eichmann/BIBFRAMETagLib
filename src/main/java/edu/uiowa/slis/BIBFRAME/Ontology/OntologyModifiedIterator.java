@@ -90,11 +90,11 @@ public class OntologyModifiedIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupp
 		subjectURI = null;
 	}
 
-	public  void setModified(String theModified) {
+	public void setModified(String theModified) {
 		modified = theModified;
 	}
 
-	public  String getModified() {
+	public String getModified() {
 		return modified;
 	}
 

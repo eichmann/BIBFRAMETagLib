@@ -90,11 +90,11 @@ public class ResourceValueIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport
 		subjectURI = null;
 	}
 
-	public  void setValue(String theValue) {
+	public void setValue(String theValue) {
 		value = theValue;
 	}
 
-	public  String getValue() {
+	public String getValue() {
 		return value;
 	}
 

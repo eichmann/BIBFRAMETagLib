@@ -90,11 +90,11 @@ public class ResourceVersionInfoIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 		subjectURI = null;
 	}
 
-	public  void setVersionInfo(String theVersionInfo) {
+	public void setVersionInfo(String theVersionInfo) {
 		versionInfo = theVersionInfo;
 	}
 
-	public  String getVersionInfo() {
+	public String getVersionInfo() {
 		return versionInfo;
 	}
 

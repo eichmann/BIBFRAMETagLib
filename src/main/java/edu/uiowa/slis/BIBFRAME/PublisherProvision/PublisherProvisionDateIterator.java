@@ -90,11 +90,11 @@ public class PublisherProvisionDateIterator extends edu.uiowa.slis.BIBFRAME.TagL
 		subjectURI = null;
 	}
 
-	public  void setDate(String theDate) {
+	public void setDate(String theDate) {
 		date = theDate;
 	}
 
-	public  String getDate() {
+	public String getDate() {
 		return date;
 	}
 

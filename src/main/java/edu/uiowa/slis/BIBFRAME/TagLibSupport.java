@@ -286,6 +286,13 @@ public class TagLibSupport extends javax.servlet.jsp.tagext.TagSupport {
 		String applicationRoot = theURI.substring(0, theURI.indexOf('/', 1));
 		log.info("loading " + applicationRoot + ".properties");
 		properties = PropertyLoader.loadProperties(applicationRoot + ".properties");
+
+		String redirect = properties.getProperty("BIBFRAMETagLib_properties");
+		if (redirect != null) {
+			log.info("loading BIBFRAMETagLib redirection: " + redirect);
+			properties = PropertyLoader.loadProperties(redirect);
+		}
+
 		useSPARQL = properties.getProperty("useSPARQL", "true").equals("true");
 		endpoint = properties.getProperty("endpoint", "localhost");
 		tripleStore = properties.getProperty("tripleStore", "localhost");

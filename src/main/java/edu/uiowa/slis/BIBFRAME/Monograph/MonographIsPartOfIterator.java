@@ -23,6 +23,8 @@ public class MonographIsPartOfIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 	String type = null;
 	String isPartOf = null;
 	ResultSet rs = null;
+	String sortCriteria = null;
+	int limitCriteria = 0;
 	Hashtable<String,String> classFilter = null;
 
 	public int doStartTag() throws JspException {
@@ -40,19 +42,21 @@ public class MonographIsPartOfIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 
 			rs = getResultSet(prefix+"SELECT ?s ?t where {"
 					+" <" + subjectURI + "> <http://purl.org/dc/terms/isPartOf> ?s . "
-					+" ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?t ."
+					+" OPTIONAL { ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?t } ."
 					+" FILTER NOT EXISTS {"
 					+"   ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?subtype ."
 					+"   ?subtype <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?t ."
 					+"   filter ( ?subtype != ?t )"
-					+" }"
-					+"} ");
+					+" } " +
+					" } " +
+					(limitCriteria == 0 ? "" : " LIMIT " + limitCriteria + " ")
+					);
 			while(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				isPartOf = sol.get("?s").toString();
-				type = getLocalName(sol.get("?t").toString());
-				if (type == null)
-					continue;
+				type = sol.get("?t") == null ? null : getLocalName(sol.get("?t").toString());
+//				if (type == null)
+//					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isPartOf + "	type: " + type);
 					firstInstance = true;
@@ -75,9 +79,9 @@ public class MonographIsPartOfIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 			while(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
 				isPartOf = sol.get("?s").toString();
-				type = getLocalName(sol.get("?t").toString());
-				if (type == null)
-					continue;
+				type = sol.get("?t") == null ? null : getLocalName(sol.get("?t").toString());
+//				if (type == null)
+//					continue;
 				if (classFilter == null || (classFilter != null && type != null && classFilter.containsKey(type))) {
 					log.info("instance: " + isPartOf + "	type: " + type);
 					firstInstance = false;
@@ -117,19 +121,35 @@ public class MonographIsPartOfIterator extends edu.uiowa.slis.BIBFRAME.TagLibSup
 		classFilter = null;
 	}
 
-	public  void setType(String theType) {
+	public void setSortCriteria(String theSortCriteria) {
+		sortCriteria = theSortCriteria;
+	}
+
+	public String getSortCriteria() {
+		return sortCriteria;
+	}
+
+	public void setLimitCriteria(Integer theLimitCriteria) {
+		limitCriteria = theLimitCriteria;
+	}
+
+	public Integer getLimitCriteria() {
+		return limitCriteria;
+	}
+
+	public void setType(String theType) {
 		type = theType;
 	}
 
-	public  String getType() {
+	public String getType() {
 		return type;
 	}
 
-	public  void setIsPartOf(String theIsPartOf) {
+	public void setIsPartOf(String theIsPartOf) {
 		isPartOf = theIsPartOf;
 	}
 
-	public  String getIsPartOf() {
+	public String getIsPartOf() {
 		return isPartOf;
 	}
 

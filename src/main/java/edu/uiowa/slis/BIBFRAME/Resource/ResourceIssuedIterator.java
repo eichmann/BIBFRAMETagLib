@@ -90,11 +90,11 @@ public class ResourceIssuedIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppor
 		subjectURI = null;
 	}
 
-	public  void setIssued(String theIssued) {
+	public void setIssued(String theIssued) {
 		issued = theIssued;
 	}
 
-	public  String getIssued() {
+	public String getIssued() {
 		return issued;
 	}
 

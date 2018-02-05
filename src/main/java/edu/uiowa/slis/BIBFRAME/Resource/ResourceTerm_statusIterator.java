@@ -90,11 +90,11 @@ public class ResourceTerm_statusIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 		subjectURI = null;
 	}
 
-	public  void setTerm_status(String theTerm_status) {
+	public void setTerm_status(String theTerm_status) {
 		term_status = theTerm_status;
 	}
 
-	public  String getTerm_status() {
+	public String getTerm_status() {
 		return term_status;
 	}
 

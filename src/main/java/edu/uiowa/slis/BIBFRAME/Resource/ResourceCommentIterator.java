@@ -90,11 +90,11 @@ public class ResourceCommentIterator extends edu.uiowa.slis.BIBFRAME.TagLibSuppo
 		subjectURI = null;
 	}
 
-	public  void setComment(String theComment) {
+	public void setComment(String theComment) {
 		comment = theComment;
 	}
 
-	public  String getComment() {
+	public String getComment() {
 		return comment;
 	}
 
