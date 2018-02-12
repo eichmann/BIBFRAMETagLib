@@ -25,6 +25,7 @@ public class InstanceHasHoldingIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 	ResultSet rs = null;
 	String sortCriteria = null;
 	int limitCriteria = 0;
+	int offsetCriteria = 0;
 	Hashtable<String,String> classFilter = null;
 
 	public int doStartTag() throws JspException {
@@ -49,7 +50,8 @@ public class InstanceHasHoldingIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 					+"   filter ( ?subtype != ?t )"
 					+" } " +
 					" } " +
-					(limitCriteria == 0 ? "" : " LIMIT " + limitCriteria + " ")
+					(limitCriteria == 0 ? "" : " LIMIT " + limitCriteria + " ") +
+					(offsetCriteria == 0 ? "" : " OFFSET " + offsetCriteria + " ")
 					);
 			while(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
@@ -135,6 +137,14 @@ public class InstanceHasHoldingIterator extends edu.uiowa.slis.BIBFRAME.TagLibSu
 
 	public Integer getLimitCriteria() {
 		return limitCriteria;
+	}
+
+	public void setOffsetCriteria(Integer theOffsetCriteria) {
+		offsetCriteria = theOffsetCriteria;
+	}
+
+	public Integer getOffsetCriteria() {
+		return offsetCriteria;
 	}
 
 	public void setType(String theType) {

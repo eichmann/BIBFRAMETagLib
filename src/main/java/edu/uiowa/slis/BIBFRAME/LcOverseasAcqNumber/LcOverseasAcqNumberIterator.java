@@ -22,6 +22,7 @@ public class LcOverseasAcqNumberIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 	ResultSet rs = null;
 	String sortCriteria = null;
 	int limitCriteria = 0;
+	int offsetCriteria = 0;
 
 	public int doStartTag() throws JspException {
 		currentInstance = this;
@@ -36,7 +37,8 @@ public class LcOverseasAcqNumberIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 					"  BIND(COALESCE(?labelUS, ?labelENG, ?label, ?labelANY ) as ?lab) "+
 					" } " +
 					" ORDER BY ?lab " +
-					(limitCriteria == 0 ? "" : " LIMIT " + limitCriteria + " ")
+					(limitCriteria == 0 ? "" : " LIMIT " + limitCriteria + " ") +
+					(offsetCriteria == 0 ? "" : " OFFSET " + offsetCriteria + " ")
 					);
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
@@ -110,6 +112,14 @@ public class LcOverseasAcqNumberIterator extends edu.uiowa.slis.BIBFRAME.TagLibS
 
 	public Integer getLimitCriteria() {
 		return limitCriteria;
+	}
+
+	public void setOffsetCriteria(Integer theOffsetCriteria) {
+		offsetCriteria = theOffsetCriteria;
+	}
+
+	public Integer getOffsetCriteria() {
+		return offsetCriteria;
 	}
 
 	public void setSubjectURI(String theSubjectURI) {

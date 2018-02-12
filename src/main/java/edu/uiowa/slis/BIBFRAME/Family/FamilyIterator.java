@@ -22,6 +22,7 @@ public class FamilyIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 	ResultSet rs = null;
 	String sortCriteria = null;
 	int limitCriteria = 0;
+	int offsetCriteria = 0;
 
 	public int doStartTag() throws JspException {
 		currentInstance = this;
@@ -35,8 +36,7 @@ public class FamilyIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 					"  OPTIONAL { ?s rdfs:label ?labelANY FILTER (lang(?labelANY) != \"\") } "+
 					"  BIND(COALESCE(?labelUS, ?labelENG, ?label, ?labelANY ) as ?lab) "+
 					" } " +
-					" ORDER BY ?lab " +
-					(limitCriteria == 0 ? "" : " LIMIT " + limitCriteria + " ")
+					" ORDER BY ?lab ?s "
 					);
 			if(rs.hasNext()) {
 				QuerySolution sol = rs.nextSolution();
@@ -110,6 +110,14 @@ public class FamilyIterator extends edu.uiowa.slis.BIBFRAME.TagLibSupport {
 
 	public Integer getLimitCriteria() {
 		return limitCriteria;
+	}
+
+	public void setOffsetCriteria(Integer theOffsetCriteria) {
+		offsetCriteria = theOffsetCriteria;
+	}
+
+	public Integer getOffsetCriteria() {
+		return offsetCriteria;
 	}
 
 	public void setSubjectURI(String theSubjectURI) {
